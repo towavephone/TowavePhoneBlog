@@ -1,10 +1,11 @@
 title: PS学习第二课之选区工具
-date: 2017年11月16日21:36:28
+date: 2017-11-16 21:36:28
 categories:
 - 设计
 tags:
 - PS
 - PhotoShop
+- 选区
 ---
 [点击此处查看PS视频](https://www.bilibili.com/video/av11506181/?from=search&seid=7154155166873854341#page=4)
 ## 笔记要点
