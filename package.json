@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "hexo s -p 80",
-    "prod": "hexo c && hexo g && gulp && hexo d"
+    "prod": "hexo clean && hexo g && gulp && hexo d"
   },
   "dependencies": {
     "gulp": "^3.9.1",
