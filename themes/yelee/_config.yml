@@ -104,12 +104,19 @@ duoshuo:
   # http://<要填的部分>.duoshuo.com (domain只填上<>里的内容，不要填整个网址)
 
 youyan:
-  on: true
+  on: false
   id: 2148993
   # 是否开启友言评论，http://www.uyan.cc/index.php
   # id 中填写你的友言用户数字ID，注册后进入后台管理即可查看
   # 友言服务在 Web 环境下运行，普通本地环境无法查看，请部署后在线上测试。
 
+gitment:
+  on: true
+  github_id: towavephone
+  repo: towavephone.github.io
+  client_id: c61abeb31906bb4a209d
+  client_secret: fac8b9e40113945430e0ea638efdb96e7e0df9b5
+  lazy: true
 
 # >>> Style Customisation 样式自定义 <<<
 
