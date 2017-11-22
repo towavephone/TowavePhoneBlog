@@ -1,8 +1,7 @@
 <section class="gittalk" id="comments">
-    <%- partial('click2show') %>
     <div id="gitalk-container"></div>
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
         var loadComment = function(){
             var gitalk = new Gitalk({
@@ -13,8 +12,10 @@
                 admin: '<%= theme.gitalk.admin %>',
                 owner: '<%= theme.gitalk.owner %>',
                 distractionFreeMode: '<%= theme.gitalk.distractionFreeMode %>',
+                createIssueManually: '<%= theme.gitalk.createIssueManually %>'
             })
             gitalk.render('gitalk-container');
         }
     </script>
+    <%- partial('click2show') %>
 </section>
