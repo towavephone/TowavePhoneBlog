@@ -81,6 +81,8 @@
           }) %>
     <% } else if (theme.gitment.on) { %>
       <%- partial('comments/gitment') %>
+    <% } else if (theme.gitalk.on) { %>
+      <%- partial('comments/gitalk') %>
     <% } %>
 <% } %>
 
