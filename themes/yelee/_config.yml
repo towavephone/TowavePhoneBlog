@@ -120,11 +120,11 @@ gitment:
 
 gitalk:
   on: true
-  clientID: c61abeb31906bb4a209d,
-  clientSecret: fac8b9e40113945430e0ea638efdb96e7e0df9b5,
-  repo: towavephone.github.io,
-  owner: towavephone,
-  admin: ['towavephone'],
+  clientID: c61abeb31906bb4a209d
+  clientSecret: fac8b9e40113945430e0ea638efdb96e7e0df9b5
+  repo: towavephone.github.io
+  owner: towavephone
+  admin: ['towavephone']
   distractionFreeMode: true
 # >>> Style Customisation 样式自定义 <<<
 
