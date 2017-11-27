@@ -40,7 +40,7 @@ HelloWorld.class
 Use -f if you really want to add them.
 ```
 
->如果我们意外的将想要忽略的文件添加到缓存中去了，我们可以使用rm命令将其从中移除：
+>如果我们意外的将想要忽略的文件添加到缓存中去了，我们可以使用rm命令将其从中移除，不会删除本地文件：
 
 ```bash
 $ git rm HelloWorld.class --cached
