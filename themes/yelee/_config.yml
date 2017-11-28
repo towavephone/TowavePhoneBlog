@@ -14,10 +14,10 @@ menu:
   关于我: /about/
 
 # Link to your avatar | 填写头像地址
-avatar: /resource/avatar.jpg
+avatar: /resource/avatar.gif
 
 # Small icon of Your site | 站点小图标地址
-favicon: /resource/bitbug_favicon.ico
+favicon: /resource/avatar.gif
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言
@@ -270,7 +270,7 @@ share:
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-baidu_site: 
+baidu_site: gc3PldFwYc
 google_site: 
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
@@ -278,7 +278,7 @@ google_analytics:
 
 # 百度统计 http://sitecenter.baidu.com/sc-web/
 # 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容
-baidu_tongji: 
+baidu_tongji: 500e7e771d9096699a8156ade66f7014
 
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
@@ -322,6 +322,5 @@ leancloud_visitors:
   app_id: qox34zOusBwg5XlCfVh8XRhg-gzGzoHsz #你的app_id
   app_key: 0PKx22M4tnS8xSgRsFar5G5A #你的的app_key
 
-  
-
-
+sitemap:
+  path: sitemap.xml

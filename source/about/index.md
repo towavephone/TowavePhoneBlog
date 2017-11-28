@@ -58,7 +58,7 @@ fancybox: false
 
 <p class="sign"><span>——</span> 女王控, 2017年11月15日</p>
 
-<img src="/background/bg-3.jpg" width="50%">
+<img src="/background/bg-7.jpg" width="50%">
 
 **开博缘由:**
 > 在建立改造博客网站的过程中，学习和巩固前端基本知识；
@@ -77,7 +77,7 @@ fancybox: false
 [1]: https://github.com/MOxFIVE/hexo-theme-yelee
 
 **博客文章下载:**
-> 本博客所有文章的源码都备份在 GitHub 上，有需要可以 [点此下载](https://github.com/towavephone/SongTaoBlog)。
+> 本博客所有文章的源码都备份在 GitHub 上，有需要可以 [点此下载](https://github.com/towavephone/TowavePhoneBlog)。
 
 **欢迎交流:**
 > 个人邮件及社交网站等信息见边栏底部；
