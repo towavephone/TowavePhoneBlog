@@ -6,4 +6,3 @@ node_modules/*
 !./node_modules/hexo-generator-index/lib/generator.js
 public/
 .deploy*/
-yarn.lock
