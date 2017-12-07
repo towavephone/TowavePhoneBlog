@@ -132,10 +132,10 @@ gitalk:
 ## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
-background_image: 5
+background_image: 7
 
 # Base Font Size | 字号调节
-base_font_size: 18  #px, 16 - 24
+base_font_size: 20  #px, 16 - 24
 
 ## General Color Scheme | 主题配色方案 
 ## 可用值 Value: yilia
@@ -160,10 +160,10 @@ blockquote_style:
 heading_style: 0 # Value: 0 - 2
 
 ## List style type (ul) | 无序列表项标记样式
-list_style: 3  # value: 0 - 12 可选
+list_style: 2  # value: 0 - 12 可选
 
 # 左边栏宽度 px
-left_col_width: 400
+left_col_width: 500
 
 # Copyright info. of post | 文末版权信息
 copyright: true
@@ -172,7 +172,7 @@ copyright: true
 toc:
   on: true
   list_number: true # 目录序号
-  max_depth: 3  # 1 - 6 (h1-h6) 目录最大级数
+  max_depth: 6  # 1 - 6 (h1-h6) 目录最大级数
   nowrap: true # Keep title on same line | 目录标题不换行
 
 # 是否开启主页及加载头像时的动画效果
