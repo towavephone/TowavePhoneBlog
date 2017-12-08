@@ -113,7 +113,7 @@ tags:
 </html>
 ```
 
-## 使用PropTypes验证自定义React组件道具（3:30）
+## [使用PropTypes验证自定义React组件道具（3:30）](https://egghead.io/lessons/react-validate-custom-react-component-props-with-proptypes)
 ### 使用自定义PropTypes验证
 ```html JavaScript
 <!DOCTYPE html>
