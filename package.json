@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "hexo s -p 80",
     "prod": "hexo clean && hexo g && gulp",
-    "precommit": "yarn run prod",
+    "precommit": "yarn prod",
     "prepush": "hexo d"
   },
   "dependencies": {
