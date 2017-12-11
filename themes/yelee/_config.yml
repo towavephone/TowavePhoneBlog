@@ -163,7 +163,7 @@ heading_style: 0 # Value: 0 - 2
 list_style: 2  # value: 0 - 12 可选
 
 # 左边栏宽度 px
-left_col_width: 500
+left_col_width: 400
 
 # Copyright info. of post | 文末版权信息
 copyright: true

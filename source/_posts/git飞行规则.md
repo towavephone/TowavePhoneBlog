@@ -1,9 +1,9 @@
 title: git飞行规则
 date: 2017-12-9 10:19:20
 categories:
-- git
+- 版本控制工具
 tags:
-- git法则
+- git答疑
 - git进阶
 ---
 

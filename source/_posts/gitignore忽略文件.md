@@ -5,7 +5,7 @@ date: 2017-11-20 00:15:59
 comments: 
 fancybox: 
 categories:
-- git
+- 版本控制工具
 tags:
 - git进阶
 - gitignore
