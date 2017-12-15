@@ -96,4 +96,4 @@ deploy:
 # Security
 ##
 encrypt:
-    enable: true
+  enable: true

@@ -6,6 +6,7 @@ tags:
 - PS
 - PhotoShop
 - 移动
+- 原创
 ---
 [点击此处查看PS视频](https://www.bilibili.com/video/av11506181/?from=search&seid=7154155166873854341#page=2)
 - psd文件保存所有更改

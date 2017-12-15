@@ -7,6 +7,7 @@ tags:
 - Docker
 - Docker安装
 - linux
+- 转载
 ---
 ## 安装环境
 - Ubuntu16.04（Xenial LTS）

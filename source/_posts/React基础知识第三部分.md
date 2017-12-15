@@ -7,6 +7,7 @@ tags:
 - React
 - JavaScript
 - React基础知识
+- 原创
 ---
 学习地址：[新手指南ReactJS视频](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db)，`以下标题均采用链接+视频时长的方式展示`
 ## [React事件处理（3:42）](https://egghead.io/lessons/egghead-use-event-handlers-with-react)

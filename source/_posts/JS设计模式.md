@@ -9,6 +9,7 @@ categories:
 tags:
 - JS
 - 设计模式
+- 转载
 ---
 ## 单例模式 
 ```js

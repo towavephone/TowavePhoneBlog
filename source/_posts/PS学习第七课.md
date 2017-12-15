@@ -6,6 +6,7 @@ tags:
 - PS
 - PhotoShop
 - 切片工具
+- 原创
 ---
 [点击此处查看PS视频](https://www.bilibili.com/video/av11506181/index_9.html#page=9)
 # 笔记要点

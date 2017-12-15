@@ -6,6 +6,7 @@ tags:
 - PS
 - PhotoShop
 - 魔棒
+- 原创
 ---
 [点击此处查看PS视频](https://www.bilibili.com/video/av11506181/?from=search&seid=7154155166873854341#page=6)
 ## 笔记要点

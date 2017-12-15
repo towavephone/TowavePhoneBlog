@@ -14,10 +14,10 @@ menu:
   关于我: /about/
 
 # Link to your avatar | 填写头像地址
-avatar: /resource/avatar.jpg
+avatar: /resource/avatar.gif
 
 # Small icon of Your site | 站点小图标地址
-favicon: /resource/avatar.jpg
+favicon: /resource/avatar.gif
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言
@@ -212,10 +212,10 @@ open_in_new:
   global: 0 # 0-2
   title: false # article title in homepage 主页文章标题
   post: false # link within post/page 正文中的链接
-  tags: false # 标签
-  categories: false # 分类
+  tags: true # 标签
+  categories: true # 分类
   article_nav: false # 导航
-  archives: false # 归档
+  archives: true # 归档
   mini_archives: false # 迷你归档
   menu: false # 边栏菜单
   friends: true  # 友情链接

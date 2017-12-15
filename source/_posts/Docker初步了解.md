@@ -8,6 +8,7 @@ tags:
 - Docker
 - Docker初级入门
 - linux
+- 转载
 ---
 
 >翻译[深入 Docker：容器和镜像](http://opensolitude.com/2015/04/26/discovering-docker-containers-images.html)这篇文章，通过一些实例向大家介绍`Docker`容器和镜像的具体区别。

@@ -7,6 +7,7 @@ tags:
 - Docker
 - Docker源
 - 阿里云
+- 转载
 ---
 
 - 安装／升级你的Docker客户端

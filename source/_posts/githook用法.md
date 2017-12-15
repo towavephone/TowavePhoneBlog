@@ -8,6 +8,7 @@ categories:
 tags:
 - git进阶
 - githook
+- 转载
 ---
 ## 钩子定义
 >Git可以定制一些钩子，这些钩子可以在特定的情况下被执行，分为Client端的钩子和Server端的钩子。Client端钩子被operation触发，比如commit，merge等，Server端钩子被网络动作触发，比如pushed commits。

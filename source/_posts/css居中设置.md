@@ -5,6 +5,7 @@ categories:
 tags:
 - CSS
 - 居中
+- 原创
 ---
 ## 水平居中设置-行内元素
 > - 如果被设置元素为文本、图片等行内元素时，水平居中是通过给父元素设置 <code>text-align:center</code> 来实现的。
