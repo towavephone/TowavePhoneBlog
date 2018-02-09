@@ -6,7 +6,7 @@
 
 * add acticle,change avatar,add time a few days ago ([36f29f8](https://github.com/towavephone/TowavePhoneBlog/commit/36f29f8))
 * add acticle:front-end interview and optimization ([09a1216](https://github.com/towavephone/TowavePhoneBlog/commit/09a1216))
-* add snow article ([e5707f3](https://github.com/towavephone/TowavePhoneBlog/commit/e5707f3))
+* add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))
 * remove a few days ago ([a692294](https://github.com/towavephone/TowavePhoneBlog/commit/a692294))
 
 
