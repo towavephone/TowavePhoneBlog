@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-02-01)
+# 0.0.0 (2018-02-09)
 
 
 ### Features
@@ -8,6 +8,7 @@
 * add acticle:front-end interview and optimization ([09a1216](https://github.com/towavephone/TowavePhoneBlog/commit/09a1216))
 * add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))
 * remove a few days ago ([a692294](https://github.com/towavephone/TowavePhoneBlog/commit/a692294))
+* the first part of offer algorithm ([5de51b6](https://github.com/towavephone/TowavePhoneBlog/commit/5de51b6))
 
 
 
