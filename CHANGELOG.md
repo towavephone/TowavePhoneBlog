@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-02-17)
+# 0.0.0 (2018-02-24)
 
 
 ### Features
@@ -9,6 +9,7 @@
 * add algorithm part one ([88ff05e](https://github.com/towavephone/TowavePhoneBlog/commit/88ff05e))
 * add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))
 * remove a few days ago ([a692294](https://github.com/towavephone/TowavePhoneBlog/commit/a692294))
+* test comments ([2609ea9](https://github.com/towavephone/TowavePhoneBlog/commit/2609ea9))
 * the first part of offer algorithm ([5de51b6](https://github.com/towavephone/TowavePhoneBlog/commit/5de51b6))
 
 

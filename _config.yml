@@ -78,7 +78,7 @@ theme: Yelee
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/towavephone/towavephone.github.io
+  repo: git@github.com:towavephone/towavephone.github.io.git
   branch: master
 # live2d:
 #   model: miku # 模型名称 默认值: z16
