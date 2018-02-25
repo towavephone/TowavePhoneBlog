@@ -1,5 +1,5 @@
 ---
-title: 剑指offer算法题（一）
+title: 剑指offer算法题——查找
 original: 
 date: 2018-2-8 22:04:33
 comments: 
@@ -8,8 +8,12 @@ categories:
 - 算法
 tags:
 - 数据结构
-- 设计模式
+- 算法
+- 查找
+- 单例模式
+permalink: 剑指offer1
 ---
+
 ## 单例模式
 ### 加同步锁前两次后判断实例是否存在
 >Singleton加锁模式确保多线程下只创建一个实例
@@ -42,6 +46,7 @@ public sealed class Singleton3
     }
 }
 ```
+
 <!--more-->
 
 ### 利用静态构造函数（C#版）
@@ -142,7 +147,7 @@ int main()
 }
 ```
 
-### 替换空格
+## 替换空格
 >请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
 
 >思路：从后往前替换会好的多，合并两个数组时也可以考虑从后往前复制
@@ -207,5 +212,77 @@ int main()
     }
     return 0;
 }
+```
 
+## 旋转数组的最小数字
+>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。 输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。 NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。
+
+>思路：注意1，1，1，0，1这种情况，只能遍历得出结果
+
+
+```c++
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution {
+public:
+    static int minNumberInRotateArray(vector<int> rotateArray) {
+        if(rotateArray.size() <= 0)
+        {
+            return 0;
+        }
+        int index1 = 0;
+        int index2 = rotateArray.size() - 1;
+        // 考虑到数组有可能全部一样，初始化为index1
+        int mid = index1;
+        while(rotateArray[index1] >= rotateArray[index2])
+        {
+            if(index2 - index1 == 1)
+            {
+                mid = index2;
+                break;
+            }
+            mid = (index1 + index2) / 2;
+            if(rotateArray[mid] == rotateArray[index1] && rotateArray[mid] == rotateArray[index2])
+            {
+                int min = rotateArray[index1];
+                for(int i = index1; i < index2; i++)
+                {
+                    if(rotateArray[i] < min)
+                    {
+                        min = rotateArray[i];
+                    }
+                }
+                return min;
+            }
+            if(rotateArray[index1] <= rotateArray[mid])
+            {
+                index1 = mid;
+            }else if(rotateArray[index2] >= rotateArray[mid])
+            {
+                index2 = mid;
+            }
+        }
+        return rotateArray[mid];
+    }
+};
+int main()
+{
+    int a[1000];
+    int n = 0;
+    while(cin>>n)
+    {
+        for(int i = 0; i < n; i++)
+        {
+            cin>>a[i];
+        }
+        if(n > 0)
+        {
+            vector<int> arr(a,a+n);
+            cout<<Solution::minNumberInRotateArray(arr)<<endl;
+        }
+    }
+    return 0;
+}
 ```

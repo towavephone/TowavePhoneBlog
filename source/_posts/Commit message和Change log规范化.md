@@ -7,6 +7,7 @@ tags:
 - git commit message
 - git进阶
 - git change log
+permalink: 提交规范化
 ---
 
 ## [commitizen](https://github.com/commitizen/cz-cli)：规范commit mesage的命令行工具
