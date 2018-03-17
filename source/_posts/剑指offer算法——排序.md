@@ -86,7 +86,7 @@ int main()
 <!--more-->
 
 ### 非递归式
-```
+```c++
 void quickSort(int a[], int left, int right) {
     if(left > right)
     {
