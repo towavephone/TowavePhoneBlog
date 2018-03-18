@@ -204,7 +204,7 @@ public class MergeBU
 ### 思路
 >是一种分治的排序算法，将一个数组分成两个子数组，将两部分独立的排序。
 
-### 特点：
+### 特点
 > - 原地排序，且与长度为N的数组排序所需的时间和NlgN成正比。
 - 缺点是非常脆弱，实现时要小心避免低劣的性能，可能会降级到平方级别
 - 快速排序和归并排序是互补的：归并排序将数组分成两个子数组分别排序，递归调用发生在处理整个数组之前；而快速排序是指当数组的两个子数组都有序时整个数组也就自然有序了，递归调用发生在处理整个数组之后。
@@ -252,6 +252,7 @@ public class Quick
 - 熵最优排序：将数组切分为3部分，分别对应小于，等于和大于切分元素的数组元素。
 
 ### 三向切分的快速排序
+![](/resource/微信截图_20180318111808.png)
 ```java
 // 适用于多个重复主键的元素，对于此情况，它将排序时间从线性对数降低到了线性级别。
 public class Quick3way
@@ -269,6 +270,139 @@ public class Quick3way
         }
         sort(a,lo,lt-1);
         sort(a,gt+1,hi);
+    }
+}
+```
+## 优先队列
+### 思路
+>利用二叉树的最大堆
+
+### 特点
+> - 插入元素和删除最大元素的操作用时和队列大小成对数关系。
+- 对于一个含有N个元素的基于堆的优先队列，插入元素操作只需不超过(lgN+1)次比较，删除最大元素的操作需要不超过2lgN次比较。
+- 在一个大小为N的索引优先队列中，插入元素、改变优先级、删除和删除最小元素操作所需比较次数和logN成正比。
+
+### 基于堆的优先队列
+![](/resource/微信截图_20180318154628.png)
+```java
+public class MaxPQ<Key extends Comparable<Key>>
+{
+
+    private Key[] pq;
+    private int N=0;
+    public MaxPQ(int maxN){
+        pq=(Key[])new Comparable[maxN+1];
+    }
+    public boolean isEmpty(){
+        return N==0;
+    }
+    public int size(){
+        return N;
+    }
+    public void insert(Key v){
+        pq[++N]=v;
+        swim(N);
+    }
+    public Key delMax(){
+        //从根节点得到最大元素
+        Key max=pq[1];
+        //将其和最后一个节点交换
+        exch(1,N--);
+        //防止越界
+        pq[N+1]=null;
+        //恢复堆的有序性
+        sink(1);
+        return max;
+    }
+    private boolean less(int i,int j){
+        return pq[i].compareTo(pq[j])<0;
+    }
+    private void exch(int i,int j){
+        Key t=pq[i];pq[i]=pq[j];pq[j]=t;
+    }
+    private void swim(int k){
+        while(k>1&&less(k/2,k)){
+            exch(k,k/2);
+            k=k/2;
+        }
+    }
+    private void sink(int k){
+        while(2*k<=N){
+            int j=2*k;
+            // 放在右子树
+            if(j<N&&less(j,j+1)) j++;
+            if(!less(k,j)) break;
+            exch(j,k);
+            k=j;
+        }
+    }
+}
+```
+
+### 算法改进
+> - 多叉堆：三叉树或N叉树
+- 调整数组大小：添加一个无参数的构造函数，在insert()添加将数组长度加倍的代码，在delMax()中添加将数组长度减半的代码。
+- 元素的不可变性：假设用例代码不会改变优先队列转换为强制条件，一般不会这么做。
+- 索引优先队列：允许用例引用已经进入优先队列中的元素，给每个元素一个索引。
+
+### 使用优先队列的多向归并
+![](/resource/微信截图_20180318172514.png)
+
+>1. streams大小是N，对应N行有序数据（每一行有多个字符串，而且是有序的）。
+2. merge里面，第一个for循环，根据每行第一个字符串，建立小根堆（可以找出N个字符串中最小的一个。因为每一行也是有序的，所以也是N行所有字符串中最小的）。
+3. while是每次输出N行中最小的字符串。输出后，删掉这个最小的字符串。但是该字符串所在的行可能后面还有其它的字符串（if），所以，把下一个字符串重新参与N行首字符串建立的小根堆。
+4. 直观过程：N行的N个首字符串--->划掉最小的，并输出之--->划掉的那一个所在行的下一个字符串加入进来，仍然是N个字符串。（当然，没有下一个字符串的行就不用管了）--->划掉最小的，并输出之--->（重复）--->一直到划掉所有的字符串。
+5. 比如，有三个班级要进行体检，每次体检都从每个班来一个人进屋体检，每个班级都按生日排好序（比如从1月到12月往后排），但是医生只有一个，每个人体检结束之后，叫自己班的人进屋。每次体检需要按照屋里面人的生日顺序进行体检，直到所有人都体检结束
+
+```java
+public class Multiway
+{
+    public static void merge(In[] streams){
+        int N=streams.length;
+        IndexMinPQ<String> pq=new IndexMinPQ<String>(N);
+        for(int i=0;i<N;i++){
+            if(!streams[i].isEmpty()){
+                pq.insert(i,streams[i].readString());
+            }
+        }
+        while(!pq.isEmpty()){
+            StdOut.println(pq.min());
+            int i=pq.delMin();
+            // 将该输入的下一个字符串添加为一个元素
+            if(!streams[i].isEmpty()){
+                pq.insert(i,streams[i].readString());
+            }
+        }
+    }
+    public static void main(String[] args){
+        int N=args.length;
+        In[] streams=new In[N];
+        for(int i=0;i<N;i++){
+            streams[i]=new In(args[i]);
+        }
+        merge(streams);
+    }
+}
+```
+
+## 堆排序
+### 思路
+>把任意优先队列变成一种排序方法，将所有元素插入一个查找最小元素的优先队列，然后重复调用删除最小元素的操作来将他们按顺序删去。
+
+### 特点
+> - 用下沉操作由N个元素构造堆只需少于2N次比较以及少于N次交换
+
+### 实现
+![](/resource/微信截图_20180318184857.png)![](/resource/微信截图_20180318185323.png)
+```java
+public static void sort(Comparable[] a){
+    int N=a.length;
+    for(int k=N/2;K>=1;k--){
+        sink(a,k,N);
+    }
+    while(N>1){
+        exch(a,1,N--);
+        sink(a,1,N);
     }
 }
 ```
