@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-03-18)
+# 0.0.0 (2018-03-20)
 
 
 ### Features
@@ -8,6 +8,7 @@
 * add acticle:front-end interview and optimization ([09a1216](https://github.com/towavephone/TowavePhoneBlog/commit/09a1216))
 * add algorithm part one ([88ff05e](https://github.com/towavephone/TowavePhoneBlog/commit/88ff05e))
 * add interview data ([51d9a3d](https://github.com/towavephone/TowavePhoneBlog/commit/51d9a3d))
+* add seek algorithm ([01bc035](https://github.com/towavephone/TowavePhoneBlog/commit/01bc035))
 * add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))
 * add sort algorithm ([d1b9fd8](https://github.com/towavephone/TowavePhoneBlog/commit/d1b9fd8))
 * modify config ([bcbd6f6](https://github.com/towavephone/TowavePhoneBlog/commit/bcbd6f6))

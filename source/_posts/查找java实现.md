@@ -5,7 +5,7 @@ date: 2018-3-20 13:58:04
 comments:
 fancybox:
 categories:
-- 算法
+- 面试
 tags:
 - 数据结构
 - 算法
@@ -129,13 +129,15 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>{
 > 使用每个结点含有两个链接的二叉查找树高效实现符号表。
 
 ### 特点
-![](/resource/微信截图_20180320182015.png)
+![](/resource/微信截图_20180320182015.png)![](/resource/微信截图_20180321182858.png)
 > - 在由N个随机键构造的二叉查找树中，查找命中平均所需的比较次数为~2lnN（约1.39lgN）。
 - 在由N个随机键构造的二叉查找树中插入和查找未命中平均所需的比较次数为~2lnN（约1.39lgN）。
 - 虽然查找命中比二分查找高约39%，但是插入操作访问数组的次数是线性级别的。
+- 在一颗二叉查找树中，所有操作在最坏情况下所需的时间都和树的高度成正比。
 
 
 ### 实现
+![](/resource/微信截图_20180321174624.png)![](/resource/微信截图_20180321174731.png)![](/resource/微信截图_20180321174841.png)![](/resource/微信截图_20180321174958.png)
 ```java
 public class BST<Key extends Compareable<Key>,Value>{
     private Node root;
@@ -181,6 +183,102 @@ public class BST<Key extends Compareable<Key>,Value>{
         else x.val=val;
         x.N=size(x.left)+size(x.right)+1;
         return x;
+    }
+    public Key min(){
+        return min(root).key;
+    }
+    private Node min(Node x){
+        if(x.left==null) return x;
+        return min(x.left);
+    }
+    public Key floor(Key key){
+        Node x=floor(root,key);
+        if(x==null) return null;
+        return x.key;
+    }
+    private Node floor(Node x,Key key){
+        /**
+        如果 key 小于根节点的 key，那么小于等于 key 的最大键节点一定在左子树中；如果 key 大于根节点的 key，只有当根节点右子树中存在小于等于 key 的节点，小于等于 key 的最大键节点才在右子树中，否则根节点就是小于等于 key 的最大键节点。
+        **/
+        if(x==null) return null;
+        int cmp=key.compareTo(x.key);
+        if(cmp==0) return x;
+        if(cmp<0) return floor(x.left,key);
+        Node t=floor(x.right,key);
+        if(t!=null) return t;
+        else return x;
+    }
+    public Key select(int k){
+        return select(root,k).key;
+    }
+    private Node select(Node x,int k){
+        // 返回排名为k的结点
+        if(x==null) return null;
+        int t=size(x.left);
+        if(t>k) return select(x.left,k);
+        if(t==k) return x;
+        if(t<k) return select(x.right,k-t-1);
+    }
+    public int rank(Key key){
+        return rank(key,root);
+    }
+    private int rank(Key key,Node x){
+        // 返回以x为根结点的子树中小于x的key的数量
+        if(x==null) return 0;
+        int cmp=key.compareTo(x.key);
+        if(cmp==0) return size(x.left);
+        else if(cmp<0) return rank(key,x.left);
+        else return rank(key,x.right)+size(x.left)+1;
+    }
+    public void deleteMin(){
+        root=deleteMin(root);
+    }
+    private Node deleteMin(Node x){
+        // 令指向最小节点的链接指向最小节点的右子树。
+        if(x.left==null) return x.right;
+        x.left=deleteMin(x.left);
+        x.N=size(x.left)+size(x.right)+1;
+        return x;
+    }
+    public delete(Key key){
+        root=delete(root,key);
+    }
+    private Node delete(Node x,Key key){
+        // 如果待删除的节点只有一个子树，那么只需要让指向待// 删除节点的链接指向唯一的子树即可；否则，让右子树// 的最小节点替换该节点。
+        if(x==null) return null;
+        int cmp=key.compareTo(x.key);
+        if(cmp<0) x.left=delete(x.left,key);
+        else if(cmp>0) x.right=delete(x.right,key);
+        else {
+            if(x.right==null) return x.left;
+            if(x.left==null) return x.right;
+            Node t=x;
+            x=min(t.right);
+            x.right=deleteMin(t.right);
+            x.left=t.left;
+        }
+        x.N=size(x.left)+size(x.right)+1;
+        return x;
+    }
+    public Iterable<Key> keys(){
+        return keys(min(),max());
+    }
+    public Iterable<Key> keys(Key lo,Key hi){
+        Queue<Key> queue=new Queue<Key>();
+        keys(root,queue,lo,hi);
+        return queue;
+    }
+    private void keys(Node x,Queue<Key> queue,Key lo,Key hi){
+        // 利用二叉查找树中序遍历的结果为有序序列的特点。
+        if(x==null) return;
+        int cmplo=lo.compareTo(x.key);
+        int cmphi=hi.compareTo(x.key);
+        // 查找左子树
+        if(cmplo<0) keys(x.left,queue,lo,hi);
+        // 查找根结点
+        if(cmplo<=0&&cmphi>=0) queue.enqueue(x.key);
+        // 查找右子树
+        if(cmphi>0) keys(x.right,queue,lo,hi);
     }
 }
 ```

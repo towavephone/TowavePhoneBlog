@@ -1,11 +1,10 @@
----
 title: 剑指offer算法题——链表
 original: 
 date: 2018-2-21 11:04:04
 comments: 
 fancybox: 
 categories:
-- 算法
+- 面试
 tags:
 - 数据结构
 - 链表
