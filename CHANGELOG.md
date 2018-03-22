@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-03-20)
+# 0.0.0 (2018-03-21)
 
 
 ### Features
@@ -7,6 +7,7 @@
 * add acticle,change avatar,add time a few days ago ([36f29f8](https://github.com/towavephone/TowavePhoneBlog/commit/36f29f8))
 * add acticle:front-end interview and optimization ([09a1216](https://github.com/towavephone/TowavePhoneBlog/commit/09a1216))
 * add algorithm part one ([88ff05e](https://github.com/towavephone/TowavePhoneBlog/commit/88ff05e))
+* add binary search tree algorithm ([e1d8c3c](https://github.com/towavephone/TowavePhoneBlog/commit/e1d8c3c))
 * add interview data ([51d9a3d](https://github.com/towavephone/TowavePhoneBlog/commit/51d9a3d))
 * add seek algorithm ([01bc035](https://github.com/towavephone/TowavePhoneBlog/commit/01bc035))
 * add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))

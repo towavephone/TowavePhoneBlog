@@ -14,10 +14,12 @@
             }
         }
         #header{
-            padding: 10px 0 0 0;
+            padding: 20px 0 0 0;
             .profilepic{
                 display: block;
                 position: relative;
+                width: 100 + base-font-size - 16;
+                max-height: @width;
                 z-index: 100;
             }
             .header-menu{
@@ -91,11 +93,11 @@
     }
     .profilepic{
         text-align: center;
-        // display: block;
+        display: block;
         // border: 1px solid #fff;
         // border-radius: 50%;
-        width: 128 + base-font-size - 16;
-        height: @width;
+        // width: 128 + base-font-size - 16;
+        // height: @width;
         margin: 0 auto;
         position: relative;
         overflow: hidden;
@@ -103,6 +105,7 @@
         -webkit-box-pack: center;
         -webkit-box-align: center;
         text-align: center;
+        filter: grayscale(100%);
         img{
             width: 100%;
             animation-duration: .4s;
@@ -114,24 +117,28 @@
             // background: pink;
             // border: 1px solid white;
             // box-shadow: 0 0 2em red;
-            animation: profilepic .1s linear infinite alternate;
-            -webkit-animation: profilepic .1s linear infinite alternate; 
+            // animation: profilepic .3s linear alternate;
+            // -webkit-animation: profilepic .3s linear alternate; 
+            transform: rotateX(360deg);
+            transform-origin: 100% 50%; /* 高的一半 */
+            transition: 1s;
+	        transform-style: preserve-3d;
+            filter: none;
         }
-        @keyframes profilepic {
-            0% {
-                left: -3px;
-                top: 0x;
-            }
-            50% {
-                left: 0px;
-                top: 0x;
-                transform: rotate(10deg);
-            }
-            100% {
-                left: 3px;
-                top: 0px;
-            }
-        }
+        // @keyframes profilepic {
+        //     0% {
+        //         left: 0px;
+        //         top: 0x;
+        //     }
+        //     50% {
+        //         left: -10px;
+        //         top: 0x;
+        //     }
+        //     100% {
+        //         transform: rotateY(180deg);
+        //         filter: none;                
+        //     }
+        // }
     }
     .header-subtitle{
         text-align: center;
