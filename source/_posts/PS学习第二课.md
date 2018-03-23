@@ -17,8 +17,14 @@ tags:
 <!-- more -->
 ## 笔记内容
 <style>
-    img{
-        width: 300px;
+    .article-entry p{
+        display: table;
+        margin: 0 auto;
+    }
+    .article img {
+        max-width: 300px;
+        max-height: 300px;
+        padding-right: 50px;
     }
 </style>
 - 按住shift键加选区，alt键减选区，alt+shift键交叉选区，反键可以通过拷贝的图层

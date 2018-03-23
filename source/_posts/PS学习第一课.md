@@ -16,8 +16,14 @@ tags:
 <!-- more -->
 ## 笔记内容
 <style>
-    img{
-        width: 300px;
+    .article-entry p{
+        display: table;
+        margin: 0 auto;
+    }
+    .article img {
+        max-width: 300px;
+        max-height: 300px;
+        padding-right: 50px;
     }
 </style>
 - 勾选自动选择拖拽图片，有图层移动和组移动，显示变换控件即是放大缩小的功能

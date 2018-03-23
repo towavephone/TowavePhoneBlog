@@ -17,8 +17,14 @@ tags:
 <!-- more -->
 ## 笔记内容
 <style>
-    img{
-        width: 300px;
+    .article-entry p{
+        display: table;
+        margin: 0 auto;
+    }
+    .article img {
+        max-width: 300px;
+        max-height: 300px;
+        padding-right: 50px;
     }
 </style>
 - 形似多变形的物体直接扣

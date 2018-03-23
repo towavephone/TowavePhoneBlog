@@ -28,6 +28,7 @@ var createMask = singleton( function(){
 >这段代码来自es5的new和构造器的相关说明，可以看到，
 所谓的new本身只是一个对象的复制和改写过程， 
 而具体会生成什么是由调用ObjectFactory时传进去的参数所决定的。
+
 ```js
 function A( name ){
     this.name = name;

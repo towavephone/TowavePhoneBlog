@@ -23,7 +23,7 @@ tags:
     .article img {
         width: 300px;
         max-height: 300px;
-        padding-right: 80px;
+        padding-right: 50px;
     }
 </style>
 

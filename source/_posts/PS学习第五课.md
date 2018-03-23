@@ -16,9 +16,14 @@ tags:
 
 # 笔记内容
 <style>
-    img {
-        max-width: 200px;
-        max-height: 200px;
+    .article-entry p{
+        display: table;
+        margin: 0 auto;
+    }
+    .article img {
+        max-width: 300px;
+        max-height: 300px;
+        padding-right: 50px;
     }
 </style>
 
@@ -32,7 +37,9 @@ tags:
 > 1. 关闭`图层1`，通过调整边缘命令(选择并遮住)，然后选择视图，尽量选择对比度大的，左侧有放大镜，移动功能，勾选显示半径，调整半径至合适像素，输出到新建图层为`图层0拷贝`，可看到发梢部分有泛白色，继续操作
 > 1. 结合`图层1`和`图层0拷贝`即可得到完美带发梢头像
 
-![自动抠图步骤1](/resource/Snipaste_2017-11-21_00-45-16.jpg)![自动抠图步骤2](/resource/Snipaste_2017-11-21_00-51-10.jpg)![自动抠图步骤3](/resource/Snipaste_2017-11-21_01-10-31.jpg)![自动抠图步骤4](/resource/Snipaste_2017-11-21_01-12-01.jpg)![自动抠图步骤5](/resource/Snipaste_2017-11-21_01-18-59.jpg)
+![自动抠图步骤1](/resource/Snipaste_2017-11-21_00-45-16.jpg)![自动抠图步骤2](/resource/Snipaste_2017-11-21_00-51-10.jpg)![自动抠图步骤3](/resource/Snipaste_2017-11-21_01-10-31.jpg)
+
+![自动抠图步骤4](/resource/Snipaste_2017-11-21_01-12-01.jpg)![自动抠图步骤5](/resource/Snipaste_2017-11-21_01-18-59.jpg)
 
 ### 二、 手动抠图方法
 > 1. 1、2步骤同上，在第3步骤左侧有功能键可以手动涂抹选择区域
