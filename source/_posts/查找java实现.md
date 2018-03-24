@@ -13,17 +13,6 @@ tags:
 permalink: 查找java
 ---
 
-<style>
-    .article-entry>p{
-        display: table;
-        margin: 0 auto;
-    }
-    .article-entry img {
-        max-width: 300px;
-        max-height: 300px;
-        padding-right: 20px;
-    }
-</style>
 
 ## 无序链表的顺序查找
 ### 特点
@@ -133,8 +122,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>{
 > 使用每个结点含有两个链接的二叉查找树高效实现符号表。
 
 ### 特点
-![](/resource/微信截图_20180320182015.png)
-![](/resource/微信截图_20180321182858.png)
+![](/resource/微信截图_20180320182015.png)![](/resource/微信截图_20180321182858.png)
 > - 在由N个随机键构造的二叉查找树中，查找命中平均所需的比较次数为~2lnN（约1.39lgN）。
 - 在由N个随机键构造的二叉查找树中插入和查找未命中平均所需的比较次数为~2lnN（约1.39lgN）。
 - 虽然查找命中比二分查找高约39%，但是插入操作访问数组的次数是线性级别的。
@@ -301,9 +289,7 @@ public class BST<Key extends Compareable<Key>,Value>{
 
 
 ### 实现
-![](/resource/微信截图_20180322152831.png)![](/resource/微信截图_20180322153304.png)
-![](/resource/微信截图_20180322153609.png)![](/resource/微信截图_20180322160823.png)
-![](/resource/微信截图_20180322161403.png)![](/resource/微信截图_20180322162044.png)
+![](/resource/微信截图_20180322152831.png)![](/resource/微信截图_20180322153304.png)![](/resource/微信截图_20180322153609.png)![](/resource/微信截图_20180322160823.png)![](/resource/微信截图_20180322161403.png)![](/resource/微信截图_20180322162044.png)
 
 ## 红黑二叉查找树
 ### 思路

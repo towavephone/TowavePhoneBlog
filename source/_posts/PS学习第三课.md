@@ -16,17 +16,6 @@ tags:
 1. 了解宽度，对比度，频率
 <!-- more -->
 ## 笔记内容
-<style>
-    .article-entry p{
-        display: table;
-        margin: 0 auto;
-    }
-    .article img {
-        max-width: 300px;
-        max-height: 300px;
-        padding-right: 50px;
-    }
-</style>
 - 形似多变形的物体直接扣
 ![多边形套索步骤](/resource/Snipaste_2017-11-20_00-28-07.jpg)![多边形套索抠出结果](/resource/Snipaste_2017-11-20_00-29-46.jpg)
 - 套索工具是模拟鼠标的轨迹，看起来不规则，用来做一些不精准的操作，用来打马赛克

@@ -15,18 +15,6 @@ tags:
 <!-- more -->
 
 # 笔记内容
-<style>
-    .article-entry p{
-        display: table;
-        margin: 0 auto;
-    }
-    .article img {
-        width: 300px;
-        max-height: 300px;
-        padding-right: 50px;
-    }
-</style>
-
 ## 功能
 ><b>`透视裁剪`:交点处看到的地方，交点间距越小的地方看到的越大，更改透视角度（待查证）</b>
 

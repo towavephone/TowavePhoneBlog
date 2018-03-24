@@ -22,15 +22,6 @@ tags:
 1. 建立生产
 <!--more-->
 
-<style>
-    img {
-        display: block;
-        max-width: 100%;
-        margin: 0 auto;
-        padding-right: 80px;
-    }
-</style>
-
 ## 衡量效率
 
 在深入研究代码之前，了解您正在优化的内容以及它所带来的影响是非常重要的。我建议使用的两个工具是Lighthouse和react-addons-perf。这两个工具都可以通过NPM（安装[1](https://www.npmjs.com/package/lighthouse)，[2](https://www.npmjs.com/package/react-addons-perf)），并都提供一个浏览器扩展（[1](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)，[2](https://chrome.google.com/webstore/detail/react-perf/hacmcodfllhbnekmghgdlplbdnahmhmm?hl=en-US)）。我个人建议使用npm for Lighthouse，因为结果似乎更可靠，并使用React Perf的Chrome扩展。以下是来自Lighthouse的输出示例，我们将在以下部分查看React Perf的结果。
@@ -69,8 +60,7 @@ const users = [
 <UserList users={users} />
 ```
 由于用户ID是唯一的，我们可以确信地使用它作为列表项的关键字。对于更实际的应用程序，我创建了一个Postmate的feed的模拟版本，当点击时从DOM中删除了一个商店。
-![](/resource/1_hJJK3sBRN2g3NbXDPHTF9A.png)
-![](/resource/1_K9z91UAqGDb8pbcU1GRcPg.png)
+![](/resource/1_hJJK3sBRN2g3NbXDPHTF9A.png)![](/resource/1_K9z91UAqGDb8pbcU1GRcPg.png)
 使用react-addons-perf Chrome扩展，我计算了使用UUID作为关键字以及使用Math.random()一个关键字来移除一个元素的操作次数。结果表明，使用唯一一致的密钥只需要28个操作来移除项目，而随机生成的密钥需要超过`25倍的数目操作才能执行完全相同的任务`。谨慎用你的`key`。
 ## 管理shouldComponentUpdate
 

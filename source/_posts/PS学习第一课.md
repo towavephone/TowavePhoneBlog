@@ -15,17 +15,6 @@ tags:
 - 置入功能可以将图片直接植入图层
 <!-- more -->
 ## 笔记内容
-<style>
-    .article-entry p{
-        display: table;
-        margin: 0 auto;
-    }
-    .article img {
-        max-width: 300px;
-        max-height: 300px;
-        padding-right: 50px;
-    }
-</style>
 - 勾选自动选择拖拽图片，有图层移动和组移动，显示变换控件即是放大缩小的功能
 ![自动选择](/resource/自动选择.jpg)
 - 按住ctrl键选择文字控件可以将其对齐，ctrl+r打开标尺

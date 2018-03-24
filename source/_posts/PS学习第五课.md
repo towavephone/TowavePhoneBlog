@@ -15,18 +15,6 @@ tags:
 <!-- more -->
 
 # 笔记内容
-<style>
-    .article-entry p{
-        display: table;
-        margin: 0 auto;
-    }
-    .article img {
-        max-width: 300px;
-        max-height: 300px;
-        padding-right: 50px;
-    }
-</style>
-
 ## 功能
 1. shift加选区，alt键减选区，alt+鼠标右键左边拖拽范围变大，右边减小
 1. 对所有图层取样：勾选选取所有图层，同上节魔棒的功能

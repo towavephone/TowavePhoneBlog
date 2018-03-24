@@ -16,17 +16,6 @@ tags:
 1. 了解什么是羽化
 <!-- more -->
 ## 笔记内容
-<style>
-    .article-entry p{
-        display: table;
-        margin: 0 auto;
-    }
-    .article img {
-        max-width: 300px;
-        max-height: 300px;
-        padding-right: 50px;
-    }
-</style>
 - 按住shift键加选区，alt键减选区，alt+shift键交叉选区，反键可以通过拷贝的图层
 ![加选区](/resource/加选区.jpg)
 - 点击右键选中通过拷贝的图层，得到一个新的图层

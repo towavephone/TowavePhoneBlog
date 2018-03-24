@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-03-22)
+# 0.0.0 (2018-03-23)
 
 
 ### Features
@@ -8,6 +8,7 @@
 * add acticle:front-end interview and optimization ([09a1216](https://github.com/towavephone/TowavePhoneBlog/commit/09a1216))
 * add algorithm part one ([88ff05e](https://github.com/towavephone/TowavePhoneBlog/commit/88ff05e))
 * add binary search tree algorithm ([e1d8c3c](https://github.com/towavephone/TowavePhoneBlog/commit/e1d8c3c))
+* add hash table ([c9336fc](https://github.com/towavephone/TowavePhoneBlog/commit/c9336fc))
 * add interview data ([51d9a3d](https://github.com/towavephone/TowavePhoneBlog/commit/51d9a3d))
 * add red black tree algorithm ([77ffd6c](https://github.com/towavephone/TowavePhoneBlog/commit/77ffd6c))
 * add seek algorithm ([01bc035](https://github.com/towavephone/TowavePhoneBlog/commit/01bc035))

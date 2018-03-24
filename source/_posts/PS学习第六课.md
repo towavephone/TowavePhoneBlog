@@ -15,18 +15,6 @@ tags:
 <!-- more -->
 
 # 笔记内容
-<style>
-    .article-entry p{
-        display: table;
-        margin: 0 auto;
-    }
-    img {
-        max-width: 100%;
-        max-height: 300px;
-        padding-right: 60px;
-    }
-</style>
-
 ## 功能
 ><b>拖拽四角可形成边框，可更换边框颜色</b>
 
