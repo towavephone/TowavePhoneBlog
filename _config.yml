@@ -97,3 +97,5 @@ deploy:
 ##
 encrypt:
   enable: true
+aplayer:
+  meting: true

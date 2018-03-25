@@ -1,52 +1,14 @@
 ---
 title: 关于我 & 留言板
-date: 2017年11月15日16:06:18
-fancybox: false
+date: 2018-3-25 13:23:14
 ---
 
 <style type="text/css">
-	strong a {
-		color: #747474;
-	}
-	.player {
-		text-align: center;
-		margin: .5em auto 0;
-		width: 100%;
-		max-width: 22em;
-	}
-	.player br {
-		display: none;
-	}
 	.sign {
 		text-align: right;
 		font-style: italic;
 	}
-	#ds-recent-visitors {
-		margin: 0;
-		padding: 0;
-	}
-	#ds-recent-visitors div img {
-		display: inline-block !important;
-		width: 56px !important;
-		height: 56px !important;
-		border-radius: 50%;
-		border: 1px solid #ddd;
-		padding: 2px;
-		box-shadow: 1px 1px 1px rgba(0,0,0, .15);
-	}
-	.article-entry img:first-child {
-		display: block;
-	}
-	.article-entry span {
-		font-family: Arial;
-	}
-	#ds-hot-posts {
-		display: none;
-	}
 </style>
-
----
-
 
 >欢迎来到女王控的家！我是towavephone，是一个逗比型青年，初音粉，93老鲜肉，前端、安卓小萌新
 
@@ -58,7 +20,7 @@ fancybox: false
 
 <p class="sign"><span>——</span> 女王控, 2017年11月15日</p>
 
-<img src="/background/bg-7.jpg" width="50%">
+<div align="center"><img src="/background/bg-7.jpg"></div>
 
 **开博缘由:**
 > 在建立改造博客网站的过程中，学习和巩固前端基本知识；
@@ -83,8 +45,7 @@ fancybox: false
 > 个人邮件及社交网站等信息见边栏底部；
 > 有什么留言或问题直接在文末留下评论即可。
 
-<div class="player">
-<iframe scrolling="auto" frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=330 src="http://music.163.com/outchain/player?type=0&id=524136573&auto=0"></iframe>
-</div>
+
+{% meting "524136573" "netease" "playlist" %}
 
 <ul class="ds-recent-visitors" />
