@@ -143,7 +143,7 @@ public static void merge(Comparable[] a,int lo,int mid,int hi){
 ```
 
 ### 自顶向下实现
-![](/resource/QQ截图20180317123059.jpg)
+<div align="center">{% qnimg QQ截图20180317123059.jpg %}</div>
 
 ```java
 public class Merge
@@ -165,7 +165,7 @@ public class Merge
 ```
 
 ### 自底向上实现
-![](/resource/QQ截图20180317123009.jpg)
+<div align="center">{% qnimg QQ截图20180317123009.jpg %}</div>
 
 ```java
 public class MergeBU
@@ -203,7 +203,8 @@ public class MergeBU
 - 对于大小为N的数组，算法的运行时间在1.39NlgN的某个常数因子的范围之内。比归并排序更快，因为它移动数据的次数更少，虽然比较次数多了39%。
 
 ### 实现
-![](/resource/QQ截图20180317150548.jpg)
+<div align="center">{% qnimg QQ截图20180317150548.jpg %}</div>
+
 ```java
 public class Quick
 {
@@ -241,7 +242,8 @@ public class Quick
 - 熵最优排序：将数组切分为3部分，分别对应小于，等于和大于切分元素的数组元素。
 
 ### 三向切分的快速排序
-![](/resource/微信截图_20180318111808.png)
+<div align="center">{% qnimg 微信截图_20180318111808.png %}</div>
+
 ```java
 // 适用于多个重复主键的元素，对于此情况，它将排序时间从线性对数降低到了线性级别。
 public class Quick3way
@@ -272,7 +274,8 @@ public class Quick3way
 - 在一个大小为N的索引优先队列中，插入元素、改变优先级、删除和删除最小元素操作所需比较次数和logN成正比。
 
 ### 基于堆的优先队列
-![](/resource/微信截图_20180318154628.png)
+<div align="center">{% qnimg 微信截图_20180318154628.png %}</div>
+
 ```java
 public class MaxPQ<Key extends Comparable<Key>>
 {
@@ -335,7 +338,7 @@ public class MaxPQ<Key extends Comparable<Key>>
 - 索引优先队列：允许用例引用已经进入优先队列中的元素，给每个元素一个索引。
 
 ### 使用优先队列的多向归并
-![](/resource/微信截图_20180318172514.png)
+<div align="center">{% qnimg 微信截图_20180318172514.png %}</div>
 
 >1. streams大小是N，对应N行有序数据（每一行有多个字符串，而且是有序的）。
 2. merge里面，第一个for循环，根据每行第一个字符串，建立小根堆（可以找出N个字符串中最小的一个。因为每一行也是有序的，所以也是N行所有字符串中最小的）。
@@ -385,7 +388,8 @@ public class Multiway
 - 空间十分紧张时很适用，但现代系统很少使用，因为缓存未命中次数远远高于在相邻元素间比较的算法，如快速排序，归并排序，甚至是希尔排序。
 
 ### 实现
-![](/resource/微信截图_20180318184857.png)![](/resource/微信截图_20180318185323.png)
+<div align="center">{% qnimg 微信截图_20180318184857.png %}{% qnimg 微信截图_20180318185323.png %}</div>
+
 ```java
 public static void sort(Comparable[] a){
     int N=a.length;
@@ -410,7 +414,8 @@ public static void sort(Comparable[] a){
 - 可以把任意的排序算法变成稳定的
 
 ### 问题归约
-![](/resource/微信截图_20180319143607.png)
+<div align="center">{% qnimg 微信截图_20180319143607.png %}</div>
+
 > - 见上表，快速排序是最快的通用排序算法。
 - java系统库选择对原始数据使用三向切分的快速排序，对引用类型使用归并排序。
 - 应用例子：

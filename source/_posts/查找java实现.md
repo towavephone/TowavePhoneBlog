@@ -115,14 +115,15 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>{
 
 ## 预览
 ### 比较
-![](/resource/微信截图_20180320172415.png)
+<div align="center">{% qnimg 微信截图_20180320172415.png %}</div>
 
 ## 二叉查找树
 ### 思路
 > 使用每个结点含有两个链接的二叉查找树高效实现符号表。
 
 ### 特点
-![](/resource/微信截图_20180320182015.png)![](/resource/微信截图_20180321182858.png)
+<div align="center">{% qnimg 微信截图_20180320182015.png %}{% qnimg 微信截图_20180321182858.png %}</div>
+
 > - 在由N个随机键构造的二叉查找树中，查找命中平均所需的比较次数为~2lnN（约1.39lgN）。
 - 在由N个随机键构造的二叉查找树中插入和查找未命中平均所需的比较次数为~2lnN（约1.39lgN）。
 - 虽然查找命中比二分查找高约39%，但是插入操作访问数组的次数是线性级别的。
@@ -130,7 +131,8 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>{
 
 
 ### 实现
-![](/resource/微信截图_20180321174624.png)![](/resource/微信截图_20180321174731.png)![](/resource/微信截图_20180321174841.png)![](/resource/微信截图_20180321174958.png)
+<div align="center">{% qnimg 微信截图_20180321174624.png %}{% qnimg 微信截图_20180321174731.png %}{% qnimg 微信截图_20180321174841.png %}{% qnimg 微信截图_20180321174958.png %}</div>
+
 ```java
 public class BST<Key extends Compareable<Key>,Value>{
     private Node root;
@@ -289,14 +291,15 @@ public class BST<Key extends Compareable<Key>,Value>{
 
 
 ### 实现
-![](/resource/微信截图_20180322152831.png)![](/resource/微信截图_20180322153304.png)![](/resource/微信截图_20180322153609.png)![](/resource/微信截图_20180322160823.png)![](/resource/微信截图_20180322161403.png)![](/resource/微信截图_20180322162044.png)
+<div align="center">{% qnimg 微信截图_20180322152831.png %}{% qnimg 微信截图_20180322153304.png %}{% qnimg 微信截图_20180322153609.png %}{% qnimg 微信截图_20180322160823.png %}{% qnimg 微信截图_20180322161403.png %}{% qnimg 微信截图_20180322162044.png %}</div>
 
 ## 红黑二叉查找树
 ### 思路
 > 2-3 查找树需要用到 2- 节点和 3- 节点，红黑树使用红链接来实现 3- 节点。指向一个节点的链接颜色如果为红色，那么这个节点和上层节点表示的是一个 3- 节点，而黑色则是普通链接。
 
 ### 特点
-![](/resource/微信截图_20180322181626.png)![](/resource/微信截图_20180323173023.png)
+<div align="center">{% qnimg 微信截图_20180322181626.png %}{% qnimg 微信截图_20180323173023.png %}</div>
+
 > - 红链接都为左链接；
 - 完美黑色平衡，即任意空链接到根节点的路径上的黑链接数量相同。
 - 没有任何一个结点同时和两条红链接相连。
@@ -307,7 +310,7 @@ public class BST<Key extends Compareable<Key>,Value>{
 
 
 ### 红黑树的结点表示
-![红黑树的结点表示](/resource/微信截图_20180323133312.png)
+<div align="center">{% qnimg 微信截图_20180323133312.png %}</div>
 
 ```java
 public class RedBlackBST<Key extends Comparable<Key>,Value>{
@@ -333,7 +336,8 @@ public class RedBlackBST<Key extends Comparable<Key>,Value>{
 ### 左旋转
 >因为合法的红链接都为左链接，如果出现右链接为红链接，那么就需要进行左旋转操作。
 
-![](/resource/微信截图_20180323151041.png)
+<div align="center">{% qnimg 微信截图_20180323151041.png %}</div>
+
 ```java
 Node rotateLeft(Node h){
     Node x=h.right;
@@ -350,7 +354,8 @@ Node rotateLeft(Node h){
 ### 右旋转
 >进行右旋转是为了转换两个连续的左红链接，这会在之后的插入过程中探讨。
 
-![](/resource/微信截图_20180323151112.png)
+<div align="center">{% qnimg 微信截图_20180323151112.png %}</div>
+
 ```java
 Node rotateRight(Node h){
     Node x=h.left;
@@ -367,7 +372,8 @@ Node rotateRight(Node h){
 ### 颜色转换
 > 一个4-节点在红黑树中表现为一个结点的左右子节点都是红色的。分裂4-节点除了需要将子节点的颜色由红变黑之外，同时需要将父节点的颜色由黑变红，从2-3树的角度来看就是讲中间结点上移到上层结点。
 
-![](/resource/微信截图_20180323161940.png)
+<div align="center">{% qnimg 微信截图_20180323161940.png %}</div>
+
 ```java
 void filpColors(Node h){
     h.color=RED;
@@ -382,7 +388,8 @@ void filpColors(Node h){
 1. 如果左子节点是红色的且它的左子节点也是红色的，进行右旋转；
 1. 如果左右子节点都是红色的，进行颜色转换。
 
-![](/resource/微信截图_20180323162936.png)
+<div align="center">{% qnimg 微信截图_20180323162936.png %}</div>
+
 ```java
 public class RedBlackBST<Key extends Comparable<Key>,Value>{
     private Node root;
@@ -414,14 +421,15 @@ public class RedBlackBST<Key extends Comparable<Key>,Value>{
 ```
 
 ### 删除最小键
-![](/resource/微信截图_20180323172334.png)
+<div align="center">{% qnimg 微信截图_20180323172334.png %}</div>
+
 >如果最小键在一个 2- 节点中，那么删除该键会留下一个空链接，就破坏了平衡性，因此要确保最小键不在 2- 节点中。将 2- 节点转换成 3- 节点或者 4- 节点有两种方法，一种是向上层节点拿一个 key，一种是向兄弟节点拿一个 key。如果上层节点是 2- 节点，那么就没办法从上层节点拿 key 了，因此要保证删除路径上的所有节点都不是 2- 节点。在向下删除的过程中，保证以下情况之一成立：
 1. 如果当前节点的左子节点不是 2- 节点，完成；
 1. 如果当前节点的左子节点是 2- 节点而它的兄弟节点不是 2- 节点，向兄弟节点拿一个 key 过来；
 1. 如果当前节点的左子节点和它的兄弟节点都是 2- 节点，将左子节点、父节点中的最小键和最近的兄弟节点合并为一个 4- 节点。
 
 ## 总结
-![](/resource/微信截图_20180323174959.png)
+<div align="center">{% qnimg 微信截图_20180323174959.png %}</div>
 
 ## 散列表
 ### 特点

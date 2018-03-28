@@ -8,13 +8,13 @@ description: "Welcome to Hexo: This is your very first post."
 fancybox: 
 ---
 
-![111](//moxfive.xyz/resources/Mihawk-Wind.gif) Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+![111](/background/bg-1.jpg) Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 $$  x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 <!-- more -->
 
 Quick Start
 
-<img src="/background/bg-4.jpg" width="500"/>
+<img src="/background/bg-4.jpg"/>
 
 ## Create a new post
 

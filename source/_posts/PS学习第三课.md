@@ -17,11 +17,14 @@ tags:
 <!-- more -->
 ## 笔记内容
 - 形似多变形的物体直接扣
-![多边形套索步骤](/resource/Snipaste_2017-11-20_00-28-07.jpg)![多边形套索抠出结果](/resource/Snipaste_2017-11-20_00-29-46.jpg)
+<div align="center">{% qnimg Snipaste_2017-11-20_00-28-07.jpg alt:"多边形套索步骤" %}{% qnimg Snipaste_2017-11-20_00-29-46.jpg alt:"多边形套索抠出结果" %}</div>
+
 - 套索工具是模拟鼠标的轨迹，看起来不规则，用来做一些不精准的操作，用来打马赛克
-![马赛克步骤](/resource/Snipaste_2017-11-20_00-34-51.jpg)![马赛克结果](/resource/Snipaste_2017-11-20_00-35-45.jpg)
+<div align="center">{% qnimg Snipaste_2017-11-20_00-34-51.jpg alt:"马赛克步骤" %}{% qnimg Snipaste_2017-11-20_00-35-45.jpg alt:"马赛克结果" %}</div>
+
 - 磁性套索，自动寻找边界，单击鼠标后描出边界，完成时双击鼠标完成抠图，取消之前的一些锚点按delete键，全部取消esc键
-![磁性套索效果图](/resource/Snipaste_2017-11-20_00-46-59.jpg)![磁性套索参数](/resource/Snipaste_2017-11-20_00-52-18.jpg)
+<div align="center">{% qnimg Snipaste_2017-11-20_00-46-59.jpg alt:"磁性套索效果图" %}{% qnimg Snipaste_2017-11-20_00-52-18.jpg alt:"磁性套索参数" %}</div>
+
 > 如何吸附的更好？
 > 1. 宽度：鼠标上下抖动的范围，根据实际调整，一般越大越好
 > 2. 对比度：调高对比度适用于边界不那么明显的（例如调整色阶至图片泛白），抠图更精准

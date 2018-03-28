@@ -22,7 +22,8 @@ tags:
 - 消除锯齿：边缘消除锯齿感
 - 连续：是否选择相邻的颜色
 - 对所有图层取样：魔棒自动选中不同图层，不勾选只能选择一个图层
-![对所有图层取样效果](/resource/Snipaste_2017-11-20_01-47-45.jpg)
+
+<div align="center">{% qnimg Snipaste_2017-11-20_01-47-45.jpg alt:"对所有图层取样效果"%}</div>
 
 ## 相关链接
 1. **PS视频**: <https://www.bilibili.com/video/av11506181/?from=search&seid=7154155166873854341#page=6/>

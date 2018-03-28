@@ -12,7 +12,7 @@ permalink: 提交规范化
 
 ## [commitizen](https://github.com/commitizen/cz-cli)：规范commit mesage的命令行工具
 ### 效果
-![](/resource/add-commit.png)
+<div align="center">{% qnimg add-commit.png %}</div>
 <!--more-->
 ### 本地安装步骤
 ```
@@ -35,7 +35,7 @@ npm install --save-dev commitizen
 
 ## [commitlint](https://github.com/marionebl/commitlint)：commit mesage lint工具
 ### 效果
-![](/resource/commitlint.svg)
+<div align="center"><img src="http://p6aicz9r2.bkt.clouddn.com/static/images/commitlint.svg"/></div>
 ### 本地安装步骤
 ```
 # Install commitlint cli and angular config

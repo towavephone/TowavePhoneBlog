@@ -23,7 +23,7 @@ tags:
 同样，译者在正文开始提供一个操作`Docker`的小知识。下文中也会多次使用到这一点。
 
 `Docker`会为所有已经运行（包括已经停止）的容器随机分配一个唯一的名字和一个唯一的 ID，docker 命令可以识别 ID，也可以识别这个名字。
-![](/resource/2697097349-56fe3e372067b_articlex.png)
+<div align="center">{% qnimg 2697097349-56fe3e372067b_articlex.png %}</div>
 如图所示，第一行的容器的 ID 是 43de70a54ec1，名字是 admiring_ardinghelli
 
 想删除第一行对应的容器，我们只需要 docker rm 43de70a54ec1,或者简写成 docker rm 43de，或者 docker rm admiring_ardinghelli。
