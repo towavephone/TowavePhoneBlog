@@ -14,7 +14,7 @@ $$  x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 Quick Start
 
-<img src="/background/bg-4.jpg"/>
+<img src="/background/bg-4.jpg" class="NoNeedOptimize"/>
 
 ## Create a new post
 

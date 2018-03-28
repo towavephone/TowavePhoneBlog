@@ -113,7 +113,6 @@ qiniu:
   update_exist: true
   image: 
     folder: images
-    extend: ?imageView2/2/h/400/interlace/1/q/100|watermark/2/text/6buR54yr5aWz546L5o6nJ3Mg5Y2a5a6i/font/5qW35L2T/fontsize/360/fill/IzE5MDEwMQ==/dissolve/91/gravity/SouthEast/dx/10/dy/10
   js:
     folder: js
   css:
