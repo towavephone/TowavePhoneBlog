@@ -15,6 +15,7 @@
 * add computer network part 5 ([1972556](https://github.com/towavephone/TowavePhoneBlog/commit/1972556))
 * add hash table ([c9336fc](https://github.com/towavephone/TowavePhoneBlog/commit/c9336fc))
 * add HTTP part 1 ([72f21f4](https://github.com/towavephone/TowavePhoneBlog/commit/72f21f4))
+* add HTTP part 2 ([98971c8](https://github.com/towavephone/TowavePhoneBlog/commit/98971c8))
 * add interview data ([51d9a3d](https://github.com/towavephone/TowavePhoneBlog/commit/51d9a3d))
 * add red black tree algorithm ([77ffd6c](https://github.com/towavephone/TowavePhoneBlog/commit/77ffd6c))
 * add seek algorithm ([01bc035](https://github.com/towavephone/TowavePhoneBlog/commit/01bc035))
