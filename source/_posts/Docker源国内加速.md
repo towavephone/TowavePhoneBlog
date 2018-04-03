@@ -17,8 +17,11 @@ tags:
 ## 如何配置镜像加速器
 
 - 针对Docker客户端版本大于1.10.0的用户
+
 <!--more-->
+
 - 您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器：
+
 ```sh
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'

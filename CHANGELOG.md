@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-01)
+# 0.0.0 (2018-04-02)
 
 
 ### Features
@@ -17,6 +17,8 @@
 * add HTTP part 1 ([72f21f4](https://github.com/towavephone/TowavePhoneBlog/commit/72f21f4))
 * add HTTP part 2 ([98971c8](https://github.com/towavephone/TowavePhoneBlog/commit/98971c8))
 * add interview data ([51d9a3d](https://github.com/towavephone/TowavePhoneBlog/commit/51d9a3d))
+* add Linux shell ([1507943](https://github.com/towavephone/TowavePhoneBlog/commit/1507943))
+* add Object-oriented thoughts ([c61a810](https://github.com/towavephone/TowavePhoneBlog/commit/c61a810))
 * add OS principle ([c6e6b26](https://github.com/towavephone/TowavePhoneBlog/commit/c6e6b26))
 * add push url to coding ([68804c3](https://github.com/towavephone/TowavePhoneBlog/commit/68804c3))
 * add red black tree algorithm ([77ffd6c](https://github.com/towavephone/TowavePhoneBlog/commit/77ffd6c))

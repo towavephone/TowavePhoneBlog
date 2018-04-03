@@ -10,7 +10,9 @@ tags:
 - 原创
 ---
 学习地址：[新手指南ReactJS视频](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db)，`以下标题均采用链接+视频时长的方式展示`
+
 ## [有条件地渲染一个React组件（2:43）](https://egghead.io/lessons/egghead-conditionally-render-a-react-component)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -38,8 +40,11 @@ tags:
 
 </html>
 ```
+
 <!-- more -->
+
 ## [渲染React组件（3:17）](https://egghead.io/lessons/react-rerender-a-react-application)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +71,9 @@ tags:
 
 </html>
 ```
+
 ## [React样式（5:36）](https://egghead.io/lessons/react-style-react-components)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">

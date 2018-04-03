@@ -62,7 +62,7 @@ $ hexo deploy
 
 More info: [Deployment](http://hexo.io/docs/deployment.html)
 
-``` 
+``` css
 .article-entry
   pre, code
     font-family: font-mono
@@ -73,13 +73,13 @@ More info: [Deployment](http://hexo.io/docs/deployment.html)
   pre
  ```
 
- http://veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryv
+ `http://veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryv`
 
  <i class="fa fa-fort-awesome"></i>
 
   A | B
  :-------- | :-------
- 1 | This is a sample.http://veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryv 
+ 1 | This is a sample.`http://veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryv` 
 2 | This is a sample. 
 
 
@@ -88,7 +88,7 @@ tcpsumblock = (char *)malloc (packetSize * sizeof (char));
 ```
 
 
-```
+```js
 class Test{
   void Test(){}
 } 

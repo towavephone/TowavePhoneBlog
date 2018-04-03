@@ -1,3 +1,4 @@
+---
 title: PS学习第六课之裁剪工具
 date: 2017-11-28 01:53:31
 categories:
@@ -9,13 +10,18 @@ tags:
 - 原创
 ---
 [点击此处查看PS视频](https://www.bilibili.com/video/av11506181/?from=search&seid=7154155166873854341#page=8)
+
 # 笔记要点
+
 1. 掌握尺寸设定
-1. 熟悉拉直功能
+2. 熟悉拉直功能
+
 <!-- more -->
 
 # 笔记内容
+
 ## 功能
+
 ><b>拖拽四角可形成边框，可更换边框颜色</b>
 
 <div align="center">{% qnimg Snipaste_2017-11-28_01-57-27.jpg %}</div>
@@ -41,4 +47,5 @@ tags:
 <div align="center">{% qnimg Snipaste_2017-11-28_02-30-54.jpg %}{% qnimg Snipaste_2017-11-28_02-31-27.jpg %}{% qnimg Snipaste_2017-11-28_02-33-13.jpg %}</div>
 
 ## 相关链接
+
 1. **PS视频**: <https://www.bilibili.com/video/av11506181/?from=search&seid=7154155166873854341#page=8/>

@@ -1,3 +1,4 @@
+---
 title: PS学习第七课之切片工具
 date: 2017-12-12 01:36:49
 categories:
@@ -9,13 +10,18 @@ tags:
 - 原创
 ---
 [点击此处查看PS视频](https://www.bilibili.com/video/av11506181/index_9.html#page=9)
+
 # 笔记要点
+
 1. 掌握透视裁剪工具
-1. 掌握切片工具
+2. 掌握切片工具
+
 <!-- more -->
 
 # 笔记内容
+
 ## 功能
+
 ><b>`透视裁剪`:交点处看到的地方，交点间距越小的地方看到的越大，更改透视角度（待查证）</b>
 
 <div align="center">{% qnimg Snipaste_2017-12-12_01-41-40.jpg %}{% qnimg Snipaste_2017-12-12_01-43-54.jpg %}</div>
@@ -34,4 +40,5 @@ tags:
 ><b>`切片移动选择工具`：移动切片专用，还可以切换切片图层至上下层，调整居中对齐关系（多选时按住SHIFT）。隐藏自动切片：只看到用户当前自己的切片</b>
 
 ## 相关链接
+
 1. **PS视频**: <https://www.bilibili.com/video/av11506181/index_9.html#page=9>

@@ -1,3 +1,4 @@
+---
 title: React基础知识第一部分
 date: 2017-12-9 00:54:08
 categories:
@@ -11,6 +12,7 @@ tags:
 学习地址：[新手指南ReactJS视频](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db)，`以下标题均采用链接+视频时长的方式展示`
 
 ## [用原始的React API写出Hello World（3:24）](https://egghead.io/lessons/react-write-hello-world-with-raw-react-apis)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -32,9 +34,13 @@ tags:
 </body>
 </html>
 ```
+
 <!-- more -->
+
 ## [使用JSX和React（5:48）](https://egghead.io/lessons/react-use-jsx-with-react)
+
 ### 方式一
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +63,9 @@ tags:
 
 </html>
 ```
+
 ### 方式二
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -87,6 +95,7 @@ tags:
 ```
 
 ## [创建自定义React组件（5:15）](https://egghead.io/lessons/react-create-custom-react-components)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +124,9 @@ tags:
 ```
 
 ## [使用PropTypes验证自定义React组件（3:30）](https://egghead.io/lessons/react-validate-custom-react-component-props-with-proptypes)
+
 ### 使用自定义PropTypes验证
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -152,6 +163,7 @@ tags:
 ```
 
 ### 使用已有的PropTypes验证
+
 ```html
 <!DOCTYPE html>
 <html lang="en">

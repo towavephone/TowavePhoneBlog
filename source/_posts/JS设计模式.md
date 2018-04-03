@@ -12,6 +12,7 @@ tags:
 - 转载
 ---
 ## 单例模式 
+
 ```js
 var singleton = function( fn ){
     var result;
@@ -23,8 +24,11 @@ var createMask = singleton( function(){
     return document.body.appendChild( document.createElement('div') );
 })
 ```
+
 <!--more-->
+
 ## 简单工厂模式 
+
 >这段代码来自es5的new和构造器的相关说明，可以看到，
 所谓的new本身只是一个对象的复制和改写过程， 
 而具体会生成什么是由调用ObjectFactory时传进去的参数所决定的。
@@ -45,6 +49,7 @@ alert ( a.name );  //svenzeng
 ```
 
 ## 观察者模式 
+
 ```js
 Events = function() {
     var listen, log, obj, one, remove, trigger, __this;
@@ -106,6 +111,7 @@ $id = function( id ){
 ```
 
 ## 代理模式
+
 ```js
 var keyMgr = keyManage();
  
@@ -141,6 +147,7 @@ forEach( [1,2,3], function( i, n ){
 ```
 
 ## 外观模式
+
 ```js
 var stopEvent = function( e ){   //同时阻止事件默认行为和冒泡
   e.stopPropagation();
@@ -149,6 +156,7 @@ var stopEvent = function( e ){   //同时阻止事件默认行为和冒泡
 ```
 
 ## 访问者模式
+
 ```js
 function ArrayPush() {  
     var n = TO_UINT32( this.length );
@@ -173,6 +181,7 @@ alert ( obj.length );  //1
 ```
 
 ## 策略模式
+
 ```js
 nameInput.addValidata({
    notNull: true,
@@ -275,6 +284,7 @@ if (validator.hasErrors()) {
 ```
 
 ## 模版方法模式
+
 ```js
 var Life = function(){
 }
@@ -318,9 +328,11 @@ var = Dog = function(){
 //Dog继承自哺乳动物.
 Dog.prototype = Mammal.prototype;
 var dog = new Dog();
-dog.init();```
+dog.init();
+```
 
 ## 中介者模式
+
 ```js
 var mode1 = Mode.create(),  mode2 = Mode.create();
 var view1 = View.create(),   view2 = View.create();
@@ -337,6 +349,7 @@ var controler2 = Controler.create( mode2, view2, function(){
 ```
 
 ## 迭代器模式
+
 ```js
 forEach = function( ary, fn ){  
     for ( var i = 0, l = ary.length; i < l; i++ ){    
@@ -352,6 +365,7 @@ forEach( [ 1, 2, 3 ], function( i, n ){
 ```
 
 ## 组合模式
+
 ```js
 var allNodes = document.getElementsByTagName("\*");
 var len = allNodes.length;
@@ -369,6 +383,7 @@ form.validata = function(){
 ```
 
 ## 备忘录模式
+
 ```js
 var Page = function(){
    var page = 1,cache = {},data;
@@ -387,9 +402,11 @@ var Page = function(){
 ```
 
 ## 职责链模式
+
 js中的事件冒泡就是作为一个职责链来实现的。一个事件在某个节点上被触发，然后向根节点传递， 直到被节点捕获。
 
 ## 享元模式
+
 ```js
 var getDiv = (function(){
     var created = [];
@@ -413,6 +430,7 @@ div.innerHTML = "${userinfo}";
 ```
 
 ## 状态模式
+
 ```js
 if ( state === 'jump' ){
    if ( currState === 'attack' || currState === 'defense' ){

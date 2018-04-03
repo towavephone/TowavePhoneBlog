@@ -12,15 +12,16 @@ tags:
 - 排序
 permalink: 查找java
 ---
-
-
 ## 无序链表的顺序查找
+
 ### 特点
+
 > - 在含有N对键值的基于（无序）链表的符号表中，未命中的查找和插入操作都需要N次比较。命中的查找在最坏情况下需要N次比较。特别的，向一个空表中插入N个不同的键需要$$~N^2/2次比较$$
 
 <!--more-->
 
 ### 实现
+
 ```java
 public class SequentialSearchST<Key,Value>{
     private Node first;
@@ -55,11 +56,14 @@ public class SequentialSearchST<Key,Value>{
 ```
 
 ## 有序数组的二分查找
+
 ### 特点
+
 > - 在N个键的有序数组中进行二分查找最多需要(lgN+1)次比较（无论是否成功）。
 - 向大小为N的有序数组中插入一个新的元素在最坏情况下需要访问~2N次数组，因此向一个空符号表中插入N个元素在最坏情况下需要访问$$~N^2次数组$$
 
 ### 实现
+
 ```java
 public class BinarySearchST<Key extends Comparable<Key>, Value>{
     private Key[] keys;
@@ -114,14 +118,19 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>{
 ```
 
 ## 预览
+
 ### 比较
+
 <div align="center">{% qnimg 微信截图_20180320172415.png %}</div>
 
 ## 二叉查找树
+
 ### 思路
+
 > 使用每个结点含有两个链接的二叉查找树高效实现符号表。
 
 ### 特点
+
 <div align="center">{% qnimg 微信截图_20180320182015.png %}{% qnimg 微信截图_20180321182858.png %}</div>
 
 > - 在由N个随机键构造的二叉查找树中，查找命中平均所需的比较次数为~2lnN（约1.39lgN）。
@@ -131,6 +140,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>{
 
 
 ### 实现
+
 <div align="center">{% qnimg 微信截图_20180321174624.png %}{% qnimg 微信截图_20180321174731.png %}{% qnimg 微信截图_20180321174841.png %}{% qnimg 微信截图_20180321174958.png %}</div>
 
 ```java
@@ -279,10 +289,13 @@ public class BST<Key extends Compareable<Key>,Value>{
 ```
 
 ## 平衡查找树
+
 ### 思路
+
 >保证所有查找都能在~lgN次比较内结束，为了保证树的平衡性，我们允许树中的一个结点保存多个键。
 
 ### 特点
+
 > - 一颗完美平衡的 2-3 查找树的所有空链接到根节点的距离应该是相同的。
 - 2-3 查找树插入操作的变换都是局部的，除了相关的节点和链接之外不必修改或者检查树的其它部分，而这些局部变换不会影响树的全局有序性和平衡性。
 - 2-3 查找树的查找和插入操作复杂度和插入顺序 无关 ，在最坏的情况下查找和插入操作访问的节点必然不超过 logN 个，含有 10 亿个节点的 2-3 查找树最多只需要访问 30 个节点就能进行任意的查找和插入操作。
@@ -291,13 +304,17 @@ public class BST<Key extends Compareable<Key>,Value>{
 
 
 ### 实现
+
 <div align="center">{% qnimg 微信截图_20180322152831.png %}{% qnimg 微信截图_20180322153304.png %}{% qnimg 微信截图_20180322153609.png %}{% qnimg 微信截图_20180322160823.png %}{% qnimg 微信截图_20180322161403.png %}{% qnimg 微信截图_20180322162044.png %}</div>
 
 ## 红黑二叉查找树
+
 ### 思路
+
 > 2-3 查找树需要用到 2- 节点和 3- 节点，红黑树使用红链接来实现 3- 节点。指向一个节点的链接颜色如果为红色，那么这个节点和上层节点表示的是一个 3- 节点，而黑色则是普通链接。
 
 ### 特点
+
 <div align="center">{% qnimg 微信截图_20180322181626.png %}{% qnimg 微信截图_20180323173023.png %}</div>
 
 > - 红链接都为左链接；
@@ -310,6 +327,7 @@ public class BST<Key extends Compareable<Key>,Value>{
 
 
 ### 红黑树的结点表示
+
 <div align="center">{% qnimg 微信截图_20180323133312.png %}</div>
 
 ```java
@@ -334,6 +352,7 @@ public class RedBlackBST<Key extends Comparable<Key>,Value>{
 ```
 
 ### 左旋转
+
 >因为合法的红链接都为左链接，如果出现右链接为红链接，那么就需要进行左旋转操作。
 
 <div align="center">{% qnimg 微信截图_20180323151041.png %}</div>
@@ -352,6 +371,7 @@ Node rotateLeft(Node h){
 ```
 
 ### 右旋转
+
 >进行右旋转是为了转换两个连续的左红链接，这会在之后的插入过程中探讨。
 
 <div align="center">{% qnimg 微信截图_20180323151112.png %}</div>
@@ -370,6 +390,7 @@ Node rotateRight(Node h){
 ```
 
 ### 颜色转换
+
 > 一个4-节点在红黑树中表现为一个结点的左右子节点都是红色的。分裂4-节点除了需要将子节点的颜色由红变黑之外，同时需要将父节点的颜色由黑变红，从2-3树的角度来看就是讲中间结点上移到上层结点。
 
 <div align="center">{% qnimg 微信截图_20180323161940.png %}</div>
@@ -383,10 +404,11 @@ void filpColors(Node h){
 ```
 
 ### 插入
+
 > 先将一个节点按二叉查找树的方法插入到正确位置，然后再进行如下的颜色操作：
 1. 如果右子节点是红色的而左子节点是黑色的，进行左旋转；
-1. 如果左子节点是红色的且它的左子节点也是红色的，进行右旋转；
-1. 如果左右子节点都是红色的，进行颜色转换。
+2. 如果左子节点是红色的且它的左子节点也是红色的，进行右旋转；
+3. 如果左右子节点都是红色的，进行颜色转换。
 
 <div align="center">{% qnimg 微信截图_20180323162936.png %}</div>
 
@@ -421,63 +443,71 @@ public class RedBlackBST<Key extends Comparable<Key>,Value>{
 ```
 
 ### 删除最小键
+
 <div align="center">{% qnimg 微信截图_20180323172334.png %}</div>
 
 >如果最小键在一个 2- 节点中，那么删除该键会留下一个空链接，就破坏了平衡性，因此要确保最小键不在 2- 节点中。将 2- 节点转换成 3- 节点或者 4- 节点有两种方法，一种是向上层节点拿一个 key，一种是向兄弟节点拿一个 key。如果上层节点是 2- 节点，那么就没办法从上层节点拿 key 了，因此要保证删除路径上的所有节点都不是 2- 节点。在向下删除的过程中，保证以下情况之一成立：
+
 1. 如果当前节点的左子节点不是 2- 节点，完成；
-1. 如果当前节点的左子节点是 2- 节点而它的兄弟节点不是 2- 节点，向兄弟节点拿一个 key 过来；
-1. 如果当前节点的左子节点和它的兄弟节点都是 2- 节点，将左子节点、父节点中的最小键和最近的兄弟节点合并为一个 4- 节点。
+2. 如果当前节点的左子节点是 2- 节点而它的兄弟节点不是 2- 节点，向兄弟节点拿一个 key 过来；
+3. 如果当前节点的左子节点和它的兄弟节点都是 2- 节点，将左子节点、父节点中的最小键和最近的兄弟节点合并为一个 4- 节点。
 
 ## 总结
+
 <div align="center">{% qnimg 微信截图_20180323174959.png %}</div>
 
 ## 散列表
+
 ### 特点
+
 >散列表类似于数组，可以把散列表的散列值看成数组的索引值。访问散列表和访问数组元素一样快速，它可以在常数时间内实现查找和插入的符号表。
 由于无法通过散列值知道键的大小关系，因此散列表无法实现有序性操作。
 
 ### 散列函数
+
 > - 对于一个大小为 M 的散列表，散列函数能够把任意键转换为 [0, M-1] 内的正整数，该正整数即为 hash值。
 - 散列表有冲突的存在，也就是两个不同的键可能有相同的 hash 值。
 - 散列函数应该满足以下三个条件：
  1. 一致性：相等的键应当有相等的 hash 值，两个键相等表示调用 equals() 返回的值相等。
- 1. 高效性：计算应当简便，有必要的话可以把 hash 值缓存起来，在调用 hash 函数时直接返回。
- 1. 均匀性：所有键的 hash 值应当均匀地分布到 [0, M-1] 之间，这个条件至关重要，直接影响到散列表的性能。
+ 2. 高效性：计算应当简便，有必要的话可以把 hash 值缓存起来，在调用 hash 函数时直接返回。
+ 3. 均匀性：所有键的 hash 值应当均匀地分布到 [0, M-1] 之间，这个条件至关重要，直接影响到散列表的性能。
 
 > - 可以将整数散列到 [0, M-1] 之间，例如一个正整数 k，计算 k%M 既可得到一个 [0, M-1] 之间的 hash 值。注意 M 必须是一个素数，否则无法利用键包含的所有信息。例如 M 为 10k，那么只能利用键的后 k 位。
 - 对于其它数，可以将其转换成整数的形式，然后利用除留余数法。例如对于浮点数，可以将其表示成二进制形式，然后使用二进制形式的整数值进行除留余数法。
 - 对于有多部分组合的键，每部分都需要计算 hash 值，并且最后合并时需要让每部分 hash 值都具有同等重要的地位。可以将该键看成 R 进制的整数，键中每部分都具有不同的权值。
 
-> - 例如，字符串的散列函数实现如下:
-```java
-int hash = 0;
-for(int i = 0; i < s.length(); i++)
-    hash = (R * hash + s.charAt(i)) % M;
-```
->- 再比如，拥有多个成员的自定义类的哈希函数如下,R 的值不是很重要，通常取 31。
-```java
-int hash = (((day * R + month) % M) * R + year) % M;
-```
-> - Java 中的 hashCode() 实现了 hash 函数，但是默认使用对象的内存地址值。在使用 hashCode() 函数时，应当结合除留余数法来使用。因为内存地址是 32 位整数，我们只需要 31 位的非负整数，因此应当屏蔽符号位之后再使用除留余数法。
-```java
-int hash = (x.hashCode() & 0x7fffffff) % M;
-```
-> - 使用 Java 自带的 HashMap 等自带的哈希表实现时，只需要去实现 Key 类型的 hashCode() 函数即可。Java 规定 hashCode() 能够将键均匀分布于所有的 32 位整数，Java 中的 String、Integer 等对象的 hashCode() 都能实现这一点。以下展示了自定义类型如何实现 hashCode()。
-```java
-public class Transaction{
-    private final String who;
-    private final Date when;
-    private final double amount;
+- 例如，字符串的散列函数实现如下:
+    ```java
+    int hash = 0;
+    for(int i = 0; i < s.length(); i++)
+        hash = (R * hash + s.charAt(i)) % M;
+    ```
 
-    public int hashCode(){
-        int hash = 17;
-        hash = 31 * hash + who.hashCode();
-        hash = 31 * hash + when.hashCode();
-        hash = 31 * hash + ((Double) amount).hashCode();
-        return hash;
+- 再比如，拥有多个成员的自定义类的哈希函数如下,R 的值不是很重要，通常取 31。
+    ```java
+    int hash = (((day * R + month) % M) * R + year) % M;
+    ```
+
+- Java 中的 hashCode() 实现了 hash 函数，但是默认使用对象的内存地址值。在使用 hashCode() 函数时，应当结合除留余数法来使用。因为内存地址是 32 位整数，我们只需要 31 位的非负整数，因此应当屏蔽符号位之后再使用除留余数法。
+    ```java
+    int hash = (x.hashCode() & 0x7fffffff) % M;
+    ```
+- 使用 Java 自带的 HashMap 等自带的哈希表实现时，只需要去实现 Key 类型的 hashCode() 函数即可。Java 规定 hashCode() 能够将键均匀分布于所有的 32 位整数，Java 中的 String、Integer 等对象的 hashCode() 都能实现这一点。以下展示了自定义类型如何实现 hashCode()。
+    ```java
+    public class Transaction{
+        private final String who;
+        private final Date when;
+        private final double amount;
+
+        public int hashCode(){
+            int hash = 17;
+            hash = 31 * hash + who.hashCode();
+            hash = 31 * hash + when.hashCode();
+            hash = 31 * hash + ((Double) amount).hashCode();
+            return hash;
+        }
     }
-}
-```
+    ```
 
 ### 基于拉链法的散列表
 

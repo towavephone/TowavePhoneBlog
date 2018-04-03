@@ -10,7 +10,9 @@ tags:
 - 原创
 ---
 学习地址：[新手指南ReactJS视频](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db)，`以下标题均采用链接+视频时长的方式展示`
+
 ## [React事件处理（3:42）](https://egghead.io/lessons/egghead-use-event-handlers-with-react)
+
 ```html
 
 <!DOCTYPE html>
@@ -69,9 +71,11 @@ tags:
 
 </html>
 ```
+
 <!-- more -->
 
 ## [React组件状态（7:09）](https://egghead.io/lessons/react-use-component-state-with-react)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +128,9 @@ tags:
 
 </html>
 ```
+
 ## [React用componentWillUnmount方法停止内存泄漏（1:14）](https://egghead.io/lessons/react-stop-memory-leaks-with-componentwillunmount-lifecycle-method-in-react)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -189,6 +195,7 @@ tags:
 ```
 
 ## [React Class（4:16）](https://egghead.io/lessons/egghead-use-class-components-with-react)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">

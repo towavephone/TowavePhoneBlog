@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.7.0"
+    "version": "3.4.2"
   },
   "scripts": {
     "dev": "hexo s -p 80",
@@ -11,8 +11,9 @@
     "cm": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "prepush": "yarn prod && hexo d",
-    "postcommit": "yarn changelog && git add CHANGELOG.md",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "postcommit": "yarn lint:markdown && yarn changelog && git add CHANGELOG.md",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "lint:markdown": "markdownlint --config ./.markdownlint.json ./source/_posts/*.md"
   },
   "dependencies": {
     "gulp": "^3.9.1",
@@ -45,7 +46,9 @@
     "@commitlint/config-conventional": "^5.2.3",
     "commitizen": "^2.9.6",
     "conventional-changelog": "^1.1.7",
-    "cz-conventional-changelog": "^2.1.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "markdownlint": "^0.8.1",
+    "markdownlint-cli": "^0.8.1"
   },
   "config": {
     "commitizen": {

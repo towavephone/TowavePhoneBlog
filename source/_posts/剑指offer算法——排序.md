@@ -13,7 +13,9 @@ tags:
 permalink: 剑指offer5
 ---
 ## 快速排序
+
 ### 递归式
+
 ```c++
 #include<iostream>
 #include<stack>
@@ -83,9 +85,11 @@ int main()
 }
 
 ```
+
 <!--more-->
 
 ### 非递归式
+
 ```c++
 void quickSort(int a[], int left, int right) {
     if(left > right)

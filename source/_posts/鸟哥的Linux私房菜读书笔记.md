@@ -33,6 +33,7 @@ man 是 manual 的缩写，将指令的具体信息显示出来。
 | 8 | 系统管理员可以使用的管理指令 |
 
 <!--more-->
+
 ### 3. info
 
 info 与 man 类似，但是 info 将文档分成一个个页面，每个页面可以进行跳转。
@@ -78,11 +79,13 @@ reboot、halt、poweroff。
 ## sudo
 
 使用 sudo 允许一般用户使用 root 可执行的命令，只有在 /etc/sudoers 配置文件中添加的用户才能使用该指令。
+
 ```bash
 # User privilege specification
 root    ALL=(ALL:ALL) ALL
 towavephone ALL=(ALL:ALL) ALL
 ```
+
 ## GNU
 
 GNU 计划，译为革奴计划，它的目标是创建一套完全自由的操作系统，称为 GNU，其内容软件完全以 GPL 方式发布。其中 GPL 全称为 GNU 通用公共许可协议，包含了以下内容：
@@ -967,19 +970,19 @@ daemon 2
 
 示例一：查看自己的进程
 
-```
+```bash
 # ps -l
 ```
 
 示例二：查看系统所有进程
 
-```
+```bash
 # ps aux
 ```
 
 示例三：查看特定的进程
 
-```
+```bash
 # ps aux | grep threadx
 ```
 
@@ -989,7 +992,7 @@ daemon 2
 
 示例：两秒钟刷新一次
 
-```
+```bash
 # top -d 2
 ```
 
@@ -999,7 +1002,7 @@ daemon 2
 
 示例：查看所有进程树
 
-```
+```bash
 # pstree -A
 ```
 
@@ -1007,7 +1010,7 @@ daemon 2
 
 查看占用端口的进程
 
-```
+```bash
 # netstat -anp | grep port
 ```
 

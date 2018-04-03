@@ -1,3 +1,4 @@
+---
 title: git飞行规则
 date: 2017-12-9 10:19:20
 categories:
@@ -17,15 +18,16 @@ tags:
 
 一个 [宇航员指南](http://www.jsc.nasa.gov/news/columbia/fr_generic.pdf) (现在, 程序员们都在使用GIT) 是关于出现问题过后应该怎么操作。
 
->  *飞行规则(Flight Rules)* 是记录在手册上的来之不易的一系列知识，记录了某个事情发生的原因，以及怎样一步一步的进行处理。本质上, 它们是特定场景的非常详细的标准处理流程。 [...]
+>  -飞行规则(Flight Rules)- 是记录在手册上的来之不易的一系列知识，记录了某个事情发生的原因，以及怎样一步一步的进行处理。本质上, 它们是特定场景的非常详细的标准处理流程。 [...]
 
 > 自20世纪60年代初以来，NASA一直在捕捉(capturing)我们的失误，灾难和解决方案, 当时水星时代(Mercury-era)的地面小组首先开始将“经验教训”收集到一个纲要(compendium)中，该纲现在已经有上千个问题情景，从发动机故障到破损的舱口把手到计算机故障，以及它们对应的解决方案。
 
-&mdash; Chris Hadfield, *一个宇航员的生活指南(An Astronaut's Guide to Life)*。
+&mdash; Chris Hadfield, -一个宇航员的生活指南(An Astronaut's Guide to Life)-。
 <!-- more -->
+
 ## 这篇文章的约定
 
-为了清楚的表述，这篇文档里的所有例子使用了自定义的bash 提示，以便指示当前分支和是否有暂存的变化(changes)。分支名用小括号括起来，分支名后面跟的`*`表示暂存的变化(changes)。
+为了清楚的表述，这篇文档里的所有例子使用了自定义的bash 提示，以便指示当前分支和是否有暂存的变化(changes)。分支名用小括号括起来，分支名后面跟的`-`表示暂存的变化(changes)。
 
 ## 编辑提交(editting commits)
 
@@ -50,6 +52,7 @@ $ git log -n1 -p
 ```sh
 $ git commit --amend
 ```
+
 这会打开你的默认编辑器, 在这里你可以编辑信息. 另一方面, 你也可以用一条命令一次完成:
 
 ```sh
@@ -92,8 +95,8 @@ $ git push -f [remote] [branch]
 
 如果你还没有推到远程, 把Git重置(reset)到你最后一次提交前的状态就可以了(同时保存暂存的变化):
 
-```
-(my-branch*)$ git reset --soft HEAD@{1}
+```js
+(my-branch-)$ git reset --soft HEAD@{1}
 
 ```
 
@@ -122,13 +125,13 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-注意, rebasing(见下面)和修正(amending)会用一个**新的提交(commit)代替旧的**, 所以如果之前你已经往远程仓库上推过一次修正前的提交(commit)，那你现在就必须强推(force push) (`-f`)。 注意 &ndash; *总是* 确保你指明一个分支!
+注意, rebasing(见下面)和修正(amending)会用一个--新的提交(commit)代替旧的--, 所以如果之前你已经往远程仓库上推过一次修正前的提交(commit)，那你现在就必须强推(force push) (`-f`)。 注意 &ndash; -总是- 确保你指明一个分支!
 
 ```sh
 (my-branch)$ git push origin mybranch -f
 ```
 
-一般来说, **要避免强推**. 最好是创建和推(push)一个新的提交(commit)，而不是强推一个修正后的提交。后者会使那些与该分支或该分支的子分支工作的开发者，在源历史中产生冲突。
+一般来说, --要避免强推--. 最好是创建和推(push)一个新的提交(commit)，而不是强推一个修正后的提交。后者会使那些与该分支或该分支的子分支工作的开发者，在源历史中产生冲突。
 
 ### 我意外的做了一次硬重置(hard reset)，我想找回我的内容
 
@@ -151,7 +154,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ### 我需要把暂存的内容添加到上一次的提交(commit)
 
 ```sh
-(my-branch*)$ git commit --amend
+(my-branch-)$ git commit --amend
 
 ```
 
@@ -173,6 +176,7 @@ $ git add -N filename.x
 
 
 <a href="stage-in-two-commits"></a>
+
 ### 我想把在一个文件里的变化(changes)加到两个提交(commit)里
 
 `git add` 会把整个文件加入到一个提交. `git add -p` 允许交互式的选择你想要提交的部分.
@@ -337,8 +341,8 @@ HEAD is now at a13b85e
 
 假设你有:
 
-  * 分支 `solution`, 拥有原型方案， 领先 `develop` 分支。
-  * 分支 `develop`, 在这里你应用原型方案的一些内容。
+- 分支 `solution`, 拥有原型方案， 领先 `develop` 分支。
+- 分支 `develop`, 在这里你应用原型方案的一些内容。
 
 我去可以通过把内容拿到你的分支里，来解决这个问题:
 
@@ -403,13 +407,13 @@ HEAD is now at a13b85e
 (21)$
 ```
 
-接着, 我们用 *cherry-pick* 把对bug #21的提交放入当前分支。 这意味着我们将应用(apply)这个提交(commit)，仅仅这一个提交(commit)，直接在HEAD上面。
+接着, 我们用 -cherry-pick- 把对bug #21的提交放入当前分支。 这意味着我们将应用(apply)这个提交(commit)，仅仅这一个提交(commit)，直接在HEAD上面。
 
 ```sh
 (21)$ git cherry-pick e3851e8
 ```
 
-这时候, 这里可能会产生冲突， 参见[交互式 rebasing 章](#interactive-rebase) [**冲突节**](#merge-conflict) 解决冲突.
+这时候, 这里可能会产生冲突， 参见[交互式 rebasing 章](#interactive-rebase) [--冲突节--](#merge-conflict) 解决冲突.
 
 
 再者， 我们为bug #14 创建一个新的分支, 也基于`master`分支
@@ -428,6 +432,7 @@ HEAD is now at a13b85e
 
 
 ### 我想删除上游(upstream)分支被删除了的本地分支
+
 一旦你在github 上面合并(merge)了一个pull request, 你就可以删除你fork里被合并的分支。 如果你不准备继续在这个分支里工作, 删除这个分支的本地拷贝会更干净，使你不会陷入工作分支和一堆陈旧分支的混乱之中。
 
 ```sh
@@ -483,7 +488,7 @@ oh noes, deleted my branch!
 
 在这时候你应该想起了`reflog`, 一个升级版的日志，它存储了仓库(repo)里面所有动作的历史。
 
-```
+```js
 (master)$ git reflog
 69204cd HEAD@{0}: checkout: moving from my-branch to master
 4e3cd85 HEAD@{1}: commit: foo.txt added
@@ -569,7 +574,7 @@ Switched to a new branch 'daves'
 
 ### 我需要组合(combine)几个提交(commit)
 
-假设你的工作分支将会做对于 `master` 的pull-request。 一般情况下你不关心提交(commit)的时间戳，只想组合 *所有* 提交(commit) 到一个单独的里面, 然后重置(reset)重提交(recommit)。 确保主(master)分支是最新的和你的变化都已经提交了, 然后:
+假设你的工作分支将会做对于 `master` 的pull-request。 一般情况下你不关心提交(commit)的时间戳，只想组合 -所有- 提交(commit) 到一个单独的里面, 然后重置(reset)重提交(recommit)。 确保主(master)分支是最新的和你的变化都已经提交了, 然后:
 
 ```sh
 (my-branch)$ git reset --soft master
@@ -619,7 +624,7 @@ pick e3851e8 another fix
 
 然后，你可以用任何上面命令列表的命令替换 `pick`, 你也可以通过删除对应的行来删除一个提交(commit)。
 
-例如, 如果你想 **单独保留最旧(first)的提交(commit),组合所有剩下的到第二个里面**, 你就应该编辑第二个提交(commit)后面的每个提交(commit) 前的单词为 `f`:
+例如, 如果你想 --单独保留最旧(first)的提交(commit),组合所有剩下的到第二个里面--, 你就应该编辑第二个提交(commit)后面的每个提交(commit) 前的单词为 `f`:
 
 ```vim
 pick a9c8a1d Some refactoring
@@ -628,7 +633,7 @@ f b729ad5 fixup
 f e3851e8 another fix
 ```
 
-如果你想组合这些提交(commit) **并重命名这个提交(commit)**, 你应该在第二个提交(commit)旁边添加一个`r`，或者更简单的用`s` 替代 `f`:
+如果你想组合这些提交(commit) --并重命名这个提交(commit)--, 你应该在第二个提交(commit)旁边添加一个`r`，或者更简单的用`s` 替代 `f`:
 
 ```vim
 pick a9c8a1d Some refactoring
@@ -660,6 +665,7 @@ Newer, awesomer features
 ```
 
 #### 安全合并(merging)策略
+
 `--no-commit` 执行合并(merge)但不自动提交, 给用户在做提交前检查和修改的机会。 `no-ff` 会为特性分支(feature branch)的存在过留下证据, 保持项目历史一致。
 
 ```sh
@@ -701,14 +707,15 @@ Newer, awesomer features
 #### 这个rebase 编辑屏幕出现'noop'
 
 如果你看到的是这样:
-```
+
+```js
 noop
 ```
 
-这意味着你rebase的分支和当前分支在同一个提交(commit)上, 或者 *领先(ahead)* 当前分支。 你可以尝试:
+这意味着你rebase的分支和当前分支在同一个提交(commit)上, 或者 -领先(ahead)- 当前分支。 你可以尝试:
 
-* 检查确保主(master)分支没有问题
-* rebase  `HEAD~2` 或者更早
+- 检查确保主(master)分支没有问题
+- rebase  `HEAD~2` 或者更早
 
 #### 有冲突的情况
 
@@ -741,7 +748,7 @@ Changes not staged for commit:
 有时候这些合并非常复杂，你应该使用可视化的差异编辑器(visual diff editor):
 
 ```sh
-(master*)$ git mergetool -t opendiff
+(master-)$ git mergetool -t opendiff
 ```
 
 在你解决完所有冲突和测试过后, `git add` 变化了的(changed)文件, 然后用`git rebase --continue` 继续rebase。
@@ -811,6 +818,7 @@ $ git update-ref refs/tags/<tag_name> <hash>
 ```
 
 <a href="remove-from-git"></a>
+
 ### 我想从Git删除一个文件，但保留该文件
 
 ```sh
@@ -861,6 +869,7 @@ $ git config --global credential.helper 'cache --timeout=3600'
 ```
 
 <a href="#ive-no-idea-what-i-did-wrong"></a>
+
 ## 我不知道我做错了些什么
 
 你把事情搞砸了：你 `重置(reset)` 了一些东西, 或者你合并了错误的分支, 亦或你强推了后找不到你自己的提交(commit)了。有些时候, 你一直都做得很好, 但你想回到以前的某个状态。
@@ -891,29 +900,29 @@ $ git reset --hard 0254ea7
 
 ### 书(Books)
 
-* [Pro Git](https://git-scm.com/book/en/v2) - Scott Chacon's excellent git book
-* [Git Internals](https://github.com/pluralsight/git-internals-pdf) - Scott Chacon's other excellent git book
+- [Pro Git](https://git-scm.com/book/en/v2) - Scott Chacon's excellent git book
+- [Git Internals](https://github.com/pluralsight/git-internals-pdf) - Scott Chacon's other excellent git book
 
 ### 教程(Tutorials)
 
-* [Learn Git branching](https://learngitbranching.js.org/) 一个基于网页的交互式 branching/merging/rebasing 教程
-* [Getting solid at Git rebase vs. merge](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa)
-* [git-workflow](https://github.com/asmeurer/git-workflow) - [Aaron Meurer](https://github.com/asmeurer)的怎么使用Git为开源仓库贡献
-* [GitHub as a workflow](http://hugogiraudel.com/2015/08/13/github-as-a-workflow/) - 使用GitHub做为工作流的趣事, 尤其是空PRs
+- [Learn Git branching](https://learngitbranching.js.org/) 一个基于网页的交互式 branching/merging/rebasing 教程
+- [Getting solid at Git rebase vs. merge](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa)
+- [git-workflow](https://github.com/asmeurer/git-workflow) - [Aaron Meurer](https://github.com/asmeurer)的怎么使用Git为开源仓库贡献
+- [GitHub as a workflow](http://hugogiraudel.com/2015/08/13/github-as-a-workflow/) - 使用GitHub做为工作流的趣事, 尤其是空PRs
 
 ### 脚本和工具(Scripts and Tools)
 
-* [firstaidgit.io](http://firstaidgit.io/) 一个可搜索的最常被问到的Git的问题
-* [git-extra-commands](https://github.com/unixorn/git-extra-commands) - 一堆有用的额外的Git脚本
-* [git-extras](https://github.com/tj/git-extras) - GIT 工具集 -- repo summary, repl, changelog population, author commit percentages and more
-* [git-fire](https://github.com/qw3rtman/git-fire) - git-fire 是一个 Git 插件，用于帮助在紧急情况下添加所有当前文件, 做提交(committing), 和推(push)到一个新分支(阻止合并冲突)。
-* [git-tips](https://github.com/git-tips/tips) - Git小提示
-* [git-town](https://github.com/Originate/git-town) - 通用，高级Git工作流支持！ http://www.git-town.com
+- [firstaidgit.io](http://firstaidgit.io/) 一个可搜索的最常被问到的Git的问题
+- [git-extra-commands](https://github.com/unixorn/git-extra-commands) - 一堆有用的额外的Git脚本
+- [git-extras](https://github.com/tj/git-extras) - GIT 工具集 -- repo summary, repl, changelog population, author commit percentages and more
+- [git-fire](https://github.com/qw3rtman/git-fire) - git-fire 是一个 Git 插件，用于帮助在紧急情况下添加所有当前文件, 做提交(committing), 和推(push)到一个新分支(阻止合并冲突)。
+- [git-tips](https://github.com/git-tips/tips) - Git小提示
 
 ### GUI客户端(GUI Clients)
-* [GitKraken](https://www.gitkraken.com/) - 豪华的Git客户端 Windows, Mac & Linux
-* [git-cola](https://git-cola.github.io/) - 另外一个Git客户端 Windows & OS X
-* [GitUp](https://github.com/git-up/GitUp) - 一个新的Git客户端，在处理Git的复杂性上有自己的特点
-* [gitx-dev](https://rowanj.github.io/gitx/) - 图形化的Git客户端 OS X
-* [Source Tree](https://www.sourcetreeapp.com/) - 免费的图形化Git客户端 Windows & OS X
-* [Tower](http://www.git-tower.com/) - 图形化Git客户端 OS X(付费)
+
+- [GitKraken](https://www.gitkraken.com/) - 豪华的Git客户端 Windows, Mac & Linux
+- [git-cola](https://git-cola.github.io/) - 另外一个Git客户端 Windows & OS X
+- [GitUp](https://github.com/git-up/GitUp) - 一个新的Git客户端，在处理Git的复杂性上有自己的特点
+- [gitx-dev](https://rowanj.github.io/gitx/) - 图形化的Git客户端 OS X
+- [Source Tree](https://www.sourcetreeapp.com/) - 免费的图形化Git客户端 Windows & OS X
+- [Tower](http://www.git-tower.com/) - 图形化Git客户端 OS X(付费)

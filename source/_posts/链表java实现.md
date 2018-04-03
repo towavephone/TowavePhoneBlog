@@ -16,10 +16,13 @@ tags:
 permalink: 链表java
 ---
 ## 下压栈
+
 ### 特点
+
 >能动态调整数组大小的实现
 
 ### 实现
+
 ```java
 package edu.princeton.cs.algs4;
 
@@ -156,8 +159,11 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
 }
 
 ```
+
 <!-- more-->
+
 ## 下压堆栈（链表实现）
+
 ```java
 package edu.princeton.cs.algs4;
 
@@ -457,6 +463,7 @@ public class Queue<Item> implements Iterable<Item> {
 ```
 
 ## 背包
+
 ```java
 package edu.princeton.cs.algs4;
 
