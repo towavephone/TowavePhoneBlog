@@ -122,7 +122,10 @@
   margin-bottom: 0px;
   padding-bottom: .5em;
   word-break: break-word;
-  box-shadow: 3px 2px 8px rgba(0,0,0, .07);
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.1);    
+  &:hover{
+    box-shadow: 5px 5px 16px rgba(0,0,0,0.3);    
+  }
 }
 .article-header{
   border-left: 6px solid #eee;
@@ -299,7 +302,9 @@
     margin: 1em auto;
     font-size 1rem
     background: rgba(158, 188, 226, i-opacity);
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.1);    
     &:hover {
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);    
         background: #93b5e0;
     }
 }
@@ -377,6 +382,7 @@ li:hover {
     line-height: 1.6em;
     word-break: break-all;
     background: rgba(255, 255, 255, .4);
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.1);    
     span {
         display: inline-block;
         width: 5.8em;
@@ -389,6 +395,9 @@ li:hover {
             color: #a3d2a3;
             text-decoration: underline;
         }
+    }
+    &:hover{
+      box-shadow: 5px 5px 16px rgba(0,0,0,0.3);    
     }
     &:hover .fa-clipboard {
         color: black;

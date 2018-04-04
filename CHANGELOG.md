@@ -13,6 +13,7 @@
 * add computer network part 2 ([969c848](https://github.com/towavephone/TowavePhoneBlog/commit/969c848))
 * add computer network part 3 ([9e4f638](https://github.com/towavephone/TowavePhoneBlog/commit/9e4f638))
 * add computer network part 5 ([1972556](https://github.com/towavephone/TowavePhoneBlog/commit/1972556))
+* add database related ([9d4aa06](https://github.com/towavephone/TowavePhoneBlog/commit/9d4aa06))
 * add hash table ([c9336fc](https://github.com/towavephone/TowavePhoneBlog/commit/c9336fc))
 * add HTTP part 1 ([72f21f4](https://github.com/towavephone/TowavePhoneBlog/commit/72f21f4))
 * add HTTP part 2 ([98971c8](https://github.com/towavephone/TowavePhoneBlog/commit/98971c8))

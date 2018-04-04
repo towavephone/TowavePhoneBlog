@@ -25,6 +25,10 @@
     }
 }
 .overlay{
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.1); 
+    &:hover{
+        box-shadow: 5px 5px 6px rgba(0,0,0,0.3);    
+    }   
     .slider-trigger{
         position: absolute;
         z-index: 101;
@@ -207,24 +211,23 @@
     top: auto; /*In order to cover style in article.styl*/
     bottom: 10px;
     padding: .2em .4em;
-    border-radius: 6px;
-    border-style : outset;
     background: rgba(255, 255, 255, .7);
     font-size: 1em;
     font-weight: bold;
     color: #258fb8;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.3);  
     &:hover {
-        color: #88acdb;
-        font-size: 1.1em;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);    
+        color: #93b5e0;
     }
 }
 
 .toc-article {
-    display: none;
+    display: block;
     z-index: 99
-    left: 0;
+    left: .5em;
     top: 38%;
-    bottom: 3em;
+    bottom: 2.5em;
     height: auto;
     max-height: 58%;
     // width: none;
@@ -234,17 +237,18 @@
     overflow: auto;
     margin-left: 0;
     padding: 10px;
-    padding-left: 0;
-    border-radius: 2.8%;
-    background: none;
+    background: rgba(255, 255, 255, .85);
+    // background: none;
     font-size: 1em;
     line-height: 1.25em;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.3);   
+    &:hover{
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);    
+    }   
     .toc-title {
         display: none;
         padding: .6em;
         color: #258fb8;
-        background: lightgray;
-        border-radius 5px;
     }
     .toc {
         padding: 0.5em;
@@ -252,8 +256,7 @@
     ol {
         margin: 0;
         padding: 0.5em;
-        border-radius: 5px;
-        background: rgba(255, 255, 255, .85);
+        // border-radius: 5px;
         ol {
             padding: 0.1em 0;
             padding-left: 1.2em;
@@ -287,7 +290,7 @@ if toc-nowrap
     top: auto; 
     bottom: 10px;
     padding: .2em .4em;
-    border-radius: 6px;
+    // border-radius: 6px;
     border-style : outset;
     opacity: .9;
     background: rgba(255, 255, 255, .8);

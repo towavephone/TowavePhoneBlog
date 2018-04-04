@@ -151,7 +151,7 @@ MyISAM 存储引擎支持全文索引，用于查找文本中的关键词，而�
 
 - 大大减少了服务器需要扫描的数据量；
 
-- 帮助服务器避免进行排序和创建临时表；
+- 避免服务器进行排序和创建临时表；
 
 - 将随机 I/O 变为顺序 I/O。
 
@@ -178,7 +178,7 @@ SELECT actor_id FROM sakila.actor WHERE actor_id + 1 = 5;
 在需要使用多个列作为条件进行查询时，使用多列索引比使用多个单列索引性能更好。例如下面的语句中，最好把 actor_id 和 film_id 设置为多列索引。
 
 ```sql
-SELECT film_id, actor_ id FROM sakila.film_actor
+SELECT film_id, actor_id FROM sakila.film_actor
 WhERE actor_id = 1 AND film_id = 1;
 ```
 
@@ -193,7 +193,7 @@ COUNT(*)
 FROM payment;
 ```
 
-```html
+```sql
    staff_id_selectivity: 0.0001
 customer_id_selectivity: 0.0373
                COUNT(*): 16049
