@@ -261,7 +261,7 @@ mathjax: true
 
 # Socail Share | 是否开启分享
 share: 
-  on: true
+  on: false
   baidu: false
   addthis: true
   addthis_pubid: "ra-56ff76c972fc0cf9"
@@ -274,11 +274,13 @@ baidu_site: gc3PldFwYc
 google_site: 
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
-google_analytics: UA-98114394-2
+#  UA-98114394-2
+google_analytics: false
 
 # 百度统计 http://sitecenter.baidu.com/sc-web/
 # 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容
-baidu_tongji: 500e7e771d9096699a8156ade66f7014
+# 500e7e771d9096699a8156ade66f7014
+baidu_tongji: false
 
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
@@ -302,20 +304,22 @@ progressBar:
   on: true
   type: "minimal"  # Keep Quotes | 保留引号避免出错
   color: red
-
+lazysizes:
+  on: true
 CDN:
-  jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
-  require: //cdn.bootcss.com/require.js/2.2.0/require.min.js
-  fontawesome: //cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css
-  fancybox_js: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
-  fancybox_css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
-  animate_css: //cdn.bootcss.com/animate.css/3.5.1/animate.min.css
-  jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js
-  jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css
-  pace_js: //cdn.bootcss.com/pace/1.0.2/pace.min.js
-  clipboard: //cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js
-  mathjax: //cdn.bootcss.com/mathjax/2.6.1/MathJax.js
+  jquery: https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js
+  require: https://cdn.bootcss.com/require.js/2.2.0/require.min.js
+  fontawesome: https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css
+  fancybox_js: https://cdn.bootcss.com/fancybox/3.3.0/jquery.fancybox.min.js
+  fancybox_css: https://cdn.bootcss.com/fancybox/3.3.0/jquery.fancybox.min.css
+  animate_css: https://cdn.bootcss.com/animate.css/3.5.1/animate.min.css
+  jquery_ui_js: https://cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js
+  jquery_ui_css: https://cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css
+  pace_js: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
+  clipboard: https://cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js
+  mathjax: https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js
   scrollreveal: //cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js
+  lazysizes: https://cdn.bootcss.com/lazysizes/4.0.2/lazysizes.min.js
 
 leancloud_visitors:
   enable: true

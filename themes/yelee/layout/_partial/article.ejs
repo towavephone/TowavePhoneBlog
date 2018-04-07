@@ -94,4 +94,7 @@
             yiliaConfig.fancybox = false;
         <% } %>
     </script>
+    <% if (theme.mathjax && post.mathjax){ %>
+      <%- partial('mathjax') %>
+    <% } %>
 <% } %>

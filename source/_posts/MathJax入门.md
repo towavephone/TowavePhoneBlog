@@ -11,6 +11,7 @@ tags:
 - 转载
 - md文件
 permalink: MathJax
+mathjax: true
 ---
 ## 基础语法
 

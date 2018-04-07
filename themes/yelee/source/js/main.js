@@ -69,28 +69,51 @@ require([], function (){
             if(isFancy.length != 0){
                 var imgArr = $(".article-inner img");
                 for(var i=0,len=imgArr.length;i<len;i++){
-                    var src = imgArr.eq(i).attr("src");
-                    var title = imgArr.eq(i).attr("alt");
+                    var img = imgArr.eq(i);
+                    var dataSrc = img.attr("data-src");
+                    var imgSrc = img.attr("src");
+                    var imgClass = img.attr("class");
+                    var title = img.attr("alt");
                     if(typeof(title) == "undefined"){
-                        var title = imgArr.eq(i).attr("title");
+                        var title = img.attr("title");
                     }
-                    var width = imgArr.eq(i).attr("width");
-                    var height = imgArr.eq(i).attr("height");
-                    var imgClass = imgArr.eq(i).attr("class");
-                    var NoNeedOptimize = !src.includes(yiliaConfig.urlPrefix) || (imgClass && imgClass.includes('NoNeedOptimize'));
-                    var big_img = null;
-                    var small_img = null;
+                    var big_img = imgSrc ? imgSrc : dataSrc;
+                    var small_img = big_img;
+                    var NoNeedOptimize = (imgClass && imgClass.includes('NoNeedOptimize')) || !small_img.includes(yiliaConfig.urlPrefix);
                     if(!yiliaConfig.offline && !NoNeedOptimize){
-                        small_img = src + '-small_watermark';
-                        big_img = src + '-big_watermark';
-                    }else{
-                        small_img = big_img = src;
+                        big_img += '-big_watermark';
+                        small_img += '-small_watermark';
                     }
-                    imgArr.eq(i).replaceWith("<a href='"+big_img+"' title='"+title+"' rel='fancy-group' class='fancy-ctn fancybox'><img src='"+small_img+"' width="+width+" height="+height+" title='"+title+"' alt='"+title+"'></a>");
+                    img.attr("data-src", small_img);
+                    img.attr("class", imgClass + ' lazyload');
+                    img.wrap("<a href='"+big_img+"' title='"+title+"' data-fancybox='gallery'></a>");
                 }
-                $(".article-inner .fancy-ctn").fancybox({ type: "image" });
+                $(".article-inner [data-fancybox='gallery']").fancybox({
+                    buttons: [
+                    "zoom",
+                    'slideShow',
+                    'fullScreen',
+                    'download',
+                    "thumbs",
+                    "close"]
+                });
             }
         })
+    }else{
+        var imgArr = $(".article-inner img");
+        for(var i=0,len=imgArr.length;i<len;i++){
+            var img = imgArr.eq(i);
+            var dataSrc = img.attr("data-src");
+            var imgSrc = img.attr("src");
+            var imgClass = img.attr("class");
+            var small_img = imgSrc ? imgSrc : dataSrc;;
+            var NoNeedOptimize = (imgClass && imgClass.includes('NoNeedOptimize')) || !small_img.includes(yiliaConfig.urlPrefix);
+            if(!yiliaConfig.offline && !NoNeedOptimize){
+                small_img += '-small_watermark';
+            }
+            img.attr("data-src", small_img);
+            img.attr('class',imgClass + ' lazyload');
+        }
     }
 
     // Animate on Homepage

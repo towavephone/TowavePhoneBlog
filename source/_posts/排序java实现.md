@@ -11,6 +11,7 @@ tags:
 - 算法
 - 排序
 permalink: 排序java
+mathjax: true
 ---
 
 ## 选择排序

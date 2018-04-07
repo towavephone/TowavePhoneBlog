@@ -15,10 +15,12 @@ permalink: 提交规范化
 ### 效果
 
 <div align="center">{% qnimg add-commit.png %}</div>
+
 <!--more-->
+
 ### 本地安装步骤
 
-```js
+```bash
 npm install --save-dev commitizen
 // 如果全局安装过，强制覆盖加--force参数
 ./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact
@@ -28,7 +30,7 @@ npm install --save-dev commitizen
 
 在package.json添加脚本运行，最好不要用commit，容易和husky插件冲突
 
-```js
+```bash
 // package.json
   ...
   "scripts": {
@@ -43,11 +45,11 @@ npm install --save-dev commitizen
 
 ### 效果
 
-<div align="center"><img class="NoNeedOptimize" src="http://p6aicz9r2.bkt.clouddn.com/static/images/commitlint.svg"/></div>
+<div align="center"><img class="NoNeedOptimize" src="http://p6aicz9r2.bkt.clouddn.com/static/images/commitlint.svg"/>
 
 ### 本地安装步骤
 
-```js
+```bash
 # Install commitlint cli and angular config
 # 这行命令在win10 shell上识别失败，需分开安装
 # npm install --save-dev @commitlint/config-conventional
@@ -62,7 +64,7 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 
 在package.json添加脚本运行
 
-```js
+```bash
 {
   "scripts": {
     // 必须是commitmsg，别的hook不行
@@ -75,7 +77,7 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 
 ### 效果
 
-```js
+```bash
 <a name="0.0.0"></a>
 # 0.0.0 (2017-12-15)
 
@@ -88,7 +90,7 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 
 ### 本地安装步骤
 
-```js
+```bash
 npm install --save-dev conventional-changelog-cli
 cd my-project
 ./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s
@@ -96,7 +98,7 @@ cd my-project
 
 加上-r 0参数覆盖以前记录，建议初次生成时加上
 
-```js
+```bash
 conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 ```
 
@@ -104,13 +106,13 @@ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 
 在package.json添加脚本运行
 
-```js
+```bash
 "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0".
 ```
 
 ## 建议配置的package.json
 
-```js
+```bash
 "scripts": {
     "dev": "hexo s -p 80",
     "prod": "hexo clean && hexo g && gulp",

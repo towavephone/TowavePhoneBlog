@@ -19,10 +19,10 @@
 
 <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
 
+<link href="<%- theme.CDN.fontawesome %>" rel="stylesheet">
 <link rel="apple-touch-icon" href= "<%- theme.root_url %>/apple-touch-icon.png">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.all.min.js"></script>
+
 <% if (theme.rss){ %>
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
 <% } %>
@@ -39,8 +39,20 @@
     <link href="<%- theme.CDN.fancybox_css %>" rel="stylesheet">
 <% } %>
 
+<script src="<%- theme.CDN.jquery %>"></script>
+<script defer src="<%- theme.CDN.clipboard %>"></script>
+
+<script defer src="https://cdn.bootcss.com/limonte-sweetalert2/7.18.0/sweetalert2.all.js"></script>
+<% if (theme.share.on && theme.share.addthis){ %>
+    <script defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1d3f6b51787bfe"></script> 
+<% } %>
+
+<% if (theme.lazysizes.on) { %>
+    <script async src="<%- theme.CDN.lazysizes %>"></script>
+<% } %>
+
 <% if (theme.progressBar.on) { %>
-    <script src="<%- theme.CDN.pace_js %>"></script>
+    <script defer src="<%- theme.CDN.pace_js %>"></script>
     <link href="//cdn.bootcss.com/pace/1.0.2/themes/<%= theme.progressBar.color || 'blue'%>/pace-theme-<%= theme.progressBar.type || 'minimal'%>.css" rel="stylesheet">
 <% } %>
 
@@ -49,8 +61,6 @@
 <% if (is_home() && theme.animate){ %>
     <style> .article { opacity: 0;} </style>
 <% } %>
-
-<link href="<%- theme.CDN.fontawesome %>" rel="stylesheet">
 
 <%  var title = page.title;
 if ( is_archive() ) {
@@ -66,9 +76,6 @@ if ( is_archive() ) {
         title = 'Tag: ' + page.tag;
 } %>
 <title><% if ( title ){ %><%= title %> | <% } %><%= config.title %></title>
-
-<script src="<%- theme.CDN.jquery %>"></script>
-<script src="<%- theme.CDN.clipboard %>"></script>
 
 <script>
     var yiliaConfig = {
@@ -101,15 +108,12 @@ if ( is_archive() ) {
     <script> yiliaConfig.rootUrl = "\/";</script>
 <% } %>
 
-<% if (theme.share.on && theme.share.addthis){ %>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1d3f6b51787bfe"></script> 
-<% } %>
-
 <% if (theme.baidu_tongji){ %>
     <script>
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement("script");
+            hm.async = "async";
             hm.src = "//hm.baidu.com/hm.js?<%=theme.baidu_tongji%>";
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);

@@ -13,19 +13,21 @@
             <span><%= __('copyright_info.url') %>:</span><a class="post-url" href="<%- url_for(post.path) %>" title="<%= post.title %>"><%= post.permalink %></a>
             <span class="copy-path" data-clipboard-text="<%= __('copyright_info.from') %> <%= post.permalink %>　　<%= __('copyright_info.by') %> <%=theme.author%>" title="<%= __('tooltip.copyPath') %>"><i class="fa fa-clipboard"></i></span>
             <script> 
-                var clipboard = new Clipboard('.copy-path'); 
-                clipboard.on('success', $(function(){
-                    $(".fa-clipboard").click(function(){
-                        swal({   
-                        title: "",   
-                        text: '复制成功',  
-                        type: 'success',
-                        html: false,
-                        timer: 1000,   
-                        showConfirmButton: false
+                $(document).ready(function(){ 
+                    var clipboard = new Clipboard('.copy-path'); 
+                    clipboard.on('success', $(function(){
+                        $(".fa-clipboard").click(function(){
+                            swal({   
+                            title: "",   
+                            text: '复制成功',  
+                            type: 'success',
+                            html: false,
+                            timer: 1000,   
+                            showConfirmButton: false
+                            });
                         });
-                    });
-                }));
+                    }));
+                });
             </script>
         </p>
         <p>

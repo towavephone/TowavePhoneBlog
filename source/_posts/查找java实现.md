@@ -11,6 +11,7 @@ tags:
 - 算法
 - 排序
 permalink: 查找java
+mathjax: true
 ---
 ## 无序链表的顺序查找
 
