@@ -4,5 +4,6 @@ db.json
 *.log
 /node_modules
 !./node_modules/hexo-generator-index/lib/generator.js
+!./node_modules/hexo-qiniu-sync/index.js
 /public
 /.deploy*

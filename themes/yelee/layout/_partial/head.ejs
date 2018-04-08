@@ -21,7 +21,7 @@
 
 <link href="<%- theme.CDN.fontawesome %>" rel="stylesheet">
 <link rel="apple-touch-icon" href= "<%- theme.root_url %>/apple-touch-icon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/limonte-sweetalert2/7.18.0/sweetalert2.min.css">
 
 <% if (theme.rss){ %>
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
@@ -42,7 +42,7 @@
 <script src="<%- theme.CDN.jquery %>"></script>
 <script defer src="<%- theme.CDN.clipboard %>"></script>
 
-<script defer src="https://cdn.bootcss.com/limonte-sweetalert2/7.18.0/sweetalert2.all.js"></script>
+<script defer src="https://cdn.bootcss.com/limonte-sweetalert2/7.18.0/sweetalert2.min.js"></script>
 <% if (theme.share.on && theme.share.addthis){ %>
     <script defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1d3f6b51787bfe"></script> 
 <% } %>

@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-04)
+# 0.0.0 (2018-04-07)
 
 
 ### Features
@@ -30,6 +30,7 @@
 * add sort algorithm ([d1b9fd8](https://github.com/towavephone/TowavePhoneBlog/commit/d1b9fd8))
 * modify config ([bcbd6f6](https://github.com/towavephone/TowavePhoneBlog/commit/bcbd6f6))
 * offer algorithm part ([099f936](https://github.com/towavephone/TowavePhoneBlog/commit/099f936))
+* optimize image and js loading speed ([8132c48](https://github.com/towavephone/TowavePhoneBlog/commit/8132c48))
 * optimize image url to qiniu ([09d0123](https://github.com/towavephone/TowavePhoneBlog/commit/09d0123))
 * optimize image url to qiniu step 2 ([49b8577](https://github.com/towavephone/TowavePhoneBlog/commit/49b8577))
 * remove a few days ago ([a692294](https://github.com/towavephone/TowavePhoneBlog/commit/a692294))
