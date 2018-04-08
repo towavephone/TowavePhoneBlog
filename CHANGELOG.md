@@ -31,6 +31,7 @@
 * modify cdn url ([d0ec38a](https://github.com/towavephone/TowavePhoneBlog/commit/d0ec38a))
 * modify config ([bcbd6f6](https://github.com/towavephone/TowavePhoneBlog/commit/bcbd6f6))
 * offer algorithm part ([099f936](https://github.com/towavephone/TowavePhoneBlog/commit/099f936))
+* optimize background image ([31c7c2e](https://github.com/towavephone/TowavePhoneBlog/commit/31c7c2e))
 * optimize image and js loading speed ([8132c48](https://github.com/towavephone/TowavePhoneBlog/commit/8132c48))
 * optimize image url to qiniu ([09d0123](https://github.com/towavephone/TowavePhoneBlog/commit/09d0123))
 * optimize image url to qiniu step 2 ([49b8577](https://github.com/towavephone/TowavePhoneBlog/commit/49b8577))

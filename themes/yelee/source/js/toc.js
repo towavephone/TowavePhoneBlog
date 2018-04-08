@@ -66,12 +66,12 @@ define(function (){
             $tocTitle.click(function(){
                 if ($subToc.is(":hidden")) {
                     $subToc.show(150);
-                    $iconToExpand.removeClass("hide");
-                    $iconToFold.addClass("hide");
-                } else {
-                    $subToc.hide(100);
                     $iconToExpand.addClass("hide");
                     $iconToFold.removeClass("hide");
+                } else {
+                    $subToc.hide(100);
+                    $iconToExpand.removeClass("hide");
+                    $iconToFold.addClass("hide");
                 }
             })
             // TOC on mobile
