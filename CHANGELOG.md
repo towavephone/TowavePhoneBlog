@@ -28,6 +28,7 @@
 * add seek algorithm ([01bc035](https://github.com/towavephone/TowavePhoneBlog/commit/01bc035))
 * add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))
 * add sort algorithm ([d1b9fd8](https://github.com/towavephone/TowavePhoneBlog/commit/d1b9fd8))
+* fix TAG button and add front end interview html part ([e84dca0](https://github.com/towavephone/TowavePhoneBlog/commit/e84dca0))
 * modify cdn url ([d0ec38a](https://github.com/towavephone/TowavePhoneBlog/commit/d0ec38a))
 * modify config ([bcbd6f6](https://github.com/towavephone/TowavePhoneBlog/commit/bcbd6f6))
 * offer algorithm part ([099f936](https://github.com/towavephone/TowavePhoneBlog/commit/099f936))
