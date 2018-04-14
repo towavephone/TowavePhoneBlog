@@ -14,5 +14,6 @@
     "commands-show-output": false,
     "list-indent": false,
     "no-duplicate-header": false,
-    "no-alt-text": false
+    "no-alt-text": false,
+    "no-bare-urls": false
 }
