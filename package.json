@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "hexo s -p 80",
     "prod": "hexo clean && hexo g && gulp",
-    "debug": "hexo clean --debug",
     "cm": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "prepush": "yarn prod && hexo d",
