@@ -4,7 +4,7 @@ define(function (){
         var valueHide = yiliaConfig.toc[0];
         var valueShow = yiliaConfig.toc[1];
         if ($(".left-col").is(":hidden")) {
-            $("#tocButton").attr("value", valueShow);
+            $("#tocButton").attr("value", valueHide);
         }
         $("#tocButton").click(function() {
             if ($("#toc").is(":hidden")) {

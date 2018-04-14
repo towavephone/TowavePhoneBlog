@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.4.2"
+    "version": "3.7.1"
   },
   "scripts": {
     "dev": "hexo s -p 80",
     "prod": "hexo clean && hexo g && gulp",
+    "debug": "hexo clean --debug",
     "cm": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "prepush": "yarn prod && hexo d",
@@ -21,8 +22,8 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-uglify": "^3.0.0",
-    "hexo": "^3.2.0",
-    "hexo-blog-encrypt": "^2.0.2",
+    "hexo": "^3.4.2",
+    "hexo-blog-encrypt": "^2.0.7",
     "hexo-deployer-git": "^0.3.1",
     "hexo-fs": "^0.2.2",
     "hexo-generator-archive": "^0.1.4",
@@ -46,6 +47,7 @@
     "@commitlint/config-conventional": "^5.2.3",
     "commitizen": "^2.9.6",
     "conventional-changelog": "^1.1.7",
+    "conventional-changelog-cli": "^1.3.21",
     "cz-conventional-changelog": "^2.1.0",
     "markdownlint": "^0.8.1",
     "markdownlint-cli": "^0.8.1"

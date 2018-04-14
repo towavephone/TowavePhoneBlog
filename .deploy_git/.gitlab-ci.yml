@@ -1,0 +1,11 @@
+deploy:
+  stage: deploy
+  script:
+    - ls
+    - rm -rf /etc/gitlab-runner/blog && mkdir /etc/gitlab-runner/blog
+    - cp -r * /etc/gitlab-runner/blog
+  only:
+  - master
+  environment:
+    name: production
+    url: http://120.79.62.126

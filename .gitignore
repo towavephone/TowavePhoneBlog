@@ -7,3 +7,4 @@ db.json
 !./node_modules/hexo-qiniu-sync/index.js
 /public
 /.deploy*
+!.deploy_git/.gitlab-ci.yml

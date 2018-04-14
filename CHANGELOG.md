@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-08)
+# 0.0.0 (2018-04-14)
 
 
 ### Features
@@ -14,8 +14,10 @@
 * add computer network part 3 ([9e4f638](https://github.com/towavephone/TowavePhoneBlog/commit/9e4f638))
 * add computer network part 5 ([1972556](https://github.com/towavephone/TowavePhoneBlog/commit/1972556))
 * add database related ([9d4aa06](https://github.com/towavephone/TowavePhoneBlog/commit/9d4aa06))
+* add gitlab shell ([eac7d2f](https://github.com/towavephone/TowavePhoneBlog/commit/eac7d2f))
 * add hash table ([c9336fc](https://github.com/towavephone/TowavePhoneBlog/commit/c9336fc))
 * add hover style and code style ([b9bf526](https://github.com/towavephone/TowavePhoneBlog/commit/b9bf526))
+* add html part 2 ([fe19171](https://github.com/towavephone/TowavePhoneBlog/commit/fe19171))
 * add HTTP part 1 ([72f21f4](https://github.com/towavephone/TowavePhoneBlog/commit/72f21f4))
 * add HTTP part 2 ([98971c8](https://github.com/towavephone/TowavePhoneBlog/commit/98971c8))
 * add interview data ([51d9a3d](https://github.com/towavephone/TowavePhoneBlog/commit/51d9a3d))
@@ -28,6 +30,14 @@
 * add seek algorithm ([01bc035](https://github.com/towavephone/TowavePhoneBlog/commit/01bc035))
 * add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))
 * add sort algorithm ([d1b9fd8](https://github.com/towavephone/TowavePhoneBlog/commit/d1b9fd8))
+* fix ([29b33c2](https://github.com/towavephone/TowavePhoneBlog/commit/29b33c2))
+* fix ([adcdb69](https://github.com/towavephone/TowavePhoneBlog/commit/adcdb69))
+* fix ([6e083ac](https://github.com/towavephone/TowavePhoneBlog/commit/6e083ac))
+* fix ([2bb1223](https://github.com/towavephone/TowavePhoneBlog/commit/2bb1223))
+* fix ([840bf37](https://github.com/towavephone/TowavePhoneBlog/commit/840bf37))
+* fix ([31a0e10](https://github.com/towavephone/TowavePhoneBlog/commit/31a0e10))
+* fix ([260b2d3](https://github.com/towavephone/TowavePhoneBlog/commit/260b2d3))
+* fix hexo build many times ([e52aadf](https://github.com/towavephone/TowavePhoneBlog/commit/e52aadf))
 * fix TAG button and add front end interview html part ([e84dca0](https://github.com/towavephone/TowavePhoneBlog/commit/e84dca0))
 * modify cdn url ([d0ec38a](https://github.com/towavephone/TowavePhoneBlog/commit/d0ec38a))
 * modify config ([bcbd6f6](https://github.com/towavephone/TowavePhoneBlog/commit/bcbd6f6))

@@ -413,3 +413,259 @@ If-Modified-Since: Wed, 01 Sep 2004 13:24:52 GMT
 
 name=qiu&age=25
 ```
+
+## 如何进行网站性能优化
+
+[雅虎Best Practices for Speeding Up Your Web Site:](https://developer.yahoo.com/performance/rules.html)
+[前端性能优化最佳实践](/2018/01/05/前端性能优化/)
+
+- content方面
+    1. 减少HTTP请求：合并文件、CSS精灵、Inline Image
+    2. 减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分布到恰当数量的主机名，平衡并行下载和DNS查询
+    3. 避免重定向：多余的中间访问
+    4. 使Ajax可缓存
+    5. 非必须组件延迟加载
+    6. 未来所需组件预加载
+    7. 减少DOM元素数量
+    8. 将资源放到不同的域下：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量
+    9. 减少iframe数量
+    10. 不要404
+
+- Server方面
+    1. 使用CDN
+    2. 添加Expires或者Cache-Control响应头
+    3. 对组件使用Gzip压缩
+    4. 配置ETag
+    5. Flush Buffer Early
+    6. Ajax使用GET进行请求
+    7. 避免空src的img标签
+
+- Cookie方面
+    1. 减小cookie大小
+    2. 引入资源的域名不要包含cookie
+
+- css方面
+    1. 将样式表放到页面顶部
+    2. 不使用CSS表达式
+    3. 不使用@import
+    4. 不使用IE的Filter
+
+- Javascript方面
+    1. 将脚本放到页面底部
+    2. 将javascript和css从外部引入
+    3. 压缩javascript和css
+    4. 删除不需要的脚本
+    5. 减少DOM访问
+    6. 合理设计事件监听器
+
+- 图片方面
+    1. 优化图片：根据实际颜色需要选择色深、压缩
+    2. 优化css精灵
+    3. 不要在HTML中拉伸图片
+    4. 保证favicon.ico小并且可缓存
+
+- 移动方面
+    1. 保证组件小于25k
+    2. Pack Components into a Multipart Document
+
+## 什么是渐进增强
+
+渐进增强是指在web设计时强调可访问性、语义化HTML标签、外部样式表和脚本。保证所有人都能访问页面的基本内容和功能同时为高级浏览器和高带宽用户提供更好的用户体验。核心原则如下:
+
+- 所有浏览器都必须能访问基本内容
+- 所有浏览器都必须能使用基本功能
+- 所有内容都包含在语义化标签中
+- 通过外部CSS提供增强的布局
+- 通过非侵入式、外部javascript提供增强功能
+- end-user web browser preferences are respected
+
+## HTTP状态码及其含义
+
+参考[RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+
+- 1XX：信息状态码
+    - **100 Continue**：客户端应当继续发送请求。这个临时响应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。服务器必须在请求完成后向客户端发送一个最终响应。
+    - **101 Switching Protocols**：服务器已经理解客户端的请求，并将通过Upgrade消息头通知客户端采用不同的协议来完成这个请求。在发送完这个响应最后的空行后，服务器将会切换到Upgrade消息头中定义的那些协议。
+- 2XX：成功状态码
+    - **200 OK**：请求成功，请求所希望的响应头或数据体将随此响应返回
+    - **201 Created**
+    - **202 Accepted**
+    - **203 Non-Authoritative Information**
+    - **204 No Content**
+    - **205 Reset Content**
+    - **206 Partial Content**
+- 3XX：重定向
+    - **300 Multiple Choices**
+    - **301 Moved Permanently**
+    - **302 Found**
+    - **303 See Other**
+    - **304 Not Modified**
+    - **305 Use Proxy**
+    - **306 （unused）**
+    - **307 Temporary Redirect**
+- 4XX：客户端错误
+    - **400 Bad Request**
+    - **401 Unauthorized**
+    - **402 Payment Required**
+    - **403 Forbidden**
+    - **404 Not Found**
+    - **405 Method Not Allowed**
+    - **406 Not Acceptable**
+    - **407 Proxy Authentication Required**
+    - **408 Request Timeout**
+    - **409 Conflict**
+    - **410 Gone**
+    - **411 Length Required**
+    - **412 Precondition Failed**
+    - **413 Request Entity Too Large**
+    - **414 Request-URI Too Long**
+    - **415 Unsupported Media Type**
+    - **416 Requested Range Not Satisfiable**
+    - **417 Expectation Failed**
+- 5XX: 服务器错误
+    - **500 Internal Server Error**
+    - **501 Not Implemented**
+    - **502 Bad Gateway**
+    - **503 Service Unavailable**
+    - **504 Gateway Timeout**
+    - **505 HTTP Version Not Supported**
+
+## `keygen`是正确的HTML5标签吗？
+
+`<keygen>` 标签规定用于表单的密钥对生成器字段。当提交表单时，私钥存储在本地，公钥发送到服务器。是HTML5 标签。
+
+## `bdo` 标签是否可以改变文本方向？
+
+`<bdo>`标签覆盖默认的文本方向。
+
+```html
+<bdo dir="rtl">Here is some text</bdo>
+```
+
+实现效果：<bdo dir="rtl">Here is some text</bdo>
+
+## 下列HTML代码是否正确？
+
+```html
+<figure>
+    <img src="myimage.jpg" alt="My image">
+    <figcaption>
+        <p>This is my self portrait.</p>
+    </figcaption>
+</figure>
+```
+
+正确`<figure>`标签规定独立的流内容（图像、图表、照片、代码等等）。figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。使用`<figcaption>`元素为figure添加标题（caption）。
+
+## 哪种情况下应该使用small标签？当你想在h1标题后创建副标题？还是当在footer里面增加版权信息？
+
+small标签一般使用场景是在版权信息和法律文本里使用，也可以在标题里使用标注附加信息（bootstrap中可见），但不可以用来创建副标题。
+
+>The HTML Small Element (`<small>`) makes the text font size one size smaller (for example, from large to medium, or from small to x-small) down to the browser's minimum font size. In HTML5, this element is repurposed to represent side-comments and small print, including copyright and legal text, independent of its styled presentation.
+
+## 在一个结构良好的web网页里，多个h1标签会不利于SEO吗？
+
+不影响。
+
+>According to Matt Cutts (lead of Google's webspam team and the de facto expert on these things), using multiple `<h1>` tags is fine, as long as you're not abusing it (like sticking your whole page in an `<h1>` and using CSS to style it back to normal size). That would likely have no effect, and might trigger a penalty, as it looks spammy.
+
+>If you have multiple headings and it would be natural to use multiple `<h1>`'s, then go for it.
+
+摘自：<http://www.quora.com/Does-using-multiple-h1-tags-on-a-page-affect-search-engine-rankings>
+
+## 如果你有一个搜索结果页面，你想高亮搜索的关键词。什么HTML 标签可以使用?
+
+`<mark>`标签表现高亮文本。
+
+>The HTML `<mark>` Element represents highlighted text, i.e., a run of text marked for reference purpose, due to its relevance in a particular context. For example it can be used in a page showing search results to highlight every instance of the searched for word.
+
+## 下列代码中scope 属性是做什么的？
+
+```html
+<article>
+    <h1>Hello World</h1>
+    <style scoped>
+        p {
+            color: #FF0;
+        }
+    </style>
+    <p>This is my text</p>
+</article>
+
+<article>
+    <h1>This is awesome</h1>
+    <p>I am some other text</p>
+</article>
+```
+
+scoped 属性是一个布尔属性。如果使用该属性，则样式仅仅应用到 style 元素的父元素及其子元素。
+
+## HTML5 支持块级超链接吗？例如：
+
+```html
+<article>
+    <a href="#">
+        <h1>Hello</h1>
+        <p>I am some text</p>
+    </a>
+</article>
+```
+
+支持，HTML5中`<a>`元素表现为一个超链接，支持任何行内元素和块级元素。
+
+## 当下列的HTML代码加载时会触发新的HTTP请求吗？
+
+```html
+<img src="mypic.jpg" style="visibility: hidden" alt="My picture">
+```
+
+会。
+
+## 当下列的HTML代码加载时会触发新的HTTP请求吗？
+
+```html
+<div style="display: none;">
+    <img src="mypic.jpg" alt="My photo">
+</div>
+```
+
+会。
+
+## main1.css一定会在alert('Hello world')被加载和编译吗?
+
+```html
+<head>
+    <link href="main1.css" rel="stylesheet">
+    <script>
+        alert('Hello World');
+    </script>
+</head>
+```
+
+会。
+
+## 在main2.css获取前main1一定必须被下载解析吗？
+
+```html
+<head>
+    <link href="main1.css" rel="stylesheet">
+    <link href="main2.css" rel="stylesheet">
+</head>
+```
+
+不一定。
+
+## 在Paragraph 1加载后main2.css才会被加载编译吗？
+
+```html
+<head>
+    <link href="main1.css" rel="stylesheet">
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <link href="main2.css" rel="stylesheet">
+</body>
+```
+
+是。
