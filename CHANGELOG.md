@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-14)
+# 0.0.0 (2018-04-15)
 
 
 ### Features
@@ -14,7 +14,8 @@
 * add computer network part 3 ([9e4f638](https://github.com/towavephone/TowavePhoneBlog/commit/9e4f638))
 * add computer network part 5 ([1972556](https://github.com/towavephone/TowavePhoneBlog/commit/1972556))
 * add database related ([9d4aa06](https://github.com/towavephone/TowavePhoneBlog/commit/9d4aa06))
-* add design pattern part 2 ([4da0840](https://github.com/towavephone/TowavePhoneBlog/commit/4da0840))
+* add design pattern part 2 ([1f7a3a5](https://github.com/towavephone/TowavePhoneBlog/commit/1f7a3a5))
+* add design pattern part 3 ([4458b33](https://github.com/towavephone/TowavePhoneBlog/commit/4458b33))
 * add gitlab shell and front end css html ([a1db2fe](https://github.com/towavephone/TowavePhoneBlog/commit/a1db2fe))
 * add hash table ([c9336fc](https://github.com/towavephone/TowavePhoneBlog/commit/c9336fc))
 * add hover style and code style ([b9bf526](https://github.com/towavephone/TowavePhoneBlog/commit/b9bf526))
@@ -32,7 +33,6 @@
 * add seek algorithm ([01bc035](https://github.com/towavephone/TowavePhoneBlog/commit/01bc035))
 * add snow article ([21755f2](https://github.com/towavephone/TowavePhoneBlog/commit/21755f2))
 * add sort algorithm ([d1b9fd8](https://github.com/towavephone/TowavePhoneBlog/commit/d1b9fd8))
-* fix ([d55eebf](https://github.com/towavephone/TowavePhoneBlog/commit/d55eebf))
 * fix encrypt zip error ([844b742](https://github.com/towavephone/TowavePhoneBlog/commit/844b742))
 * fix TAG button and add front end interview html part ([e84dca0](https://github.com/towavephone/TowavePhoneBlog/commit/e84dca0))
 * modify cdn url ([d0ec38a](https://github.com/towavephone/TowavePhoneBlog/commit/d0ec38a))
