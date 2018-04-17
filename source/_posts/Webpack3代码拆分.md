@@ -13,7 +13,7 @@ tags:
 
 翻译转载：[Webpack 3, Dynamic Imports, Code Splitting, and Long Term Caching… Made Easy.](https://blog.cloudboost.io/webpack-3-dynamic-imports-code-splitting-and-long-term-caching-made-easy-1892981e0ae7)
 在与Webpack 1.x升级到3.x（比我想承认的更长的时间）后，突然点击了一下。看到揭开的奥秘：
-<iframe src="https://giphy.com/embed/xUOxeX2W00FmKjNsUo" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/code-splitting-dynamic-imports-webpack-3-xUOxeX2W00FmKjNsUo">via GIPHY</a></p>
+<div align="center"><iframe src="https://giphy.com/embed/xUOxeX2W00FmKjNsUo" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/code-splitting-dynamic-imports-webpack-3-xUOxeX2W00FmKjNsUo">via GIPHY</a></p></div>
 演示一个简单的应用程序动态加载多个路线。请注意编辑“页面2”后的200响应，而未更改的文件则为304。
 
 <!--more-->
