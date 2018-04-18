@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-17)
+# 0.0.0 (2018-04-18)
 
 
 ### Features
@@ -20,6 +20,7 @@
 * add design pattern part 5 ([2cc2e3c](https://github.com/towavephone/TowavePhoneBlog/commit/2cc2e3c))
 * add design pattern part 6 ([f31bf0b](https://github.com/towavephone/TowavePhoneBlog/commit/f31bf0b))
 * add design pattern part 7 ([fdab85e](https://github.com/towavephone/TowavePhoneBlog/commit/fdab85e))
+* add design pattern part 8 ([b80230b](https://github.com/towavephone/TowavePhoneBlog/commit/b80230b))
 * add gitlab shell and front end css html ([a1db2fe](https://github.com/towavephone/TowavePhoneBlog/commit/a1db2fe))
 * add hash table ([c9336fc](https://github.com/towavephone/TowavePhoneBlog/commit/c9336fc))
 * add hover style and code style ([b9bf526](https://github.com/towavephone/TowavePhoneBlog/commit/b9bf526))

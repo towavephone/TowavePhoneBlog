@@ -1,0 +1,39 @@
+cache:
+  paths:
+  - node_modules
+
+stages:
+- install
+- lint
+- build_deploy
+
+install:
+  stage: install
+  script:
+  - yarn
+  - git status
+  - git checkout .
+  - git status
+  - git config --global user.email "634407147@qq.com"
+  - git config --global user.name "towavephone"
+
+lint:
+  stage: lint
+  script:
+  - yarn lint:markdown
+
+build_deploy:
+  stage: build_deploy
+  script:
+    - yarn prod
+    - ls
+    - rm -rf /etc/gitlab-runner/blog && mkdir /etc/gitlab-runner/blog
+    - cp -r public/* /etc/gitlab-runner/blog
+    - echo '部署到gitlab上成功'
+    - yarn deploy
+    - echo '部署到github和coding上成功'
+  only:
+  - master
+  environment:
+    name: production
+    url: http://120.79.62.126

@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Yelee
+theme: yelee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,7 +82,6 @@ deploy:
   repo: 
     github: git@github.com:towavephone/towavephone.github.io.git
     coding: git@git.coding.net:towavephone/towavephone.coding.me.git
-    gitlab: ssh://git@120.79.62.126:10022/towavephone/towavephone.github.io.git
 # live2d:
 #   model: miku # 模型名称 默认值: z16
 #   width: 150 # 宽度 默认值: 150
