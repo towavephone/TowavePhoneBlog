@@ -7,7 +7,6 @@ stages:
 - lint
 - build
 - deploy to gitlab
-- deploy to github and coding
 
 install:
   stage: install
@@ -35,8 +34,8 @@ build:
 deploy to gitlab:
   stage: deploy to gitlab
   script:
-    - cp -r public/* /etc/gitlab-runner/blog
     - rm -rf /etc/gitlab-runner/blog && mkdir /etc/gitlab-runner/blog
+    - cp -r public/* /etc/gitlab-runner/blog
     - echo '部署到gitlab上成功'
   dependencies:
     - build
@@ -52,17 +51,3 @@ stop deploy on gitlab:
   environment:
     name: gitlab
     action: stop
-
-deploy to github and coding:
-  stage: deploy to github and coding
-  script: 
-    - git config --global user.email "634407147@qq.com"
-    - git config --global user.name "towavephone" 
-    - yarn deploy
-    - echo '部署到github和coding上成功'
-  dependencies:
-    - build
-  environment:
-    name: github and coding
-    url: http://towavephone.github.io
-  allow_failure: true
