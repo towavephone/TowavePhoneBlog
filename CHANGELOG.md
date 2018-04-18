@@ -14,6 +14,7 @@
 * add computer network part 3 ([9e4f638](https://github.com/towavephone/TowavePhoneBlog/commit/9e4f638))
 * add computer network part 5 ([1972556](https://github.com/towavephone/TowavePhoneBlog/commit/1972556))
 * add database related ([9d4aa06](https://github.com/towavephone/TowavePhoneBlog/commit/9d4aa06))
+* add deploy shell to gitlab ([002ed4e](https://github.com/towavephone/TowavePhoneBlog/commit/002ed4e))
 * add design pattern part 2 ([1f7a3a5](https://github.com/towavephone/TowavePhoneBlog/commit/1f7a3a5))
 * add design pattern part 3 ([4458b33](https://github.com/towavephone/TowavePhoneBlog/commit/4458b33))
 * add design pattern part 4 ([556b3f3](https://github.com/towavephone/TowavePhoneBlog/commit/556b3f3))

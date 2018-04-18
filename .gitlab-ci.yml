@@ -5,7 +5,9 @@ cache:
 stages:
 - install
 - lint
-- build_deploy
+- build
+- deploy to gitlab
+- deploy to github and coding
 
 install:
   stage: install
@@ -14,26 +16,53 @@ install:
   - git status
   - git checkout .
   - git status
-  - git config --global user.email "634407147@qq.com"
-  - git config --global user.name "towavephone"
 
 lint:
   stage: lint
   script:
   - yarn lint:markdown
 
-build_deploy:
-  stage: build_deploy
+build:
+  stage: build
   script:
     - yarn prod
     - ls
-    - rm -rf /etc/gitlab-runner/blog && mkdir /etc/gitlab-runner/blog
+  artifacts:
+    name: "CI_JOB_NAME-$CI_COMMIT_REF_NAME"
+    paths:
+    - public
+
+deploy to gitlab:
+  stage: deploy to gitlab
+  script:
     - cp -r public/* /etc/gitlab-runner/blog
+    - rm -rf /etc/gitlab-runner/blog && mkdir /etc/gitlab-runner/blog
     - echo '部署到gitlab上成功'
+  dependencies:
+    - build
+  environment:
+    name: gitlab
+    url: http://120.79.62.126
+    on_stop: stop deploy on gitlab
+
+stop deploy on gitlab:
+  stage: deploy to gitlab
+  script: rm -rf /etc/gitlab-runner/blog
+  when: manual
+  environment:
+    name: gitlab
+    action: stop
+
+deploy to github and coding:
+  stage: deploy to github and coding
+  script: 
+    - git config --global user.email "634407147@qq.com"
+    - git config --global user.name "towavephone" 
     - yarn deploy
     - echo '部署到github和coding上成功'
-  only:
-  - master
+  dependencies:
+    - build
   environment:
-    name: production
-    url: http://120.79.62.126
+    name: github and coding
+    url: http://towavephone.github.io
+  allow_failure: true
