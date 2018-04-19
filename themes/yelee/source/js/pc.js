@@ -91,12 +91,12 @@ define([], function(){
                 $("#post-nav-button .fa-bars,#post-nav-button .fa-times").toggle();
                 $(".post-list").toggle(300);
                 if ($(".toc").length > 0) {
-                    $("#toc, #tocButton").toggle(200, function() {
+                    $("#toc-div, #tocButton").toggle(200, function() {
                         if ($(".switch-area").is(":visible")) {
-                            $("#toc, .switch-btn, .switch-area").toggle();
+                            $("#toc-div, .switch-btn, .switch-area").toggle();
                             $("#tocButton").attr("value", yiliaConfig.toc[0]);
-                            }
-                        });
+                        }
+                    });
                 }
                 else {
                     $(".switch-btn, .switch-area").fadeToggle(300);
@@ -165,7 +165,7 @@ define([], function(){
         var search = function(){
             require([yiliaConfig.rootUrl + 'js/search.js'], function(){
                 var inputArea = document.querySelector("#local-search-input");
-                var $HideWhenSearch = $("#toc, #tocButton, .post-list, #post-nav-button a:nth-child(2)");
+                var $HideWhenSearch = $("#toc-div, #tocButton, .post-list, #post-nav-button a:nth-child(2)");
                 var $resetButton = $("#search-form .fa-times");
                 var $resultArea = $("#local-search-result");
 

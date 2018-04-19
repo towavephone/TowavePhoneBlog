@@ -1,10 +1,18 @@
 <% if (!index && ((post.toc != false && !is_page() && theme.toc.on) || post.toc)) { %>
-    <div id="toc" class="toc-article">
+    <div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
         <strong class="toc-title"><%= __('toc.title') %></strong>
         <% if ((theme.toc.list_number && post.toc_list_number != false) || post.toc_list_number) { %>
-            <%- toc(post.content) %>
+            <% if (post.encrypt == true) { %>
+                <%- toc(post.origin) %>
+            <% } else { %>
+                <%- toc(post.content) %>
+            <% } %>
         <% } else { %>
-            <%- toc(post.content, {list_number: false}) %>
+            <% if (post.encrypt == true) { %>
+                <%- toc(post.origin, {list_number: false}) %>
+            <% } else { %>
+                <%- toc(post.content, {list_number: false}) %>
+            <% } %>
         <% } %>
     </div>
     <style>
@@ -18,7 +26,7 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="<%= __('toc.hide') %>"  title="<%= __('tooltip.tocButton') %>">
+    <input type="button" id="tocButton" value="<%= __('toc.hide') %>"  title="<%= __('tooltip.tocButton') %>" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
 
     <script>
         yiliaConfig.toc = ["<%= __('toc.hide') %>", "<%= __('toc.show') %>", !!"<%= theme.toc.nowrap %>"];

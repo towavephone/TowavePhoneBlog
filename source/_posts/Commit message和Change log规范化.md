@@ -45,7 +45,7 @@ npm install --save-dev commitizen
 
 ### 效果
 
-<div align="center"><img class="NoNeedOptimize" src="http://p6aicz9r2.bkt.clouddn.com/static/images/commitlint.svg"/>
+<div align="center"><img class="NoNeedOptimize" src="http://p6aicz9r2.bkt.clouddn.com/static/images/commitlint.svg"/></div>
 
 ### 本地安装步骤
 

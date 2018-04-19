@@ -7,14 +7,14 @@ define(function (){
             $("#tocButton").attr("value", valueHide);
         }
         $("#tocButton").click(function() {
-            if ($("#toc").is(":hidden")) {
+            if ($("#toc-div").is(":hidden")) {
                 $("#tocButton").attr("value", valueHide);
-                $("#toc").slideDown(320);
+                $("#toc-div").slideDown(320);
                 $(".switch-btn, .switch-area").fadeOut(300);
             }
             else {
                 $("#tocButton").attr("value", valueShow);
-                $("#toc").slideUp(350);
+                $("#toc-div").slideUp(350);
                 $(".switch-btn, .switch-area").fadeIn(500);
             }
         })
@@ -22,17 +22,17 @@ define(function (){
 
     var HideTOCifNoHeader = function(){
         if (!$(".toc").length) {
-            $("#toc, #tocButton").hide();
+            $("#toc-div, #tocButton").hide();
             $(".switch-btn, .switch-area").show();
         }
     }()
 
-    var $itemHasChild = $("#toc .toc-item:has(> .toc-child)");
+    var $itemHasChild = $("#toc-div .toc-item:has(> .toc-child)");
     var $titleHasChild = $itemHasChild.children(".toc-link");
     $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i>");
 
     var clickIcon = function(){
-        $("#toc .toc-item > i").click(function(){
+        $("#toc-div .toc-item > i").click(function(){
             $(this).siblings(".toc-child").slideToggle(100);
             $(this).toggleClass("hide");
             $(this).siblings("i").toggleClass("hide");
@@ -60,7 +60,7 @@ define(function (){
         var $subToc = $titleHasChild.next(".toc-child");
         $iconToExpand.addClass("hide");
 
-        var $tocTitle = $("#toc .toc-title");
+        var $tocTitle = $("#toc-div .toc-title");
         if ($titleHasChild.length) {
             $tocTitle.addClass("clickable");
             $tocTitle.click(function(){
@@ -95,7 +95,7 @@ define(function (){
             })
             var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
             if (isSafari) {
-                $("#toc .toc-item i").css("bottom", ".1em");
+                $("#toc-div .toc-item i").css("bottom", ".1em");
             }
         }
     }

@@ -19,7 +19,7 @@
         }
     <% } else if (global === 1) { %>
         $("a").attr("target", "_blank");
-        $("#scroll a, #toc a").removeAttr("target");
+        $("#scroll a, #toc-div a").removeAttr("target");
     <% } else if (global === 2) { %>
         $("a[target=_blank]").removeAttr("target");
     <% } %>

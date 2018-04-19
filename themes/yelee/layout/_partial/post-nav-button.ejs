@@ -9,7 +9,7 @@
             <a href="/" title="<%= __('tooltip.back2home') %>"><i class="fa fa-home"></i></a>
         <% } %>
 
-        <a title="<%= __('tooltip.miniArchives') %>"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a id="miniArchives" title="<%= __('tooltip.miniArchives') %>" <% if (post.encrypt == true) { %>style="display:none" <% } %> ><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         <% if (post.next){ %>
             <a href="<%- url_for(post.next.path) %>" title="<%= __('tooltip.nextPost') %>: <%= post.next.title %>">
