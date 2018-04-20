@@ -304,6 +304,9 @@ progressBar:
   on: true
   type: "minimal"  # Keep Quotes | 保留引号避免出错
   color: red
+ICP:
+ on: true
+ value: 鄂ICP备18008308号 
 lazysizes:
   on: true
 CDN:
