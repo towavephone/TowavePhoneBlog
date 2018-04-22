@@ -875,19 +875,158 @@ baz = 'qux';
 
 ## ES6 的类和 ES5 的构造函数有什么区别？
 
-TODO
+* ES5 的构造函数的原型上的属性和方法可以遍历，ES6 不能够遍历
+* ES6 的类必须通过 new 调用，构造函数则可以不用
+* 类不存在变量提升
+* ES6 的类没有私有方法和私有属性（正在提议中）
+* class 多了一个静态方法（static），里面的 this 指向的是类本身，静态方法可以被子类继承
+* ES6 的静态属性和静态方法
+* ES6 类多了一个 new Target 可以判定 new 的构造函数
 
 ## 你能给出一个使用箭头函数的例子吗，箭头函数与其他函数有什么不同？
 
-TODO
+1. 定义对象方法
+    * 定义字面量方法
+        **错误情况：**
+        ```js
+        const calculator = {
+            array: [1, 2, 3],
+            sum: () => {
+                console.log(this === window); // => true
+                return this.array.reduce((result, item) => result + item);
+            }
+        };
+
+        console.log(this === window); // => true
+
+        // Throws "TypeError: Cannot read property 'reduce' of undefined"
+        calculator.sum();
+        ```
+        **修正情况**
+        ```js
+            const calculator = {
+                array: [1, 2, 3],
+                sum() {
+                    console.log(this === calculator); // => true
+                    return this.array.reduce((result, item) => result + item);
+                }
+            };
+            calculator.sum(); // => 6
+        ```
+    * 定义原型方法
+        **错误情况：**
+        ```js
+            function Cat(name) {
+                this.name = name;
+            }
+
+            Cat.prototype.sayCatName = () => {
+                console.log(this === window); // => true
+                return this.name;
+            };
+
+            const cat = new Cat('Mew');
+            cat.sayCatName(); // => undefined
+        ```
+        **修正情况**
+        ```js
+        function Cat(name) {
+            this.name = name;
+        }
+
+        Cat.prototype.sayCatName = function () {
+            console.log(this === cat); // => true
+            return this.name;
+        };
+
+        const cat = new Cat('Mew');
+        cat.sayCatName(); // => 'Mew'
+        ```        
+2. 定义事件回调函数
+    **错误情况：**
+    ```js
+    const button = document.getElementById('myButton');
+    button.addEventListener('click', () => {
+        console.log(this === window); // => true
+        this.innerHTML = 'Clicked button';
+    });
+    ```
+    **修正情况**
+    ```js
+    const button = document.getElementById('myButton');
+    button.addEventListener('click', function() {
+        console.log(this === button); // => true
+        this.innerHTML = 'Clicked button';
+    });
+    ```
+3. 定义构造函数
+    **错误情况：**
+    ```js
+    const Message = (text) => {
+        this.text = text;
+    };
+    // Throws "TypeError: Message is not a constructor"
+    const helloMessage = new Message('Hello World!');
+    ```
+    **修正情况**
+    ```js
+    const Message = function(text) {
+        this.text = text;
+    };
+    const helloMessage = new Message('Hello World!');
+    console.log(helloMessage.text); // => 'Hello World!'
+    ```
+4. 追求过短的代码
+    **不建议情况：**
+    ```js
+    const multiply = (a, b) => b === undefined ? b => a * b : a * b;
+    const double = multiply(2);
+    double(3);      // => 6
+    multiply(2, 3); // => 6
+    ```
+    **建议情况**
+    ```js
+    function multiply(a, b) {
+        if (b === undefined) {
+            return function (b) {
+                return a * b;
+            }
+        }
+        return a * b;
+    }
+
+    const double = multiply(2);
+    double(3); // => 6
+    multiply(2, 3); // => 6
+    ```
+5. 总结：在箭头函数中，this被设置为它被创建时的上下文，不会改变。
 
 ## 在构造函数中使用箭头函数有什么好处？
 
-TODO
+箭头函数固然好用，但是不能用于构造函数，即不能被 new 一下
+
+```js
+///使用function方法定义构造函数
+function per(){
+    this.name='aaa';
+    this.sex='man'
+};
+var ming=new per();
+console.log(ming); /// {name: "aaa", sex: "man"}
+
+
+///使用箭头函数定义构造函数
+var per=>{
+    this.name='bbb';
+    this.sex='women';
+};
+var gang=new per();
+///运行便会报错：Uncaught TypeError: per is not a constructor
+```
 
 ## 高阶函数（higher-order）的定义是什么？
 
-高阶函数是将一个或多个函数作为参数的函数，它用于数据处理，也可能将函数作为返回结果。高阶函数是为了抽象一些重复执行的操作。一个典型的例子是`map`，它将一个数组和一个函数作为参数。`map`使用这个函数来转换数组中的每个元素，并返回一个包含转换后元素的新数组。JavaScript 中的其他常见示例是`forEach`、`filter`和`reduce`。高阶函数不仅需要操作数组的时候会用到，还有许多函数返回新函数的用例。`Function.prototype.bind`就是一个例子。
+高阶函数是将一个或多个函数作为参数的函数，它用于数据处理，也可能将函数作为返回结果。高阶函数是为了抽象一些重复执行的操作。一个典型的例子是`map`，它将一个数组和一个函数作为参数。`map`使用这个函数来转换数组中的每个元素，并返回一个包含转换后元素的新数组。JavaScript 中的其他常见示例是`forEach`、`filter`和`reduce`。高阶函数不仅需要操作数组的时候会用到，还有许多函数返回新函数的用例，`Function.prototype.bind`就是一个例子。
 
 **Map 示例：**
 
@@ -997,23 +1136,22 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 
 ```js
 //show函数采用rest参数的写法如下：
-
 let name = '张三',
-  age = 20,
-  message = show`我来给大家介绍:${name}的年龄是${age}.`;
+    age = 20,
+    message = show`我来给大家介绍:${name}的年龄是${age}.`;
 
 function show(stringArr, ...values) {
-  let output = '';
+    let output = '';
 
-  let index = 0;
+    let index = 0;
+    
+    for (; index < values.length; index++) {
+        output += stringArr[index] + values[index];
+    }
 
-  for (; index < values.length; index++) {
-    output += stringArr[index] + values[index];
-  }
+    output += stringArr[index];
 
-  output += stringArr[index];
-
-  return output;
+    return output;
 }
 
 message; //"我来给大家介绍:张三的年龄是20."

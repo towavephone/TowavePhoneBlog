@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-19)
+# 0.0.0 (2018-04-20)
 
 
 ### Features
@@ -46,6 +46,8 @@
 * fix TAG button and add front end interview html part ([e84dca0](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/e84dca0))
 * modify cdn url ([d0ec38a](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d0ec38a))
 * modify config ([bcbd6f6](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/bcbd6f6))
+* modify personal resume ([796aa98](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/796aa98))
+* modify personal resume part 2 and add ICP SN number ([8a4148a](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/8a4148a))
 * offer algorithm part ([099f936](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/099f936))
 * optimize background image ([31c7c2e](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/31c7c2e))
 * optimize image and js loading speed ([8132c48](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/8132c48))
