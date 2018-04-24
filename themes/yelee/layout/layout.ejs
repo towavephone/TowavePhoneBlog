@@ -2,12 +2,18 @@
 <body>
   <div id="container">
     <div class="left-col">
-    <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
+        <%- fragment_cache('left-col', function(){
+            return partial('_partial/left-col');
+        }) %>
     </div>
     <div class="mid-col">
-      <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
-      <div class="body-wrap"><%- body %></div>
-      <%- partial('_partial/footer') %>
+        <%- fragment_cache('mobile-nav', function(){
+            return partial('_partial/mobile-nav');
+        }) %>
+        <div class="body-wrap"><%- body %></div>
+        <%- fragment_cache('footer', function(){
+            return partial('_partial/footer');
+        }) %>
     </div>
     <%- partial('_partial/after-footer') %>
     <%- partial('_partial/lean-analytics') %>

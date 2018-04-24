@@ -16,6 +16,7 @@ visit_counter:
   site: 本站到访数
   page: 本页阅读量
   total_word_count: 本站总字数
+  total_post_length: 本站文章数
 
 copyright_info:
   title: 本文标题

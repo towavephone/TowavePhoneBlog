@@ -290,6 +290,7 @@ visit_counter:
   site_visit: true
   page_visit: true
   site_word: true
+  post_length: true 
 
 # GitHub Repo Widget
 # https://github.com/hustcc/GitHub-Repo-Widget.js

@@ -1,10 +1,12 @@
 ---
 title: 你不知道的JS（一）
 categories:
-  - eg
+  - 面试
 tags:
-  - eg
-permalink: 网络
+  - You Don't know JS
+  - JS
+  - 闭包
+permalink: JS
 date: 2018-04-21 17:52:46
 fancybox:
 original:
