@@ -19,6 +19,13 @@ define(function (){
             }
         })
     }()
+    
+    var HideTOCifNoHeader = function(){
+        if (!$(".toc").length) {
+            $("#toc-div, #tocButton").hide();
+            $(".switch-btn, .switch-area").show();
+        }
+    }()
 
     $.fn.scrollUnique = function() {
         return $(this).each(function() {

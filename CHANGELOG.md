@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-20)
+# 0.0.0 (2018-04-22)
 
 
 ### Features
@@ -7,6 +7,7 @@
 * add acticle,change avatar,add time a few days ago ([36f29f8](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/36f29f8))
 * add acticle:front-end interview and optimization ([09a1216](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/09a1216))
 * add algorithm part one ([88ff05e](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/88ff05e))
+* add baidu and 360 auto push ([70becc7](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/70becc7))
 * add binary search tree algorithm ([e1d8c3c](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/e1d8c3c))
 * add computer internet part 4 ([d71d6c5](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d71d6c5))
 * add computer network part 1 ([ea70cc6](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/ea70cc6))
@@ -39,6 +40,7 @@
 * add seek algorithm ([01bc035](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/01bc035))
 * add snow article ([21755f2](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/21755f2))
 * add sort algorithm ([d1b9fd8](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d1b9fd8))
+* add You Don't Know JS part 1 ([9455f7b](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/9455f7b))
 * fix encrypt style and uglify es6 ([3ee2611](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/3ee2611))
 * fix encrypt zip error ([844b742](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/844b742))
 * fix gitlab shell ([eb20468](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/eb20468))
