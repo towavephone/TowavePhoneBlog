@@ -42,11 +42,19 @@ function createCopyBtns() {
                 console.error('Action:', e.action);
                 console.error('Trigger:', e.trigger);
             });
+        $("#copyBtn").hover(
+            function() {
+                $("#copyBtn").css("display", "block");
+            },
+            function() {
+                $("#copyBtn").css("display", "none");
+            }
+        );
     }
 }
 //感应鼠标是否在代码区
 $("figure").hover(
-    function() {
+    function(e) {
         //-------鼠标活动在代码块内
         //移除之前含有复制标志代码块的 copyFlag
         $("[copyFlag]").removeAttr("copyFlag");
@@ -55,7 +63,6 @@ $("figure").hover(
         //获取复制按钮
         $copyBtn = $("#copyBtn");
         // debugger
-        console.log('aaa')
         if ($copyBtn.lenght != 0) {
             //获取到按钮的前提下进行一下操作
             //停止按钮动画效果
@@ -66,11 +73,11 @@ $("figure").hover(
             $copyBtn.css("top", parseInt($copyBtn.css("top")) + $(this).offset().top - $copyBtn.offset().top + 8);
             $copyBtn.css("right", $copyBtn.width() + 5);
         }
-    }, function(){
-        console.log('bbb')
+    }, function(e){
         $("#copyBtn").css("display", "none");
     }
 );
+
 //页面载入完成后，创建复制按钮
 $(document).ready(function() {
     createCopyBtns();
