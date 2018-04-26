@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-25)
+# 0.0.0 (2018-04-26)
 
 
 ### Features
@@ -32,6 +32,7 @@
 * add interview data ([51d9a3d](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/51d9a3d))
 * add JS and design pattern ([2bf5b16](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/2bf5b16))
 * add Linux shell ([1507943](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/1507943))
+* add live2d avatar and fix mobile slider ([2af0a59](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/2af0a59))
 * add markdown lint ([95ec6b9](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/95ec6b9))
 * add Object-oriented thoughts ([c61a810](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/c61a810))
 * add OS principle ([c6e6b26](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/c6e6b26))
@@ -41,6 +42,7 @@
 * add snow article ([21755f2](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/21755f2))
 * add sort algorithm ([d1b9fd8](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d1b9fd8))
 * add You Don't Know JS part 1 ([9455f7b](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/9455f7b))
+* change avatar and fix copy code ([6812bc3](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/6812bc3))
 * fix encrypt style and uglify es6 ([3ee2611](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/3ee2611))
 * fix encrypt zip error ([844b742](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/844b742))
 * fix gitlab shell ([eb20468](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/eb20468))
