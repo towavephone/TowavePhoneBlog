@@ -1,9 +1,23 @@
 <div class="overlay"></div>
 <div class="intrude-less">
     <header id="header" class="inner">
-        <a href="<%= config.root %>" class="profilepic">
-            <img src="<%- theme.root_url %><%=theme.avatar%>" class="animated zoomIn">
-        </a>
+        
+        <div class="waifu">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" height="250" class="live2d"></canvas>
+            <a href="<%= config.root %>" class="profilepic">
+                <img src="<%- theme.root_url %><%=theme.avatar%>" class="animated zoomIn">
+            </a>
+            <div class="waifu-tool">
+                <span class="fui-home"></span>
+                <span class="fui-chat"></span>
+                <span class="fui-eye"></span>
+                <span class="fui-user"></span>
+                <span class="fui-photo"></span>
+                <span class="fui-info-circle"></span>
+                <span class="fui-cross"></span>
+            </div>
+        </div>
         <hgroup>
           <h1 class="header-author"><a href="<%= config.root %>"><%=theme.author%></a></h1>
         </hgroup>

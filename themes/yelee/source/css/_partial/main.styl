@@ -19,6 +19,7 @@
                 display: block;
                 position: relative;
                 height: 100 + base-font-size - 16;
+                width: @height;
                 z-index: 100;
             }
             .header-menu{
@@ -46,7 +47,7 @@
         overflow-y: auto;
         .overlay{
             width: 100%;
-            height: 150px;
+            height: 200px;
             background-color: black;
             position: absolute;
             opacity: 0.7;
@@ -93,14 +94,14 @@
         }
     }
     .profilepic{
+        display: none;
         text-align: center;
-        display: block;
         // border: 1px solid #fff;
         // border-radius: 50%;
         // width: 128 + base-font-size - 16;
-        height: 250 + base-font-size;
+        height: 240px;
         margin: 0 auto;
-        position: relative;
+        // position: relative;
         overflow: hidden;
         -webkit-box-orient: horizontal;
         -webkit-box-pack: center;
@@ -121,8 +122,8 @@
             // box-shadow: 0 0 2em red;
             // animation: profilepic .3s linear alternate;
             // -webkit-animation: profilepic .3s linear alternate; 
-            transform: rotateX(360deg);
-            transform-origin: 100% 50%; /* 高的一半 */
+            transform: rotateY(180deg);
+            transform-origin: 50% 100%; /* 高的一半 */
             transition: 1s;
 	        transform-style: preserve-3d;
             filter: none;

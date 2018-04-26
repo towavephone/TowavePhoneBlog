@@ -1,0 +1,131 @@
+{
+    "mouseover": [
+        {
+            "selector": "a[class*='article-title'],div[class*='article-nav-title']",
+            "text": ["要看看文章 <span style=\"color:#0099cc;\">{text}</span> 吗？"]
+        },
+        {
+            "selector": "div[class*='article-category']",
+            "text": ["要看看分类 <span style=\"color:#0099cc;\">{text}</span> 吗？"]
+        },
+        {
+            "selector": "a[class*='article-tag']",
+            "text": ["要看看标签 <span style=\"color:#0099cc;\">{text}</span> 吗？"]
+        },
+        {
+            "selector": ".fui-eye",
+            "text": ["要切换老婆吗？"]
+        },
+        {
+            "selector": ".fui-eye",
+            "text": ["要切换老婆吗？"]
+        },
+        {
+            "selector": ".fui-user",
+            "text": ["要给老婆换装吗？"]
+        },
+        {
+            "selector": ".fui-photo",
+            "text": ["要给老婆拍照吗？"]
+        },
+        {
+            "selector": ".fui-info-circle",
+            "text": ["要感谢发明家大人吗？"]
+        },
+        {
+            "selector": ".fui-cross",
+            "text": ["要切换纸片人老婆吗？"]
+        },
+        {
+            "selector": ".fui-heimao-cross",
+            "text": ["要切换会动的老婆吗？"]
+        },
+        {
+            "selector": "#copyBtn",
+            "text": ["要复制代码吗？"]
+        },
+        {
+            "selector": ".fui-home",
+            "text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦"]
+        },
+        {
+            "selector": "#tocButton",
+            "text": ["翻页比较麻烦吗，点击可以切换显示这篇文章的目录呢"]
+        },
+        {
+            "selector": "strong[class*='toc-title']",
+            "text": ["点击可以折叠显示这篇文章的目录呢"]
+        },
+        {
+            "selector": "a[href='#comments'],.fui-chat",
+            "text": ["想要去评论些什么吗？"]
+        },
+        {
+            "selector": "#night_mode",
+            "text": ["深夜时要爱护眼睛呀"]
+        },
+        {
+            "selector": "#qrcode",
+            "text": ["手机扫一下就能继续看，很方便呢"]
+        },
+        
+        {
+            "selector": "a[href='#']",
+            "text": ["回到开始的地方吧"]
+        },
+        {
+            "selector": "a[href='#footer']",
+            "text": ["穿越到终点吧"]
+        },
+        {
+            "selector": ".gt-btn-public",
+            "text": ["要[提交]^(Commit)了吗，首次评论需要审核，请耐心等待~"]
+        },
+        {
+            "selector": ".gt-btn-login",
+            "text": ["主人sama，首次评论需要登录呢~"]
+        },
+        {
+            "selector": "img[class*='lazyloaded']",
+            "text": ["点击图片可以放大呢"]
+        },
+        {
+            "selector": "input[name=q]",
+            "text": ["找不到想看的内容？搜索看看吧"]
+        },
+        {
+            "selector": ".prev",
+            "text": ["去上一页看看吧"]
+        },
+        {
+            "selector": ".next",
+            "text": ["去下一页看看吧"]
+        },
+        {
+            "selector": ".dropdown-toggle",
+            "text": ["这里是菜单"]
+        },
+        {
+            "selector": ".waifu #live2d",
+            "text": ["干嘛呢你，快把手拿开", "鼠…鼠标放错地方了！","hentai!"]
+        },
+        {
+            "selector": ".page-number",
+            "text": ["要穿越第 <span style=\"color:#0099cc;\">{text}</span> 页吗？"]
+        },
+        {
+            "selector": ".page-number",
+            "text": ["要穿越第 <span style=\"color:#0099cc;\">{text}</span> 页吗？"]
+        }
+    ],
+    "click": [
+        {
+            "selector": ".waifu #live2d",
+            "text": ["是…是不小心碰到了吧", "萝莉控是什么呀", "你看到我的小熊了吗", "再摸的话我可要报警了！⌇●﹏●⌇", "110吗，这里有个变态一直在摸我(ó﹏ò｡)"]
+        },
+        {
+            "selector": "#comments textarea",
+            "text": ["要吐槽些什么呢"]
+        }
+    ]
+}

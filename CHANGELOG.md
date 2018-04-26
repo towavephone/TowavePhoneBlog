@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-22)
+# 0.0.0 (2018-04-25)
 
 
 ### Features
@@ -45,6 +45,7 @@
 * fix encrypt zip error ([844b742](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/844b742))
 * fix gitlab shell ([eb20468](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/eb20468))
 * fix gitlab shell rm error ([c284709](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/c284709))
+* fix hexo generate too slow and add post length ([520b3ad](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/520b3ad))
 * fix TAG button and add front end interview html part ([e84dca0](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/e84dca0))
 * modify cdn url ([d0ec38a](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d0ec38a))
 * modify config ([bcbd6f6](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/bcbd6f6))
@@ -59,6 +60,7 @@
 * split design pattern many parts ([a8d950f](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/a8d950f))
 * test comments ([2609ea9](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/2609ea9))
 * the first part of offer algorithm ([5de51b6](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/5de51b6))
+* update blog log and add code paste ([e7899d8](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/e7899d8))
 
 
 
