@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-26)
+# 0.0.0 (2018-04-27)
 
 
 ### Features
@@ -49,6 +49,8 @@
 * fix gitlab shell ([eb20468](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/eb20468))
 * fix gitlab shell rm error ([c284709](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/c284709))
 * fix hexo generate too slow and add post length ([520b3ad](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/520b3ad))
+* fix mobile wife load time ([06ca10b](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/06ca10b))
+* fix slider bug ([4d79583](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/4d79583))
 * fix TAG button and add front end interview html part ([e84dca0](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/e84dca0))
 * modify cdn url ([d0ec38a](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d0ec38a))
 * modify config ([bcbd6f6](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/bcbd6f6))

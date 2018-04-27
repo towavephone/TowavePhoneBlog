@@ -78,6 +78,8 @@ function initWife(){
         $('.live2d,.fui-eye,.fui-user,.fui-photo').hide();
         $('.profilepic').css('display','block');
         $('.fui-cross').attr('class','fui-heimao-cross');
+    }else{
+        localStorage.setItem('wife', 'live2d');
     }
 }
 
