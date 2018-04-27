@@ -105,16 +105,26 @@ define([], function(){
         }
     }()
 
+    if (yiliaConfig.wife) {
+        (function(){
+            loadCSS('/assets/waifu.css',25);
+            require([yiliaConfig.rootUrl + 'assets/waifu-tips.js',yiliaConfig.rootUrl + 'assets/live2d.js'], function(){
+                initModel(yiliaConfig.rootUrl + "assets/");
+            })
+        })()
+    }
+
+    function loadCSS (url, num) {
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = url;
+        var head = document.querySelector("head");
+        head.insertBefore(link, head.childNodes[num]);
+    }
+
     if (yiliaConfig.jquery_ui[0]) {
         var tooltip = function(){
             require([yiliaConfig.jquery_ui[1]], function(){
-                var loadCSS = function (url, num) {
-                    var link = document.createElement("link");
-                    link.rel = "stylesheet";
-                    link.href = url;
-                    var head = document.querySelector("head");
-                    head.insertBefore(link, head.childNodes[num]);
-                }
                 loadCSS(yiliaConfig.jquery_ui[2], 25);
                 if (!$().tooltip) return;
                 if (navigator.userAgent.match(/(iPhone|iPad|Android|ios|PlayBook|Touch)/i)) return;

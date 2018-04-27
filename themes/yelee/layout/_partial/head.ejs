@@ -26,8 +26,6 @@
 <link href="<%- theme.CDN.fontawesome %>" rel="stylesheet">
 <link rel="apple-touch-icon" href= "<%- theme.root_url %>/apple-touch-icon.png">
 
-<%- css('assets/waifu.css') %>
-
 <link rel="stylesheet" href="https://cdn.bootcss.com/limonte-sweetalert2/7.18.0/sweetalert2.min.css">
 
 <% if (theme.rss){ %>
@@ -97,7 +95,9 @@ if ( is_archive() ) {
         scrollreveal: "<%- theme.CDN.scrollreveal %>",
         search: <%= theme.search.on %>,
         offline: <%=theme.qiniu.offline%>,
-        urlPrefix: "<%=theme.qiniu.urlPrefix%>"
+        urlPrefix: "<%=theme.qiniu.urlPrefix%>",
+        wife: <%=theme.wife.on%>,
+        slideout: "<%=theme.CDN.slideout%>"
     }
 </script>
 

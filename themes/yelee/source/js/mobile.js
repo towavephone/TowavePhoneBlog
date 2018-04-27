@@ -19,6 +19,7 @@ define([], function(){
             //生成节点
             var $viewer = document.createElement("div");
             $viewer.id = "viewer";
+            $viewer.className = "hide";
             $tag = document.getElementById("js-tagcloud");
             $aboutme = document.getElementById("js-aboutme");
             $friends = document.getElementById("js-friends");
@@ -41,40 +42,42 @@ define([], function(){
 
     //第四步 -- 绑定 DOM 事件
     var bindDOM = function(){
-        var slideout = new Slideout({
-            'panel': document.getElementsByClassName('mid-col')[0],
-            'menu': document.getElementById('viewer'),
-            'padding': 250,
-            'tolerance': 70,
-            'touch': false
-          });
+        require([yiliaConfig.slideout],function(Slideout){
+            var slideout = new Slideout({
+                'panel': document.getElementsByClassName('mid-col')[0],
+                'menu': document.getElementById('viewer'),
+                'padding': 250,
+                'tolerance': 70,
+                'touch': false
+              });
+        
+            // Toggle button
+            document.querySelector('.slider-trigger').addEventListener('click', function() {
+                slideout.open();
+            });
     
-        // Toggle button
-        document.querySelector('.slider-trigger').addEventListener('click', function() {
-            slideout.open();
-        });
-
-        function close(eve) {
-            eve.preventDefault();
-            slideout.close();
-        }
-          
-        slideout.on('beforeopen', function() {
-            this.panel.classList.add('mid-col-open');
-            $('.slideout-panel').css('z-index', 999);
-        })
-        .on('open', function() {
-            this.panel.addEventListener('click', close);
-        })
-        .on('beforeclose', function() {
-            this.panel.classList.remove('mid-col-open');
-            this.panel.removeEventListener('click', close);
-            $('.slideout-panel').css('z-index', 3);
-        });
-        $(window).resize(function(){
-            if(slideout.isOpen()){
+            function close(eve) {
+                eve.preventDefault();
                 slideout.close();
             }
+              
+            slideout.on('beforeopen', function() {
+                this.panel.classList.add('mid-col-open');
+                $('.slideout-panel').css('z-index', 999);
+            })
+            .on('open', function() {
+                this.panel.addEventListener('click', close);
+            })
+            .on('beforeclose', function() {
+                this.panel.classList.remove('mid-col-open');
+                this.panel.removeEventListener('click', close);
+                $('.slideout-panel').css('z-index', 3);
+            });
+            $(window).resize(function(){
+                if(slideout.isOpen()){
+                    slideout.close();
+                }
+            })
         })
         //滚动样式
         var $overlay = $("#mobile-nav .overlay");
@@ -97,7 +100,6 @@ define([], function(){
             }
         }
     };
-
 
     return{
         init: function(){

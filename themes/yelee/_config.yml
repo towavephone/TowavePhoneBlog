@@ -325,7 +325,8 @@ CDN:
   mathjax: https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js
   scrollreveal: //cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js
   lazysizes: https://cdn.bootcss.com/lazysizes/4.0.2/lazysizes.min.js
-
+  slideout: https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js
+  
 leancloud_visitors:
   enable: true
   app_id: qox34zOusBwg5XlCfVh8XRhg-gzGzoHsz #你的app_id
@@ -333,3 +334,6 @@ leancloud_visitors:
 
 sitemap:
   path: sitemap.xml
+
+wife:
+ on: true
