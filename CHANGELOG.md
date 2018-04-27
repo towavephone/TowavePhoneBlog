@@ -52,6 +52,7 @@
 * fix mobile wife load time ([06ca10b](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/06ca10b))
 * fix slider bug ([4d79583](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/4d79583))
 * fix TAG button and add front end interview html part ([e84dca0](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/e84dca0))
+* fix wife change bug ([337f9a8](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/337f9a8))
 * modify cdn url ([d0ec38a](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d0ec38a))
 * modify config ([bcbd6f6](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/bcbd6f6))
 * modify personal resume ([796aa98](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/796aa98))
