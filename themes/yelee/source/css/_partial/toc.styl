@@ -5,7 +5,7 @@
     font-size .9em
     font-weight bold
     font-family inherit
-    color: #258fb8
+    color: color-link
     cursor pointer
     background none
     border none
@@ -30,7 +30,7 @@
     line-height 1.65em
     .toc-title 
         font-weight bold
-        color: #258fb8
+        color: color-link
         &.clickable 
             cursor pointer
             &:hover 
@@ -59,7 +59,7 @@
                 background none
 
         a.toc-link
-            color: gray
+            // color: #222
             &:visited 
                 color rgba(244, 131, 133, 1)
             &:hover 
@@ -70,6 +70,8 @@
         ol.toc-child
             padding-left 1.25em
             margin 4px 0 
+        span.toc-number
+            color: color-default
 
 
     if toc-nowrap

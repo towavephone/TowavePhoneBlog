@@ -5,7 +5,7 @@
     padding 0
     font-family inherit
     border 2px solid transparent
-    border-bottom 2px solid lightgray
+    border-bottom 2px solid color-default
     border-radius 2px
     opacity .65
     background none
@@ -19,7 +19,7 @@
     padding 1px .7em
     box-shadow: 0 0 3px rgba(0, 0, 0, .15)
     cursor pointer
-    color gray
+    color color-default
     &:active
         background lightgray
     &:hover
@@ -37,14 +37,14 @@
         font-weight normal
     li
         margin .5em auto
-        border-bottom 2px solid lightgray
+        border-bottom 2px solid color-default
     .search-result-list li:hover
         background rgba(158,188,226,0.21)
         box-shadow 0 0 5px rgba(0, 0, 0, .2)
     a.search-result-title
         line-height 1.2
         font-weight bold
-        color #708090
+        color color-link
     p.search-result
         margin .4em auto
         line-height 1.2rem
@@ -52,7 +52,7 @@
         overflow hidden
         font-size .8rem
         text-align justify
-        color gray
+        color color-default
     em.search-keyword
         color #f58e90
         border-bottom: 1px dashed @color
@@ -64,6 +64,6 @@ p.no-result
     margin 2em 0 2em 6%
     padding-bottom .5em
     text-align left
-    color gray
+    color color-default
     font-family font-serif serif
-    border-bottom 2px solid lightgray
+    border-bottom 2px solid color-default
