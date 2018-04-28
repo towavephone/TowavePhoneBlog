@@ -1,5 +1,5 @@
 ---
-title: mvvm源码实现
+title: mvvm原理
 categories:
   - 前端
 tags:
@@ -46,14 +46,12 @@ var vm = new MVVM({
 <!--more-->
 
 效果：
-![img1][img1]
 
-### 1、实现Observer
+<div align="center"><img class="NoNeedOptimize" src="http://p6aicz9r2.bkt.clouddn.com/static/images/wx20180428234011.gif-big_watermark"/></div>
 
-ok, 思路已经整理完毕，也已经比较明确相关逻辑和模块功能了，let's do it
-我们知道可以利用`Obeject.defineProperty()`来监听属性变动
-那么将需要observe的数据对象进行递归遍历，包括子属性对象的属性，都加上	`setter`和`getter`
-这样的话，给这个对象的某个值赋值，就会触发`setter`，那么就能监听到了数据变化。。相关代码可以是这样：
+### 实现Observer
+
+ok, 思路已经整理完毕，也已经比较明确相关逻辑和模块功能了，let's do it 我们知道可以利用`Obeject.defineProperty()`来监听属性变动那么将需要observe的数据对象进行递归遍历，包括子属性对象的属性，都加上`setter`和`getter`，这样的话，给这个对象的某个值赋值，就会触发`setter`，那么就能监听到了数据变化。
 
 ```js
 var data = {name: 'kindeng'};
@@ -121,8 +119,7 @@ Dep.prototype = {
 };
 ```
 
-那么问题来了，谁是订阅者？怎么往订阅器添加订阅者？
-没错，上面的思路整理中我们已经明确订阅者应该是Watcher, 而且`var dep = new Dep();`是在 `defineReactive`方法内部定义的，所以想通过`dep`添加订阅者，就必须要在闭包内操作，所以我们可以在	`getter`里面动手脚：
+那么问题来了，谁是订阅者？怎么往订阅器添加订阅者？没错，上面的思路整理中我们已经明确订阅者应该是Watcher, 而且`var dep = new Dep();`是在 `defineReactive`方法内部定义的，所以想通过`dep`添加订阅者，就必须要在闭包内操作，所以我们可以在	`getter`里面动手脚：
 
 ```js
 // Observer.js
@@ -148,10 +145,11 @@ Watcher.prototype = {
 
 这里已经实现了一个Observer了，已经具备了监听数据和数据变化通知订阅者的功能，[完整代码](https://github.com/DMQ/mvvm/blob/master/js/observer.js)。那么接下来就是实现Compile了
 
-### 2、实现Compile
+### 实现Compile
 
 compile主要做的事情是解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图，如图所示：
-![img3][img3]
+
+<div align="center">{% qnimg wx20180428234629.png alt:模板指令实现 %}</div>
 
 因为遍历解析的过程有多次操作dom节点，为提高性能和效率，会先将跟节点`el`转换成文档碎片`fragment`进行解析编译操作，解析完成，再将`fragment`添加回原来的真实dom节点中
 
@@ -248,18 +246,17 @@ var updater = {
 };
 ```
 
-这里通过递归遍历保证了每个节点及子节点都会解析编译到，包括了 &#123;&#123; &#125;&#125; 表达式声明的文本节点。指令的声明规定是通过特定前缀的节点属性来标记，如`<span v-text="content" other-attr`中`v-text`便是指令，而`other-attr`不是指令，只是普通的属性。
-监听数据、绑定更新函数的处理是在`compileUtil.bind()`这个方法中，通过`new Watcher()`添加回调来接收数据变化的通知
+这里通过递归遍历保证了每个节点及子节点都会解析编译到，包括了 &#123;&#123; &#125;&#125; 表达式声明的文本节点。指令的声明规定是通过特定前缀的节点属性来标记，如`<span v-text="content" other-attr`中`v-text`便是指令，而`other-attr`不是指令，只是普通的属性。监听数据、绑定更新函数的处理是在`compileUtil.bind()`这个方法中，通过`new Watcher()`添加回调来接收数据变化的通知
 
 至此，一个简单的Compile就完成了，[完整代码](https://github.com/DMQ/mvvm/blob/master/js/compile.js)。接下来要看看Watcher这个订阅者的具体实现了
 
-### 3、实现Watcher
+### 实现Watcher
 
 Watcher订阅者作为Observer和Compile之间通信的桥梁，主要做的事情是:
 1、在自身实例化时往属性订阅器(dep)里面添加自己
 2、自身必须有一个update()方法
 3、待属性变动dep.notice()通知时，能调用自身的update()方法，并触发Compile中绑定的回调，则功成身退。
-如果有点乱，可以回顾下前面的[思路整理](#_2)
+如果有点乱，可以回顾下前面的思路整理
 
 ```javascript
 function Watcher(vm, exp, cb) {
@@ -313,7 +310,7 @@ ok, Watcher也已经实现了，[完整代码](https://github.com/DMQ/mvvm/blob/
 
 最后来讲讲MVVM入口文件的相关逻辑和实现吧，相对就比较简单了~
 
-### 4、实现MVVM
+### 实现MVVM
 
 MVVM作为数据绑定的入口，整合Observer、Compile和Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，达到数据变化 -> 视图更新；视图交互变化(input) -> 数据model变更的双向绑定效果。
 
@@ -376,6 +373,7 @@ MVVM.prototype = {
 这里主要还是利用了`Object.defineProperty()`这个方法来劫持了vm实例对象的属性的读写权，使读写vm实例的属性转成读写了`vm._data`的属性值，达到鱼目混珠的效果，哈哈
 
 至此，全部模块和功能已经完成了，如本文开头所承诺的两点。一个简单的MVVM模块已经实现，其思想和原理大部分来自经过简化改造的vue[源码](https://github.com/vuejs/vue)，猛戳[这里](https://github.com/DMQ/mvvm)可以看到本文的所有相关代码。
+
 由于本文内容偏实践，所以代码量较多，且不宜列出大篇幅代码，所以建议想深入了解的童鞋可以再次结合本文源代码来进行阅读，这样会更加容易理解和掌握。
 
 ### 总结

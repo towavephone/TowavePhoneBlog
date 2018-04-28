@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-27)
+# 0.0.0 (2018-04-28)
 
 
 ### Features
@@ -44,6 +44,8 @@
 * add sort algorithm ([d1b9fd8](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/d1b9fd8))
 * add You Don't Know JS part 1 ([9455f7b](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/9455f7b))
 * change avatar and fix copy code ([6812bc3](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/6812bc3))
+* change blog color style ([ae8139d](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/ae8139d))
+* change init wife to Neptune and add background image ([8a3eb79](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/8a3eb79))
 * change mobile slider ([3c628ba](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/3c628ba))
 * fix encrypt style and uglify es6 ([3ee2611](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/3ee2611))
 * fix encrypt zip error ([844b742](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/844b742))
