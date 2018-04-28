@@ -34,6 +34,7 @@
 * add Linux shell ([1507943](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/1507943))
 * add live2d avatar and fix mobile slider ([2af0a59](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/2af0a59))
 * add markdown lint ([95ec6b9](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/95ec6b9))
+* add mvvm and tx interview ([64fb26f](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/64fb26f))
 * add Object-oriented thoughts ([c61a810](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/c61a810))
 * add OS principle ([c6e6b26](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/c6e6b26))
 * add push url to coding ([68804c3](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/68804c3))

@@ -35,7 +35,7 @@ date: 2018-3-25 13:23:14
 5. 追求界面上的美观，拥有一颗UI设计师的心。
 
 **博客主题:**
-博客目前使用的是MOxFIVE的主题 Yelee，介绍请转主题 [GitHub](https://github.com/MOxFIVE/hexo-theme-yelee) 页面。
+>博客目前使用的是MOxFIVE的主题 Yelee，介绍请转主题 [GitHub](https://github.com/MOxFIVE/hexo-theme-yelee) 页面。
 
 
 **博客文章下载:**

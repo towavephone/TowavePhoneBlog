@@ -201,10 +201,11 @@ function initModel(waifuPath){
         
         /* 首次访问加载 指定模型 的 指定材质 */
         
-        var modelId = 1;            // 模型 ID
-        var modelTexturesId = 53    // 材质 ID
+        var modelId = 6;            // 模型 ID
+        var modelTexturesId = 0    // 材质 ID
         
-    } loadModel(modelId, modelTexturesId);
+    } 
+    loadModel(modelId, modelTexturesId);
     initWife();
 	$.ajax({
         cache: true,

@@ -129,10 +129,7 @@ gitalk:
 # >>> Style Customisation 样式自定义 <<<
 
 # Background | 背景
-## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`
-## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
-## "0": white-gray background | 随机颜色背景
-background_image: 0
+background_image: true
 
 # Base Font Size | 字号调节
 base_font_size: 18  #px, 16 - 24
@@ -186,7 +183,7 @@ jquery_ui: true
 # Max width of right cloumn | 限制右侧内容的宽带 
 limit_article_width: 
   on: true
-  max_width: 75 # em
+  max_width: 70 # em
 
 # >>> Small features | 小功能设置 <<<
 
