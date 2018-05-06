@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2018-04-28)
+# 0.0.0 (2018-04-29)
 
 
 ### Features
@@ -47,6 +47,7 @@
 * change blog color style ([ae8139d](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/ae8139d))
 * change init wife to Neptune and add background image ([8a3eb79](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/8a3eb79))
 * change mobile slider ([3c628ba](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/3c628ba))
+* fix backgroud image and push to github ([1def8b1](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/1def8b1))
 * fix encrypt style and uglify es6 ([3ee2611](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/3ee2611))
 * fix encrypt zip error ([844b742](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/844b742))
 * fix gitlab shell ([eb20468](http://120.79.62.126:10022/towavephone/TowavePhoneBlog/commits/eb20468))
