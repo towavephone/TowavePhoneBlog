@@ -80,7 +80,6 @@ deploy:
   type: git
   branch: master
   repo: 
-    github: git@github.com:towavephone/towavephone.github.io.git
     coding: git@git.coding.net:towavephone/towavephone.coding.me.git
 # live2d:
 #   model: miku # 模型名称 默认值: z16
