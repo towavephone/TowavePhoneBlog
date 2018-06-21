@@ -2,7 +2,7 @@
 
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![pipeline status](http://120.79.62.126:10080/towavephone/TowavePhoneBlog/badges/master/pipeline.svg)](http://120.79.62.126:10080/towavephone/TowavePhoneBlog/commits/master)
-[![Crates.io](https://img.shields.io/crates/l/rustc-serialize.svg)]()
+[![Crates.io](https://img.shields.io/crates/l/rustc-serialize.svg)]() [![Greenkeeper badge](https://badges.greenkeeper.io/towavephone/HexoBlog.svg)](https://greenkeeper.io/)
 
 本博客是基于 [MOxFIVE/hexo-theme-yelee](https://github.com/MOxFIVE/hexo-theme-yelee) 制作的主题，其中添加更改了大量功能。
 
