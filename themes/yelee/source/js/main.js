@@ -79,11 +79,6 @@ require([], function (){
                     }
                     var big_img = imgSrc ? imgSrc : dataSrc;
                     var small_img = big_img;
-                    var NoNeedOptimize = (imgClass && imgClass.includes('NoNeedOptimize')) || !small_img.includes(yiliaConfig.urlPrefix);
-                    if(!yiliaConfig.offline && !NoNeedOptimize){
-                        big_img += '-big_watermark';
-                        small_img += '-small_watermark';
-                    }
                     img.attr("data-src", small_img);
                     img.attr("class", imgClass + ' lazyload');
                     img.wrap("<a href='"+big_img+"' title='"+title+"' data-fancybox='gallery'></a>");
@@ -107,10 +102,6 @@ require([], function (){
             var imgSrc = img.attr("src");
             var imgClass = img.attr("class");
             var small_img = imgSrc ? imgSrc : dataSrc;;
-            var NoNeedOptimize = (imgClass && imgClass.includes('NoNeedOptimize')) || !small_img.includes(yiliaConfig.urlPrefix);
-            if(!yiliaConfig.offline && !NoNeedOptimize){
-                small_img += '-small_watermark';
-            }
             img.attr("data-src", small_img);
             img.attr('class',imgClass + ' lazyload');
         }

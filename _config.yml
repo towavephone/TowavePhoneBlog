@@ -100,21 +100,3 @@ encrypt:
   enable: true
 aplayer:
   meting: true
-qiniu:
-  offline: false
-  sync: true
-  bucket: towavephoneblog
-  # secret_file: sec/qn.json or C:
-  access_key: m1qQSbxOXWxYebDaXgDKgeseYExc04PhHizwGa7k
-  secret_key: dBaKs20ttlzBvjVMCpK4-xWYEaWHt1K68GnDz0Yv
-  dirPrefix: static
-  urlPrefix: http://p6aicz9r2.bkt.clouddn.com/static
-  up_host: http://upload.qiniu.com
-  local_dir: static
-  update_exist: true
-  image: 
-    folder: images
-  js:
-    folder: js
-  css:
-    folder: css

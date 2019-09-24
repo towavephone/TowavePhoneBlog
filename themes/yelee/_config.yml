@@ -14,10 +14,10 @@ menu:
   关于我: /about/
 
 # Link to your avatar | 填写头像地址
-avatar: http://p6aicz9r2.bkt.clouddn.com/static/images/avater.png?imageView2/2/h/400/format/webp/interlace/1/q/100
+avatar: /img/avatar.png
 
 # Small icon of Your site | 站点小图标地址
-favicon: http://p6aicz9r2.bkt.clouddn.com/static/images/avater.png?imageView2/2/h/30/format/webp/interlace/1/q/70
+favicon: /img/avatar.png
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言

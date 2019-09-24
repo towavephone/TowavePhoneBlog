@@ -7,6 +7,18 @@ description: "Welcome to Hexo: This is your very first post."
 mathjax: true
 ---
 
+<!-- ---
+title: 示例文章————关于 Yelee 主题背景图的压缩与优化
+date: 2016-05-17 15:59:04
+categories:
+- 术业专攻
+tags:
+- Yelee
+- PhotoShop
+toc:
+permalink: image-compression
+--- -->
+
 ![111](/background/bg-1.jpg) Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 $$  x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 <!-- more -->
@@ -92,3 +104,5 @@ class Test{
   void Test(){}
 } 
 ```
+
+![](/static/images/Pio.png)
