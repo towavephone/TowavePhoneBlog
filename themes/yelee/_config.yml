@@ -129,7 +129,7 @@ gitalk:
 # >>> Style Customisation 样式自定义 <<<
 
 # Background | 背景
-background_image: true
+background_image: false
 
 # Base Font Size | 字号调节
 base_font_size: 18  #px, 16 - 24
