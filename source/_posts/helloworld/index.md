@@ -105,4 +105,4 @@ class Test{
 } 
 ```
 
-![](/static/images/Pio.png)
+![](./Pio.png)

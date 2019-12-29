@@ -6,9 +6,10 @@
     "version": "3.7.1"
   },
   "scripts": {
+    "start": "npm run dev",
     "dev": "hexo s -p 80",
     "prod": "hexo clean && hexo g --debug && gulp",
-    "deploy": "hexo d",
+    "deploy": "npm run prod && hexo d",
     "cm": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "postcommit": "yarn lint:markdown && yarn changelog",
