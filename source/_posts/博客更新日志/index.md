@@ -1,9 +1,8 @@
 ---
 title: 博客主题更新日志
 categories:
-  - 博客
+  - 博客主题
 tags:
-  - 更新
   - 主题优化
 permalink: update
 date: 2018-04-24 20:29:35
@@ -11,7 +10,6 @@ fancybox:
 original:
 comments:
 toc_list_number: false
-top: 1
 ---
 # 前言
 
