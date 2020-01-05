@@ -77,6 +77,7 @@
 * test comments ([2609ea9](https://github.com/towavephone/HexoBlog/commit/2609ea9))
 * the first part of offer algorithm ([5de51b6](https://github.com/towavephone/HexoBlog/commit/5de51b6))
 * update blog log and add code paste ([e7899d8](https://github.com/towavephone/HexoBlog/commit/e7899d8))
+* update daily life ([73f332a](https://github.com/towavephone/HexoBlog/commit/73f332a))
 
 
 
