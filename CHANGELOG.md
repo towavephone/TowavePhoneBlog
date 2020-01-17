@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2019-12-29)
+# 0.0.0 (2020-01-05)
 
 
 ### Features
@@ -78,6 +78,7 @@
 * the first part of offer algorithm ([5de51b6](https://github.com/towavephone/HexoBlog/commit/5de51b6))
 * update blog log and add code paste ([e7899d8](https://github.com/towavephone/HexoBlog/commit/e7899d8))
 * update daily life ([73f332a](https://github.com/towavephone/HexoBlog/commit/73f332a))
+* update dinner party ([e7b32f6](https://github.com/towavephone/HexoBlog/commit/e7b32f6))
 
 
 
