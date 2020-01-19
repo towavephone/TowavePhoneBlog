@@ -12,9 +12,9 @@
 
 ## 效果预览
 
-<div align="center"><img src="./images/QQ截图20180428193728.png" width="400"/></div>
+<div align="center"><img src="./images/QQ截图20180428193728.jpg" width="400"/></div>
 
-<div align="center"><img src="./images/QQ截图20180428193643.png" width="400"/></div>
+<div align="center"><img src="./images/QQ截图20180428193643.jpg" width="400"/></div>
 
 ## 博客改进日志
 

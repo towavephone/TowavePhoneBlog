@@ -53,7 +53,6 @@ fancybox: false
 ***
 
 <div class="pic">
-<img src="/background/bg-4.jpg" title="Mihawk-Wind" width="300">
 </div>
 
 <p class="center">很抱歉，您所访问的地址并不存在: </p>
