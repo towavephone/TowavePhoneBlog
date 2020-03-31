@@ -1,5 +1,5 @@
 <a name="0.0.0"></a>
-# 0.0.0 (2020-01-05)
+# 0.0.0 (2020-01-19)
 
 
 ### Features
@@ -72,6 +72,7 @@
 * optimize image url to qiniu step 2 ([49b8577](https://github.com/towavephone/HexoBlog/commit/49b8577))
 * remove a few days ago ([a692294](https://github.com/towavephone/HexoBlog/commit/a692294))
 * remove cartoon background ([8bf53c6](https://github.com/towavephone/HexoBlog/commit/8bf53c6))
+* remove nouse pic ([0849503](https://github.com/towavephone/HexoBlog/commit/0849503))
 * reorganize file struct ([aee5354](https://github.com/towavephone/HexoBlog/commit/aee5354))
 * split design pattern many parts ([a8d950f](https://github.com/towavephone/HexoBlog/commit/a8d950f))
 * test comments ([2609ea9](https://github.com/towavephone/HexoBlog/commit/2609ea9))
@@ -79,6 +80,7 @@
 * update blog log and add code paste ([e7899d8](https://github.com/towavephone/HexoBlog/commit/e7899d8))
 * update daily life ([73f332a](https://github.com/towavephone/HexoBlog/commit/73f332a))
 * update dinner party ([e7b32f6](https://github.com/towavephone/HexoBlog/commit/e7b32f6))
+* update weekend see ([6e049b2](https://github.com/towavephone/HexoBlog/commit/6e049b2))
 
 
 
